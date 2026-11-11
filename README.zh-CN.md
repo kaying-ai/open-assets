@@ -2,11 +2,23 @@
 
 [English](README.md) | **中文**
 
-开放、可直接投产的游戏 UI 资产包 —— 页面视觉、组件精灵、纹理图集、设计令牌与引擎交付清单 —— 由可复现的「设计→交付」流水线生成，以自包含项目形式发布。
+开放的游戏 UI 资产包，包含页面视觉、组件精灵、纹理图集、设计令牌和引擎交付清单。每个资产包均以自包含项目形式发布，并附带设计契约和生成提示词。
 
 - **统一浏览入口：** <https://kaying-ai.github.io/open-assets/>（画廊）· 或克隆后本地打开 [`index.html`](index.html)。
 - **机器可读总索引：** [`catalog.json`](catalog.json) · 单项目 [`projects/<id>/project.json`](projects/)。
 - **许可证：** 美术与设计数据 [CC-BY-4.0](LICENSE-ASSETS) · 代码与脚本 [MIT](LICENSE)。
+
+## 快速查找
+
+| 想做什么 | 入口 |
+|---|---|
+| 浏览和搜索资产包 | [在线画廊](https://kaying-ai.github.io/open-assets/)：按项目 ID、名称或标签搜索 |
+| 预览开心农场 | [资产目录](https://kaying-ai.github.io/open-assets/projects/happy-farm/) · [交互演示](https://kaying-ai.github.io/open-assets/projects/happy-farm/result.html) |
+| 下载独立精灵 | [开心农场 PNG 素材包](projects/happy-farm/packages/ui-components-png.zip) |
+| 接入游戏引擎 | [引擎导出说明](projects/happy-farm/exports/) · [Web 清单](projects/happy-farm/exports/web/manifest.json) |
+| 通过程序检索 | [catalog.json](catalog.json) · [Agent 使用指南](AGENTS.md) |
+
+目前收录 **开心农场（Happy Farm）**，适用于横屏移动游戏的温馨卡通农场 UI。目录记录了 6 张页面、30 个组件、37 个精灵和 5 种引擎交付格式。PNG、图集和清单是可集成的素材，并非完整可玩的游戏。
 
 ## 资源总表
 
@@ -20,7 +32,7 @@
 
 ## 使用介绍 —— 面向人
 
-从[画廊](https://kaying-ai.github.io/open-assets/)（或克隆后的 `index.html`）进入，按标签或平台筛选，打开某个项目即可看到页面视觉与全部透明底组件精灵。每个项目自带可浏览的资产目录（`projects/<id>/index.html`）、交互壳（`result.html`）、可直接解压的精灵包（`packages/*.zip`）、带 9-slice 元数据的打包图集（`assets/atlases/`）、各引擎交付清单（`exports/godot|unity|cocos|generic|taptap-maker/`）以及 web 令牌（`exports/web/tokens.css`）。把 PNG 与图集 JSON 导入引擎，或在 web 构建中引用 `tokens.css`；单项目 README 说明布局、状态与安全区。美术可在 CC-BY-4.0 下商用与改编，只需署名「open-assets by kaying-ai」并注明改动。
+从[画廊](https://kaying-ai.github.io/open-assets/)（或克隆后的 `index.html`）进入，按项目 ID、名称或标签搜索，或按标签筛选，打开某个项目即可看到页面视觉与全部透明底组件精灵。每个项目自带可浏览的资产目录（`projects/<id>/index.html`）、交互壳（`result.html`）、可直接解压的精灵包（`packages/*.zip`）、带 9-slice 元数据的打包图集（`assets/atlases/`）、各引擎交付清单（`exports/godot|unity|cocos|generic|taptap-maker/`）以及 web 令牌（`exports/web/tokens.css`）。把 PNG 与图集 JSON 导入引擎，或在 web 构建中引用 `tokens.css`；单项目 README 说明布局、状态与安全区。美术可在 CC-BY-4.0 下商用与改编；请按照 [LICENSE-ASSETS](LICENSE-ASSETS) 保留署名与许可信息并注明改动。
 
 ## 使用介绍 —— 面向 Agent
 
