@@ -1,0 +1,973 @@
+{
+  "sheet": "assets/sprites/ui-components-sheet.png",
+  "sheet_size": [
+    2048,
+    1978
+  ],
+  "gap": 30,
+  "margin": 30,
+  "instances": [
+    {
+      "semantic_name": "btn-primary-default",
+      "component_id": "btn-primary",
+      "category": "control",
+      "state": "default",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          48,
+          48,
+          40,
+          40
+        ]
+      },
+      "target_size": [
+        360,
+        112
+      ],
+      "artboard": [
+        30,
+        30,
+        360,
+        112
+      ],
+      "component_file": "assets/components/btn-primary-default-v1.png"
+    },
+    {
+      "semantic_name": "btn-primary-pressed",
+      "component_id": "btn-primary",
+      "category": "control",
+      "state": "pressed",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          48,
+          48,
+          40,
+          40
+        ]
+      },
+      "target_size": [
+        360,
+        112
+      ],
+      "artboard": [
+        420,
+        30,
+        360,
+        112
+      ],
+      "component_file": "assets/components/btn-primary-pressed-v1.png"
+    },
+    {
+      "semantic_name": "btn-primary-disabled",
+      "component_id": "btn-primary",
+      "category": "control",
+      "state": "disabled",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          48,
+          48,
+          40,
+          40
+        ]
+      },
+      "target_size": [
+        360,
+        112
+      ],
+      "artboard": [
+        810,
+        30,
+        360,
+        112
+      ],
+      "component_file": "assets/components/btn-primary-disabled-v1.png"
+    },
+    {
+      "semantic_name": "btn-secondary-default",
+      "component_id": "btn-secondary",
+      "category": "control",
+      "state": "default",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ]
+      },
+      "target_size": [
+        320,
+        104
+      ],
+      "artboard": [
+        1200,
+        30,
+        320,
+        104
+      ],
+      "component_file": "assets/components/btn-secondary-default-v1.png"
+    },
+    {
+      "semantic_name": "btn-secondary-pressed",
+      "component_id": "btn-secondary",
+      "category": "control",
+      "state": "pressed",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ]
+      },
+      "target_size": [
+        320,
+        104
+      ],
+      "artboard": [
+        1550,
+        30,
+        320,
+        104
+      ],
+      "component_file": "assets/components/btn-secondary-pressed-v1.png"
+    },
+    {
+      "semantic_name": "btn-claim-default",
+      "component_id": "btn-claim",
+      "category": "control",
+      "state": "default",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ]
+      },
+      "target_size": [
+        300,
+        104
+      ],
+      "artboard": [
+        30,
+        172,
+        300,
+        104
+      ],
+      "component_file": "assets/components/btn-claim-default-v1.png"
+    },
+    {
+      "semantic_name": "btn-claim-pressed",
+      "component_id": "btn-claim",
+      "category": "control",
+      "state": "pressed",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ]
+      },
+      "target_size": [
+        300,
+        104
+      ],
+      "artboard": [
+        360,
+        172,
+        300,
+        104
+      ],
+      "component_file": "assets/components/btn-claim-pressed-v1.png"
+    },
+    {
+      "semantic_name": "btn-close-default",
+      "component_id": "btn-close",
+      "category": "control",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        690,
+        172,
+        96,
+        96
+      ],
+      "component_file": "assets/components/btn-close-default-v1.png"
+    },
+    {
+      "semantic_name": "btn-close-pressed",
+      "component_id": "btn-close",
+      "category": "control",
+      "state": "pressed",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        816,
+        172,
+        96,
+        96
+      ],
+      "component_file": "assets/components/btn-close-pressed-v1.png"
+    },
+    {
+      "semantic_name": "nav-tab-default",
+      "component_id": "nav-tab",
+      "category": "control",
+      "state": "default",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          32,
+          32,
+          32,
+          32
+        ]
+      },
+      "target_size": [
+        200,
+        120
+      ],
+      "artboard": [
+        942,
+        172,
+        200,
+        120
+      ],
+      "component_file": "assets/components/nav-tab-default-v1.png"
+    },
+    {
+      "semantic_name": "nav-tab-pressed",
+      "component_id": "nav-tab",
+      "category": "control",
+      "state": "pressed",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          32,
+          32,
+          32,
+          32
+        ]
+      },
+      "target_size": [
+        200,
+        120
+      ],
+      "artboard": [
+        1172,
+        172,
+        200,
+        120
+      ],
+      "component_file": "assets/components/nav-tab-pressed-v1.png"
+    },
+    {
+      "semantic_name": "nav-tab-selected",
+      "component_id": "nav-tab",
+      "category": "control",
+      "state": "selected",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          32,
+          32,
+          32,
+          32
+        ]
+      },
+      "target_size": [
+        200,
+        120
+      ],
+      "artboard": [
+        1402,
+        172,
+        200,
+        120
+      ],
+      "component_file": "assets/components/nav-tab-selected-v1.png"
+    },
+    {
+      "semantic_name": "currency-bar-default",
+      "component_id": "currency-bar",
+      "category": "container",
+      "state": "default",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          48,
+          48,
+          32,
+          32
+        ]
+      },
+      "target_size": [
+        720,
+        96
+      ],
+      "artboard": [
+        30,
+        322,
+        720,
+        96
+      ],
+      "component_file": "assets/components/currency-bar-default-v1.png"
+    },
+    {
+      "semantic_name": "panel-card-default",
+      "component_id": "panel-card",
+      "category": "container",
+      "state": "default",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          40,
+          40,
+          40,
+          40
+        ]
+      },
+      "target_size": [
+        560,
+        400
+      ],
+      "artboard": [
+        780,
+        322,
+        560,
+        400
+      ],
+      "component_file": "assets/components/panel-card-default-v1.png"
+    },
+    {
+      "semantic_name": "panel-modal-default",
+      "component_id": "panel-modal",
+      "category": "container",
+      "state": "default",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          48,
+          48,
+          48,
+          48
+        ]
+      },
+      "target_size": [
+        640,
+        480
+      ],
+      "artboard": [
+        1370,
+        322,
+        640,
+        480
+      ],
+      "component_file": "assets/components/panel-modal-default-v1.png"
+    },
+    {
+      "semantic_name": "slot-item-default",
+      "component_id": "slot-item",
+      "category": "container",
+      "state": "default",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          28,
+          28,
+          28,
+          28
+        ]
+      },
+      "target_size": [
+        160,
+        160
+      ],
+      "artboard": [
+        30,
+        832,
+        160,
+        160
+      ],
+      "component_file": "assets/components/slot-item-default-v1.png"
+    },
+    {
+      "semantic_name": "progress-bar-default",
+      "component_id": "progress-bar",
+      "category": "container",
+      "state": "default",
+      "slice": {
+        "type": "9-slice",
+        "margins": [
+          32,
+          32,
+          24,
+          24
+        ]
+      },
+      "target_size": [
+        560,
+        64
+      ],
+      "artboard": [
+        220,
+        832,
+        560,
+        64
+      ],
+      "component_file": "assets/components/progress-bar-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-coin-default",
+      "component_id": "icon-coin",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        810,
+        832,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-coin-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-gem-default",
+      "component_id": "icon-gem",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        936,
+        832,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-gem-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-energy-default",
+      "component_id": "icon-energy",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        1062,
+        832,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-energy-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-carrot-default",
+      "component_id": "icon-carrot",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        1188,
+        832,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-carrot-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-wheat-default",
+      "component_id": "icon-wheat",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        1314,
+        832,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-wheat-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-water-default",
+      "component_id": "icon-water",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        1440,
+        832,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-water-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-seed-default",
+      "component_id": "icon-seed",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        1566,
+        832,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-seed-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-star-default",
+      "component_id": "icon-star",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        1692,
+        832,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-star-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-lock-default",
+      "component_id": "icon-lock",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        1818,
+        832,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-lock-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-gear-default",
+      "component_id": "icon-gear",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        30,
+        1022,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-gear-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-heart-default",
+      "component_id": "icon-heart",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        156,
+        1022,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-heart-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-gift-default",
+      "component_id": "icon-gift",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        282,
+        1022,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-gift-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-farm-default",
+      "component_id": "icon-farm",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        408,
+        1022,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-farm-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-shop-default",
+      "component_id": "icon-shop",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        534,
+        1022,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-shop-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-barn-default",
+      "component_id": "icon-barn",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        660,
+        1022,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-barn-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-social-default",
+      "component_id": "icon-social",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        786,
+        1022,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-social-default-v1.png"
+    },
+    {
+      "semantic_name": "icon-task-default",
+      "component_id": "icon-task",
+      "category": "icon",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        96,
+        96
+      ],
+      "artboard": [
+        912,
+        1022,
+        96,
+        96
+      ],
+      "component_file": "assets/components/icon-task-default-v1.png"
+    },
+    {
+      "semantic_name": "char-farmer-default",
+      "component_id": "char-farmer",
+      "category": "character",
+      "state": "default",
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        240,
+        320
+      ],
+      "artboard": [
+        1038,
+        1022,
+        240,
+        320
+      ],
+      "component_file": "assets/components/char-farmer-default-v1.png"
+    },
+    {
+      "semantic_name": "deco-badge-default",
+      "component_id": "deco-badge",
+      "category": "decoration",
+      "state": "default",
+      "slice": {
+        "type": "1:1",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        120,
+        120
+      ],
+      "artboard": [
+        1308,
+        1022,
+        120,
+        120
+      ],
+      "component_file": "assets/components/deco-badge-default-v1.png"
+    },
+    {
+      "semantic_name": "bg-farm-default",
+      "component_id": "bg-farm",
+      "category": "background",
+      "state": "default",
+      "slice": {
+        "type": "full",
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "target_size": [
+        1024,
+        576
+      ],
+      "artboard": [
+        30,
+        1372,
+        1024,
+        576
+      ],
+      "component_file": "assets/components/bg-farm-default-v1.png"
+    }
+  ]
+}

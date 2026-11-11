@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "id": "happy-farm",
+  "title": "Happy Farm Pastoral",
+  "title_zh": "开心农场",
+  "platform": "mobile-landscape",
+  "ratio": "16:9",
+  "resolution": [
+    1792,
+    1024
+  ],
+  "style": "Q版卡通田园",
+  "tags": [
+    "farm",
+    "chibi",
+    "cartoon",
+    "pastoral",
+    "cozy",
+    "mobile-landscape",
+    "16:9"
+  ],
+  "counts": {
+    "pages": 6,
+    "components": 30,
+    "sprites": 37,
+    "engines": 5
+  },
+  "atlas": {
+    "size": [
+      2048,
+      2048
+    ],
+    "image": "assets/atlases/ui-main.png",
+    "data": "assets/atlases/ui-main.json"
+  },
+  "version": "1.0.0",
+  "status": "active",
+  "license": {
+    "assets": "CC-BY-4.0",
+    "code": "MIT"
+  },
+  "preview": "assets/pages/farm-v1.png",
+  "entry": "index.html",
+  "readme": "README.md",
+  "resources": {
+    "catalog": "index.html",
+    "shell": "result.html",
+    "manifest": "exports/web/manifest.json",
+    "tokens": "exports/web/tokens.css",
+    "atlas_png": "assets/atlases/ui-main.png",
+    "atlas_json": "assets/atlases/ui-main.json",
+    "package": "packages/ui-components-png.zip",
+    "engines": {
+      "cocos": "exports/cocos/ui-main.json",
+      "generic": "exports/generic/ui-main.json",
+      "godot": "exports/godot/ui-main.json",
+      "taptap-maker": "exports/taptap-maker/ui-main.json",
+      "unity": "exports/unity/ui-main.json"
+    }
+  },
+  "source": {
+    "pipeline": "kaying-for-ui",
+    "spec": "happy-farm"
+  }
+}

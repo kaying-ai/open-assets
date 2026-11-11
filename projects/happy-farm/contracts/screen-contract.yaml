@@ -1,0 +1,396 @@
+schema_version: 1
+project_id: "happy-farm"
+screens:
+  - id: farm
+    name: 农田主页
+    category: core
+    priority: must-have
+    status: approved
+    purpose: 种植核心循环的主界面：播种 / 浇水 / 收获 / 领离线收益，顶部资源条与底部导航的基准页。
+    entry_points:
+      - 登录回流默认落地
+      - 底部导航 farm tab
+    primary_actions:
+      - 播种 / 收获地块
+      - 领取离线收益
+      - 进入商店补种子
+    dependencies:
+      - wallet
+      - inventory
+    layout:
+      top:
+        - currency-bar
+      center:
+        - panel-card
+        - slot-item
+        - icon-carrot
+        - icon-wheat
+        - icon-water
+        - icon-seed
+        - char-farmer
+      bottom:
+        - nav-tab
+        - icon-farm
+        - icon-shop
+        - icon-barn
+        - icon-social
+        - icon-task
+      floating:
+        - btn-primary
+        - btn-claim
+        - deco-badge
+        - icon-gear
+    components:
+      - currency-bar
+      - panel-card
+      - slot-item
+      - btn-primary
+      - btn-claim
+      - btn-close
+      - nav-tab
+      - icon-coin
+      - icon-gem
+      - icon-energy
+      - icon-carrot
+      - icon-wheat
+      - icon-water
+      - icon-seed
+      - icon-star
+      - icon-lock
+      - icon-gear
+      - icon-farm
+      - icon-shop
+      - icon-barn
+      - icon-social
+      - icon-task
+      - char-farmer
+      - deco-badge
+      - bg-farm
+    states:
+      - default
+      - loading
+      - offline
+      - low-currency
+      - empty-plot
+      - locked-plot
+    edge_cases:
+      - 体力不足：浇水按钮置灰 + 恢复倒计时
+      - 地块未解锁：icon-lock + 扩建引导
+      - 离线收益弹窗：btn-claim 一键领取
+      - 断网：顶部 offline 横幅 + 重试
+    data_needs:
+      - wallet（coin / gem / energy）
+      - inventory（种子 / 作物）
+      - 地块状态与生长计时
+      - 农场等级 / 经验
+    output:
+      brief: 横屏农田主界面，中央 3×2 地块网格，顶部资源条，底部五 tab 导航，右下主操作按钮。
+      prompt: prompts/pages/farm.md
+      image: assets/pages/farm-v1.png
+
+  - id: shop
+    name: 商店
+    category: economy
+    priority: must-have
+    status: approved
+    purpose: 购买种子 / 道具 / 装饰：选品 → 确认 → 货币扣减反馈，付费操作二次确认。
+    entry_points:
+      - 底部导航 shop tab
+      - farm 资源不足「去商店」链路
+    primary_actions:
+      - 购买种子 / 道具
+      - 钻石加速二次确认
+    dependencies:
+      - wallet
+    layout:
+      top:
+        - currency-bar
+      center:
+        - panel-card
+        - slot-item
+        - icon-seed
+        - icon-water
+        - icon-carrot
+      bottom:
+        - nav-tab
+        - icon-farm
+        - icon-shop
+        - icon-barn
+        - icon-social
+        - icon-task
+      floating:
+        - btn-primary
+        - btn-secondary
+        - panel-modal
+        - btn-close
+    components:
+      - currency-bar
+      - panel-card
+      - panel-modal
+      - slot-item
+      - btn-primary
+      - btn-secondary
+      - btn-close
+      - nav-tab
+      - icon-coin
+      - icon-gem
+      - icon-seed
+      - icon-water
+      - icon-carrot
+      - icon-wheat
+      - icon-lock
+      - deco-badge
+    states:
+      - default
+      - loading
+      - low-currency
+      - confirm-purchase
+      - empty-stock
+    edge_cases:
+      - 余额不足：购买按钮置灰 + 不足提示 + 去赚取链路
+      - 钻石付费：panel-modal 二次确认
+      - 限购售罄：slot-item 置灰 + icon-lock
+    data_needs:
+      - wallet（coin / gem）
+      - 商品列表 / 价格 / 限购
+    output:
+      brief: 横屏商店，左侧分类标签，中部商品卡片网格（图标+价格区），右侧购买确认弹窗。
+      prompt: prompts/pages/shop.md
+      image: assets/pages/shop-v1.png
+
+  - id: barn
+    name: 仓库
+    category: growth
+    priority: must-have
+    status: approved
+    purpose: 作物 / 道具存储与出售：入库 → 选择 → 出售 → 金币增加；含图鉴收集进度。
+    entry_points:
+      - 底部导航 barn tab
+      - farm 收获后入库提示
+    primary_actions:
+      - 出售作物换金币
+      - 查看图鉴收集度
+    dependencies:
+      - inventory
+    layout:
+      top:
+        - currency-bar
+        - progress-bar
+      center:
+        - panel-card
+        - slot-item
+        - icon-carrot
+        - icon-wheat
+      bottom:
+        - nav-tab
+        - icon-farm
+        - icon-shop
+        - icon-barn
+        - icon-social
+        - icon-task
+      floating:
+        - btn-primary
+        - btn-secondary
+    components:
+      - currency-bar
+      - progress-bar
+      - panel-card
+      - slot-item
+      - btn-primary
+      - btn-secondary
+      - nav-tab
+      - icon-coin
+      - icon-carrot
+      - icon-wheat
+      - icon-seed
+      - icon-star
+      - icon-lock
+    states:
+      - default
+      - loading
+      - empty
+      - selling
+    edge_cases:
+      - 空仓库：empty 态 + 去种植引导
+      - 批量出售：选择多个 slot-item + 合计金币
+      - 图鉴未解锁：icon-lock 灰显
+    data_needs:
+      - inventory（作物 / 道具数量）
+      - wallet（coin）
+      - 图鉴收集进度
+    output:
+      brief: 横屏仓库，顶部容量进度条，中部物品格子矩阵，底部出售操作区与合计金额。
+      prompt: prompts/pages/barn.md
+      image: assets/pages/barn-v1.png
+
+  - id: social
+    name: 好友邻居
+    category: social
+    priority: must-have
+    status: approved
+    purpose: 好友列表与串门互助：进入好友农场 → 浇水 / 趣味偷菜，异步温暖互动。
+    entry_points:
+      - 底部导航 social tab
+    primary_actions:
+      - 串门好友农场
+      - 帮忙浇水 / 偷菜
+    dependencies: []
+    layout:
+      top:
+        - currency-bar
+      center:
+        - panel-card
+        - char-farmer
+        - icon-heart
+      bottom:
+        - nav-tab
+        - icon-farm
+        - icon-shop
+        - icon-barn
+        - icon-social
+        - icon-task
+      floating:
+        - btn-secondary
+        - btn-claim
+        - deco-badge
+    components:
+      - currency-bar
+      - panel-card
+      - btn-secondary
+      - btn-claim
+      - nav-tab
+      - icon-energy
+      - icon-heart
+      - icon-water
+      - icon-gift
+      - char-farmer
+      - deco-badge
+    states:
+      - default
+      - loading
+      - empty
+      - visiting
+      - no-energy
+    edge_cases:
+      - 无好友：empty 态 + 邀请入口
+      - 体力不足：互助按钮置灰 + 倒计时
+      - 好友农场离线：offline 提示
+    data_needs:
+      - friends（列表 / 状态）
+      - wallet（energy）
+      - 互助次数 / 冷却
+    output:
+      brief: 横屏好友页，左侧好友列表卡片（头像+名字+状态），右侧好友农场预览与互助操作。
+      prompt: prompts/pages/social.md
+      image: assets/pages/social-v1.png
+
+  - id: task
+    name: 任务成就
+    category: retention
+    priority: must-have
+    status: approved
+    purpose: 日常 / 成长任务进度与奖励领取：任务进度 → 领取 → 奖励反馈。
+    entry_points:
+      - 底部导航 task tab
+      - farm 红点引导
+    primary_actions:
+      - 领取任务奖励
+      - 查看成长任务
+    dependencies: []
+    layout:
+      top:
+        - currency-bar
+      center:
+        - panel-card
+        - progress-bar
+        - icon-star
+        - icon-gift
+      bottom:
+        - nav-tab
+        - icon-farm
+        - icon-shop
+        - icon-barn
+        - icon-social
+        - icon-task
+      floating:
+        - btn-claim
+        - deco-badge
+    components:
+      - currency-bar
+      - panel-card
+      - progress-bar
+      - btn-claim
+      - btn-secondary
+      - nav-tab
+      - icon-coin
+      - icon-gem
+      - icon-star
+      - icon-gift
+      - deco-badge
+    states:
+      - default
+      - loading
+      - claimable
+      - empty
+      - claimed
+    edge_cases:
+      - 无可领任务：empty 态
+      - 奖励已领：btn-claim 置灰「已领取」
+      - 进度未满：progress-bar 显示 x/y
+    data_needs:
+      - tasks（进度 / 奖励 / 状态）
+      - wallet（coin / gem）
+    output:
+      brief: 横屏任务页，左侧日常/成长标签，中部任务卡片列表（进度条+奖励图标+领取按钮）。
+      prompt: prompts/pages/task.md
+      image: assets/pages/task-v1.png
+
+  - id: settings
+    name: 设置
+    category: support
+    priority: must-have
+    status: approved
+    purpose: 音效 / 通知开关，账号 / 帮助入口；破坏性操作（退出/重置）二次确认。
+    entry_points:
+      - farm 右上 icon-gear
+      - 底部导航更多
+    primary_actions:
+      - 切换音效 / 通知
+      - 进入账号 / 帮助
+    dependencies: []
+    layout:
+      top:
+        - currency-bar
+      center:
+        - panel-modal
+        - panel-card
+        - icon-gear
+      bottom:
+        - btn-secondary
+        - btn-close
+      floating:
+        - btn-primary
+    components:
+      - panel-modal
+      - panel-card
+      - btn-primary
+      - btn-secondary
+      - btn-close
+      - icon-gear
+      - icon-heart
+      - icon-lock
+    states:
+      - default
+      - confirm-exit
+      - offline
+    edge_cases:
+      - 退出登录：panel-modal 二次确认
+      - 通知权限拒绝：引导系统设置
+      - 断网：账号入口 offline 提示
+    data_needs:
+      - 设置项（音效 / 通知 / 语言）
+      - 账号状态
+    output:
+      brief: 横屏设置弹窗，居中面板含开关行（音效/通知）与账号/帮助/退出按钮，关闭按钮右上。
+      prompt: prompts/pages/settings.md
+      image: assets/pages/settings-v1.png

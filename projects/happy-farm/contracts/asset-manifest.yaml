@@ -1,0 +1,530 @@
+schema_version: 1
+project_id: happy-farm
+assets:
+  - id: farm-page
+    kind: page
+    screen_id: farm
+    status: approved
+    approved: true
+    dimensions:
+      - 1792
+      - 1024
+    transparent_background: false
+    prompt_path: prompts/pages/farm.md
+    path: assets/pages/farm-v1.png
+  - id: shop-page
+    kind: page
+    screen_id: shop
+    status: approved
+    approved: true
+    dimensions:
+      - 1792
+      - 1024
+    transparent_background: false
+    prompt_path: prompts/pages/shop.md
+    path: assets/pages/shop-v1.png
+  - id: barn-page
+    kind: page
+    screen_id: barn
+    status: approved
+    approved: true
+    dimensions:
+      - 1792
+      - 1024
+    transparent_background: false
+    prompt_path: prompts/pages/barn.md
+    path: assets/pages/barn-v1.png
+  - id: social-page
+    kind: page
+    screen_id: social
+    status: approved
+    approved: true
+    dimensions:
+      - 1792
+      - 1024
+    transparent_background: false
+    prompt_path: prompts/pages/social.md
+    path: assets/pages/social-v1.png
+  - id: task-page
+    kind: page
+    screen_id: task
+    status: approved
+    approved: true
+    dimensions:
+      - 1792
+      - 1024
+    transparent_background: false
+    prompt_path: prompts/pages/task.md
+    path: assets/pages/task-v1.png
+  - id: settings-page
+    kind: page
+    screen_id: settings
+    status: approved
+    approved: true
+    dimensions:
+      - 1792
+      - 1024
+    transparent_background: false
+    prompt_path: prompts/pages/settings.md
+    path: assets/pages/settings-v1.png
+  - id: btn-primary-default
+    kind: component
+    screen_id: farm
+    component_id: btn-primary
+    status: approved
+    approved: true
+    dimensions:
+      - 360
+      - 112
+    transparent_background: true
+    prompt_path: prompts/components/btn-primary.md
+    path: assets/components/btn-primary-default-v1.png
+  - id: btn-primary-pressed
+    kind: component
+    screen_id: farm
+    component_id: btn-primary
+    status: approved
+    approved: true
+    dimensions:
+      - 360
+      - 112
+    transparent_background: true
+    prompt_path: prompts/components/btn-primary.md
+    path: assets/components/btn-primary-pressed-v1.png
+  - id: btn-primary-disabled
+    kind: component
+    screen_id: farm
+    component_id: btn-primary
+    status: approved
+    approved: true
+    dimensions:
+      - 360
+      - 112
+    transparent_background: true
+    prompt_path: prompts/components/btn-primary.md
+    path: assets/components/btn-primary-disabled-v1.png
+  - id: btn-secondary-default
+    kind: component
+    screen_id: farm
+    component_id: btn-secondary
+    status: approved
+    approved: true
+    dimensions:
+      - 320
+      - 104
+    transparent_background: true
+    prompt_path: prompts/components/btn-secondary.md
+    path: assets/components/btn-secondary-default-v1.png
+  - id: btn-secondary-pressed
+    kind: component
+    screen_id: farm
+    component_id: btn-secondary
+    status: approved
+    approved: true
+    dimensions:
+      - 320
+      - 104
+    transparent_background: true
+    prompt_path: prompts/components/btn-secondary.md
+    path: assets/components/btn-secondary-pressed-v1.png
+  - id: btn-claim-default
+    kind: component
+    screen_id: farm
+    component_id: btn-claim
+    status: approved
+    approved: true
+    dimensions:
+      - 300
+      - 104
+    transparent_background: true
+    prompt_path: prompts/components/btn-claim.md
+    path: assets/components/btn-claim-default-v1.png
+  - id: btn-claim-pressed
+    kind: component
+    screen_id: farm
+    component_id: btn-claim
+    status: approved
+    approved: true
+    dimensions:
+      - 300
+      - 104
+    transparent_background: true
+    prompt_path: prompts/components/btn-claim.md
+    path: assets/components/btn-claim-pressed-v1.png
+  - id: btn-close-default
+    kind: component
+    screen_id: farm
+    component_id: btn-close
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/btn-close.md
+    path: assets/components/btn-close-default-v1.png
+  - id: btn-close-pressed
+    kind: component
+    screen_id: farm
+    component_id: btn-close
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/btn-close.md
+    path: assets/components/btn-close-pressed-v1.png
+  - id: nav-tab-default
+    kind: component
+    screen_id: farm
+    component_id: nav-tab
+    status: approved
+    approved: true
+    dimensions:
+      - 200
+      - 120
+    transparent_background: true
+    prompt_path: prompts/components/nav-tab.md
+    path: assets/components/nav-tab-default-v1.png
+  - id: nav-tab-pressed
+    kind: component
+    screen_id: farm
+    component_id: nav-tab
+    status: approved
+    approved: true
+    dimensions:
+      - 200
+      - 120
+    transparent_background: true
+    prompt_path: prompts/components/nav-tab.md
+    path: assets/components/nav-tab-pressed-v1.png
+  - id: nav-tab-selected
+    kind: component
+    screen_id: farm
+    component_id: nav-tab
+    status: approved
+    approved: true
+    dimensions:
+      - 200
+      - 120
+    transparent_background: true
+    prompt_path: prompts/components/nav-tab.md
+    path: assets/components/nav-tab-selected-v1.png
+  - id: currency-bar-default
+    kind: component
+    screen_id: farm
+    component_id: currency-bar
+    status: approved
+    approved: true
+    dimensions:
+      - 720
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/currency-bar.md
+    path: assets/components/currency-bar-default-v1.png
+  - id: panel-card-default
+    kind: component
+    screen_id: farm
+    component_id: panel-card
+    status: approved
+    approved: true
+    dimensions:
+      - 560
+      - 400
+    transparent_background: true
+    prompt_path: prompts/components/panel-card.md
+    path: assets/components/panel-card-default-v1.png
+  - id: panel-modal-default
+    kind: component
+    screen_id: farm
+    component_id: panel-modal
+    status: approved
+    approved: true
+    dimensions:
+      - 640
+      - 480
+    transparent_background: true
+    prompt_path: prompts/components/panel-modal.md
+    path: assets/components/panel-modal-default-v1.png
+  - id: slot-item-default
+    kind: component
+    screen_id: farm
+    component_id: slot-item
+    status: approved
+    approved: true
+    dimensions:
+      - 160
+      - 160
+    transparent_background: true
+    prompt_path: prompts/components/slot-item.md
+    path: assets/components/slot-item-default-v1.png
+  - id: progress-bar-default
+    kind: component
+    screen_id: farm
+    component_id: progress-bar
+    status: approved
+    approved: true
+    dimensions:
+      - 560
+      - 64
+    transparent_background: true
+    prompt_path: prompts/components/progress-bar.md
+    path: assets/components/progress-bar-default-v1.png
+  - id: icon-coin-default
+    kind: component
+    screen_id: farm
+    component_id: icon-coin
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-coin.md
+    path: assets/components/icon-coin-default-v1.png
+  - id: icon-gem-default
+    kind: component
+    screen_id: farm
+    component_id: icon-gem
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-gem.md
+    path: assets/components/icon-gem-default-v1.png
+  - id: icon-energy-default
+    kind: component
+    screen_id: farm
+    component_id: icon-energy
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-energy.md
+    path: assets/components/icon-energy-default-v1.png
+  - id: icon-carrot-default
+    kind: component
+    screen_id: farm
+    component_id: icon-carrot
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-carrot.md
+    path: assets/components/icon-carrot-default-v1.png
+  - id: icon-wheat-default
+    kind: component
+    screen_id: farm
+    component_id: icon-wheat
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-wheat.md
+    path: assets/components/icon-wheat-default-v1.png
+  - id: icon-water-default
+    kind: component
+    screen_id: farm
+    component_id: icon-water
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-water.md
+    path: assets/components/icon-water-default-v1.png
+  - id: icon-seed-default
+    kind: component
+    screen_id: farm
+    component_id: icon-seed
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-seed.md
+    path: assets/components/icon-seed-default-v1.png
+  - id: icon-star-default
+    kind: component
+    screen_id: farm
+    component_id: icon-star
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-star.md
+    path: assets/components/icon-star-default-v1.png
+  - id: icon-lock-default
+    kind: component
+    screen_id: farm
+    component_id: icon-lock
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-lock.md
+    path: assets/components/icon-lock-default-v1.png
+  - id: icon-gear-default
+    kind: component
+    screen_id: farm
+    component_id: icon-gear
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-gear.md
+    path: assets/components/icon-gear-default-v1.png
+  - id: icon-heart-default
+    kind: component
+    screen_id: farm
+    component_id: icon-heart
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-heart.md
+    path: assets/components/icon-heart-default-v1.png
+  - id: icon-gift-default
+    kind: component
+    screen_id: farm
+    component_id: icon-gift
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-gift.md
+    path: assets/components/icon-gift-default-v1.png
+  - id: icon-farm-default
+    kind: component
+    screen_id: farm
+    component_id: icon-farm
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-farm.md
+    path: assets/components/icon-farm-default-v1.png
+  - id: icon-shop-default
+    kind: component
+    screen_id: farm
+    component_id: icon-shop
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-shop.md
+    path: assets/components/icon-shop-default-v1.png
+  - id: icon-barn-default
+    kind: component
+    screen_id: farm
+    component_id: icon-barn
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-barn.md
+    path: assets/components/icon-barn-default-v1.png
+  - id: icon-social-default
+    kind: component
+    screen_id: farm
+    component_id: icon-social
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-social.md
+    path: assets/components/icon-social-default-v1.png
+  - id: icon-task-default
+    kind: component
+    screen_id: farm
+    component_id: icon-task
+    status: approved
+    approved: true
+    dimensions:
+      - 96
+      - 96
+    transparent_background: true
+    prompt_path: prompts/components/icon-task.md
+    path: assets/components/icon-task-default-v1.png
+  - id: char-farmer-default
+    kind: component
+    screen_id: farm
+    component_id: char-farmer
+    status: approved
+    approved: true
+    dimensions:
+      - 240
+      - 320
+    transparent_background: true
+    prompt_path: prompts/components/char-farmer.md
+    path: assets/components/char-farmer-default-v1.png
+  - id: deco-badge-default
+    kind: component
+    screen_id: farm
+    component_id: deco-badge
+    status: approved
+    approved: true
+    dimensions:
+      - 120
+      - 120
+    transparent_background: true
+    prompt_path: prompts/components/deco-badge.md
+    path: assets/components/deco-badge-default-v1.png
+  - id: bg-farm-default
+    kind: component
+    screen_id: farm
+    component_id: bg-farm
+    status: approved
+    approved: true
+    dimensions:
+      - 1024
+      - 576
+    transparent_background: false
+    prompt_path: prompts/components/bg-farm.md
+    path: assets/components/bg-farm-default-v1.png
+  - id: ui-components-sheet
+    kind: sprite-sheet
+    screen_id: farm
+    status: approved
+    approved: true
+    dimensions:
+      - 2048
+      - 1978
+    transparent_background: true
+    prompt_path: prompts/components/ui-components-sheet.md
+    path: assets/sprites/ui-components-sheet.png
+  - id: ui-components-png
+    kind: package
+    screen_id: farm
+    status: approved
+    approved: true
+    path: packages/ui-components-png.zip

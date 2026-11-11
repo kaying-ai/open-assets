@@ -1,0 +1,408 @@
+items:
+  - semantic_name: btn-primary-default
+    component_id: btn-primary
+    category: control
+    state: default
+    slice:
+      type: 9-slice
+      margins:
+        - 48
+        - 48
+        - 40
+        - 40
+  - semantic_name: btn-primary-pressed
+    component_id: btn-primary
+    category: control
+    state: pressed
+    slice:
+      type: 9-slice
+      margins:
+        - 48
+        - 48
+        - 40
+        - 40
+  - semantic_name: btn-primary-disabled
+    component_id: btn-primary
+    category: control
+    state: disabled
+    slice:
+      type: 9-slice
+      margins:
+        - 48
+        - 48
+        - 40
+        - 40
+  - semantic_name: btn-secondary-default
+    component_id: btn-secondary
+    category: control
+    state: default
+    slice:
+      type: 9-slice
+      margins:
+        - 44
+        - 44
+        - 36
+        - 36
+  - semantic_name: btn-secondary-pressed
+    component_id: btn-secondary
+    category: control
+    state: pressed
+    slice:
+      type: 9-slice
+      margins:
+        - 44
+        - 44
+        - 36
+        - 36
+  - semantic_name: btn-claim-default
+    component_id: btn-claim
+    category: control
+    state: default
+    slice:
+      type: 9-slice
+      margins:
+        - 44
+        - 44
+        - 36
+        - 36
+  - semantic_name: btn-claim-pressed
+    component_id: btn-claim
+    category: control
+    state: pressed
+    slice:
+      type: 9-slice
+      margins:
+        - 44
+        - 44
+        - 36
+        - 36
+  - semantic_name: nav-tab-default
+    component_id: nav-tab
+    category: control
+    state: default
+    slice:
+      type: 9-slice
+      margins:
+        - 32
+        - 32
+        - 32
+        - 32
+  - semantic_name: nav-tab-pressed
+    component_id: nav-tab
+    category: control
+    state: pressed
+    slice:
+      type: 9-slice
+      margins:
+        - 32
+        - 32
+        - 32
+        - 32
+  - semantic_name: nav-tab-selected
+    component_id: nav-tab
+    category: control
+    state: selected
+    slice:
+      type: 9-slice
+      margins:
+        - 32
+        - 32
+        - 32
+        - 32
+  - semantic_name: btn-close-default
+    component_id: btn-close
+    category: control
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: btn-close-pressed
+    component_id: btn-close
+    category: control
+    state: pressed
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: currency-bar-default
+    component_id: currency-bar
+    category: container
+    state: default
+    slice:
+      type: 9-slice
+      margins:
+        - 48
+        - 48
+        - 32
+        - 32
+  - semantic_name: panel-card-default
+    component_id: panel-card
+    category: container
+    state: default
+    slice:
+      type: 9-slice
+      margins:
+        - 40
+        - 40
+        - 40
+        - 40
+  - semantic_name: panel-modal-default
+    component_id: panel-modal
+    category: container
+    state: default
+    slice:
+      type: 9-slice
+      margins:
+        - 48
+        - 48
+        - 48
+        - 48
+  - semantic_name: slot-item-default
+    component_id: slot-item
+    category: container
+    state: default
+    slice:
+      type: 9-slice
+      margins:
+        - 28
+        - 28
+        - 28
+        - 28
+  - semantic_name: progress-bar-default
+    component_id: progress-bar
+    category: container
+    state: default
+    slice:
+      type: 9-slice
+      margins:
+        - 32
+        - 32
+        - 24
+        - 24
+  - semantic_name: icon-wheat-default
+    component_id: icon-wheat
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-energy-default
+    component_id: icon-energy
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-carrot-default
+    component_id: icon-carrot
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-star-default
+    component_id: icon-star
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-gem-default
+    component_id: icon-gem
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-water-default
+    component_id: icon-water
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-coin-default
+    component_id: icon-coin
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-lock-default
+    component_id: icon-lock
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-seed-default
+    component_id: icon-seed
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: deco-badge-default
+    component_id: deco-badge
+    category: decoration
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-gear-default
+    component_id: icon-gear
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-task-default
+    component_id: icon-task
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-barn-default
+    component_id: icon-barn
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-shop-default
+    component_id: icon-shop
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-social-default
+    component_id: icon-social
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-gift-default
+    component_id: icon-gift
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-heart-default
+    component_id: icon-heart
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: icon-farm-default
+    component_id: icon-farm
+    category: icon
+    state: default
+    slice:
+      type: '1:1'
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: char-farmer-default
+    component_id: char-farmer
+    category: character
+    state: default
+    slice:
+      type: full
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0
+  - semantic_name: bg-farm-default
+    component_id: bg-farm
+    category: background
+    state: default
+    slice:
+      type: full
+      margins:
+        - 0
+        - 0
+        - 0
+        - 0

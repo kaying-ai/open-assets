@@ -1,0 +1,485 @@
+schema_version: 1
+project_id: "happy-farm"
+source_screen_id: farm
+source_screen_status: approved
+components:
+  - id: btn-primary
+    name: 主按钮
+    category: control
+    reusable: true
+    clickable: true
+    transparent_background: true
+    text_policy: no-text
+    target_size: [360, 112]
+    states: [default, pressed, disabled]
+    material: soft-candy
+    atlas_group: button
+    slice: {type: 9-slice, margins: [48, 48, 40, 40]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.primary, colors.pressed, colors.disabled, geometry.radius, geometry.stroke, effects.shadow]
+    prompt: prompts/components/btn-primary.md
+    output: assets/components/btn-primary-default-v1.png
+  - id: btn-secondary
+    name: 次按钮
+    category: control
+    reusable: true
+    clickable: true
+    transparent_background: true
+    text_policy: no-text
+    target_size: [320, 104]
+    states: [default, pressed]
+    material: soft-candy
+    atlas_group: button
+    slice: {type: 9-slice, margins: [44, 44, 36, 36]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.secondary, colors.pressed, geometry.radius, geometry.stroke]
+    prompt: prompts/components/btn-secondary.md
+    output: assets/components/btn-secondary-default-v1.png
+  - id: btn-claim
+    name: 领取按钮
+    category: control
+    reusable: true
+    clickable: true
+    transparent_background: true
+    text_policy: no-text
+    target_size: [300, 104]
+    states: [default, pressed]
+    material: soft-candy
+    atlas_group: button
+    slice: {type: 9-slice, margins: [44, 44, 36, 36]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.reward, colors.pressed, geometry.radius, geometry.stroke]
+    prompt: prompts/components/btn-claim.md
+    output: assets/components/btn-claim-default-v1.png
+  - id: btn-close
+    name: 关闭按钮
+    category: control
+    reusable: true
+    clickable: true
+    transparent_background: true
+    text_policy: no-text
+    target_size: [96, 96]
+    states: [default, pressed]
+    material: soft-candy
+    atlas_group: button
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.warning, colors.pressed, geometry.stroke]
+    prompt: prompts/components/btn-close.md
+    output: assets/components/btn-close-default-v1.png
+  - id: nav-tab
+    name: 导航标签
+    category: control
+    reusable: true
+    clickable: true
+    transparent_background: true
+    text_policy: no-text
+    target_size: [200, 120]
+    states: [default, pressed, selected]
+    material: soft-candy
+    atlas_group: button
+    slice: {type: 9-slice, margins: [32, 32, 32, 32]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.primary, colors.secondary, colors.surface, geometry.radius, geometry.stroke]
+    prompt: prompts/components/nav-tab.md
+    output: assets/components/nav-tab-default-v1.png
+  - id: currency-bar
+    name: 货币栏
+    category: container
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: no-text
+    target_size: [720, 96]
+    states: [default]
+    material: cream-paper
+    atlas_group: container
+    slice: {type: 9-slice, margins: [48, 48, 32, 32]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.surface, colors.stroke, geometry.radius, icon_size.currency]
+    prompt: prompts/components/currency-bar.md
+    output: assets/components/currency-bar-default-v1.png
+  - id: panel-card
+    name: 卡片面板
+    category: container
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: no-text
+    target_size: [560, 400]
+    states: [default]
+    material: cream-paper
+    atlas_group: container
+    slice: {type: 9-slice, margins: [40, 40, 40, 40]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.surface, geometry.radius.card, geometry.stroke, effects.highlight]
+    prompt: prompts/components/panel-card.md
+    output: assets/components/panel-card-default-v1.png
+  - id: panel-modal
+    name: 弹窗底板
+    category: container
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: no-text
+    target_size: [640, 480]
+    states: [default]
+    material: cream-paper
+    atlas_group: container
+    slice: {type: 9-slice, margins: [48, 48, 48, 48]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.surface, geometry.radius.modal, geometry.stroke.strong, effects.shadow]
+    prompt: prompts/components/panel-modal.md
+    output: assets/components/panel-modal-default-v1.png
+  - id: slot-item
+    name: 物品格子
+    category: container
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: no-text
+    target_size: [160, 160]
+    states: [default]
+    material: wood
+    atlas_group: container
+    slice: {type: 9-slice, margins: [28, 28, 28, 28]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.surface.cell, geometry.radius.small, geometry.stroke]
+    prompt: prompts/components/slot-item.md
+    output: assets/components/slot-item-default-v1.png
+  - id: progress-bar
+    name: 进度条
+    category: container
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: no-text
+    target_size: [560, 64]
+    states: [default]
+    material: soft-candy
+    atlas_group: container
+    slice: {type: 9-slice, margins: [32, 32, 24, 24]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.secondary, colors.surface, geometry.radius, geometry.stroke]
+    prompt: prompts/components/progress-bar.md
+    output: assets/components/progress-bar-default-v1.png
+  - id: icon-coin
+    name: 金币图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: soft-candy
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.reward, geometry.stroke]
+    prompt: prompts/components/icon-coin.md
+    output: assets/components/icon-coin-default-v1.png
+  - id: icon-gem
+    name: 钻石图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: soft-candy
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.accent, geometry.stroke]
+    prompt: prompts/components/icon-gem.md
+    output: assets/components/icon-gem-default-v1.png
+  - id: icon-energy
+    name: 体力图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: soft-candy
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.reward, colors.warning, geometry.stroke]
+    prompt: prompts/components/icon-energy.md
+    output: assets/components/icon-energy-default-v1.png
+  - id: icon-carrot
+    name: 胡萝卜图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: matte-paint
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.primary, colors.secondary, geometry.stroke]
+    prompt: prompts/components/icon-carrot.md
+    output: assets/components/icon-carrot-default-v1.png
+  - id: icon-wheat
+    name: 小麦图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: matte-paint
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.reward, geometry.stroke]
+    prompt: prompts/components/icon-wheat.md
+    output: assets/components/icon-wheat-default-v1.png
+  - id: icon-water
+    name: 水滴图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: soft-candy
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.accent, geometry.stroke]
+    prompt: prompts/components/icon-water.md
+    output: assets/components/icon-water-default-v1.png
+  - id: icon-seed
+    name: 种子图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: matte-paint
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.secondary, colors.surface.cell, geometry.stroke]
+    prompt: prompts/components/icon-seed.md
+    output: assets/components/icon-seed-default-v1.png
+  - id: icon-star
+    name: 星星图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: soft-candy
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.reward, geometry.stroke]
+    prompt: prompts/components/icon-star.md
+    output: assets/components/icon-star-default-v1.png
+  - id: icon-lock
+    name: 锁图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: soft-candy
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.disabled, colors.reward, geometry.stroke]
+    prompt: prompts/components/icon-lock.md
+    output: assets/components/icon-lock-default-v1.png
+  - id: icon-gear
+    name: 齿轮图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: soft-candy
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.disabled, geometry.stroke]
+    prompt: prompts/components/icon-gear.md
+    output: assets/components/icon-gear-default-v1.png
+  - id: icon-heart
+    name: 爱心图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: soft-candy
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.warning, geometry.stroke]
+    prompt: prompts/components/icon-heart.md
+    output: assets/components/icon-heart-default-v1.png
+  - id: icon-gift
+    name: 礼物图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: soft-candy
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.warning, colors.reward, geometry.stroke]
+    prompt: prompts/components/icon-gift.md
+    output: assets/components/icon-gift-default-v1.png
+  - id: icon-farm
+    name: 农田导航图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: matte-paint
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.secondary, geometry.stroke]
+    prompt: prompts/components/icon-farm.md
+    output: assets/components/icon-farm-default-v1.png
+  - id: icon-shop
+    name: 商店导航图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: soft-candy
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.primary, geometry.stroke]
+    prompt: prompts/components/icon-shop.md
+    output: assets/components/icon-shop-default-v1.png
+  - id: icon-barn
+    name: 仓库导航图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: wood
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.surface.cell, colors.warning, geometry.stroke]
+    prompt: prompts/components/icon-barn.md
+    output: assets/components/icon-barn-default-v1.png
+  - id: icon-social
+    name: 好友导航图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: soft-candy
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.accent, geometry.stroke]
+    prompt: prompts/components/icon-social.md
+    output: assets/components/icon-social-default-v1.png
+  - id: icon-task
+    name: 任务导航图标
+    category: icon
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [96, 96]
+    states: [default]
+    material: soft-candy
+    atlas_group: icon
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.reward, geometry.stroke]
+    prompt: prompts/components/icon-task.md
+    output: assets/components/icon-task-default-v1.png
+  - id: char-farmer
+    name: 农场主角色
+    category: character
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [240, 320]
+    states: [default]
+    material: matte-paint
+    atlas_group: character
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [visual.theme, colors.primary, colors.secondary, geometry.stroke]
+    prompt: prompts/components/char-farmer.md
+    output: assets/components/char-farmer-default-v1.png
+  - id: deco-badge
+    name: 奖励角标
+    category: decoration
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: none
+    target_size: [120, 120]
+    states: [default]
+    material: soft-candy
+    atlas_group: decoration
+    slice: {type: 1:1, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [colors.reward, colors.warning, geometry.stroke]
+    prompt: prompts/components/deco-badge.md
+    output: assets/components/deco-badge-default-v1.png
+  - id: bg-farm
+    name: 农田背景
+    category: background
+    reusable: false
+    clickable: false
+    transparent_background: false
+    text_policy: none
+    target_size: [1024, 576]
+    states: [default]
+    material: scene
+    atlas_group: background
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies: [visual.materials, visual.lighting, colors.background, colors.secondary]
+    prompt: prompts/components/bg-farm.md
+    output: assets/components/bg-farm-default-v1.png

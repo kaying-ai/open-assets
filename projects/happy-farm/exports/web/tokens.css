@@ -1,0 +1,19 @@
+/* happy-farm · game design tokens (from contracts/style-contract.yaml) */
+/* These are GAME tokens (--game-*). Web delivery chrome uses fixed --shell-* in index/result.html. */
+:root {
+  --game-primary: #FF8A3D;
+  --game-secondary: #6FBF4A;
+  --game-accent: #4FB6E8;
+  --game-bg: #CDEAF7;
+  --game-warning: #E85D4A;
+  --game-reward: #FFC93C;
+  --game-disabled: #C9C2B6;
+  --game-surface-board: #8FCB6B;
+  --game-surface-cell: #C68A4B;
+  --game-surface-card: #FFF6E3;
+  --game-surface-card-hi: #FFFFFF;
+  --game-ref-width: 1792;
+  --game-ref-height: 1024;
+  --game-radius-md: 20px;
+  --game-radius-lg: 28px;
+}

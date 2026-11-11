@@ -1,0 +1,814 @@
+- id: btn-primary-default
+  semantic_name: btn-primary-default
+  component_id: btn-primary
+  category: control
+  state: default
+  bbox:
+    - 26
+    - 26
+    - 368
+    - 120
+  dimensions:
+    - 368
+    - 120
+  transparent_background: true
+  path: assets/sprites/ui-components/items/btn-primary-default.png
+  slice:
+    type: 9-slice
+    margins:
+      - 48
+      - 48
+      - 40
+      - 40
+- id: btn-primary-pressed
+  semantic_name: btn-primary-pressed
+  component_id: btn-primary
+  category: control
+  state: pressed
+  bbox:
+    - 416
+    - 26
+    - 368
+    - 120
+  dimensions:
+    - 368
+    - 120
+  transparent_background: true
+  path: assets/sprites/ui-components/items/btn-primary-pressed.png
+  slice:
+    type: 9-slice
+    margins:
+      - 48
+      - 48
+      - 40
+      - 40
+- id: btn-primary-disabled
+  semantic_name: btn-primary-disabled
+  component_id: btn-primary
+  category: control
+  state: disabled
+  bbox:
+    - 806
+    - 26
+    - 368
+    - 120
+  dimensions:
+    - 368
+    - 120
+  transparent_background: true
+  path: assets/sprites/ui-components/items/btn-primary-disabled.png
+  slice:
+    type: 9-slice
+    margins:
+      - 48
+      - 48
+      - 40
+      - 40
+- id: btn-secondary-default
+  semantic_name: btn-secondary-default
+  component_id: btn-secondary
+  category: control
+  state: default
+  bbox:
+    - 1196
+    - 26
+    - 328
+    - 112
+  dimensions:
+    - 328
+    - 112
+  transparent_background: true
+  path: assets/sprites/ui-components/items/btn-secondary-default.png
+  slice:
+    type: 9-slice
+    margins:
+      - 44
+      - 44
+      - 36
+      - 36
+- id: btn-secondary-pressed
+  semantic_name: btn-secondary-pressed
+  component_id: btn-secondary
+  category: control
+  state: pressed
+  bbox:
+    - 1546
+    - 26
+    - 328
+    - 112
+  dimensions:
+    - 328
+    - 112
+  transparent_background: true
+  path: assets/sprites/ui-components/items/btn-secondary-pressed.png
+  slice:
+    type: 9-slice
+    margins:
+      - 44
+      - 44
+      - 36
+      - 36
+- id: btn-claim-default
+  semantic_name: btn-claim-default
+  component_id: btn-claim
+  category: control
+  state: default
+  bbox:
+    - 26
+    - 168
+    - 308
+    - 112
+  dimensions:
+    - 308
+    - 112
+  transparent_background: true
+  path: assets/sprites/ui-components/items/btn-claim-default.png
+  slice:
+    type: 9-slice
+    margins:
+      - 44
+      - 44
+      - 36
+      - 36
+- id: btn-claim-pressed
+  semantic_name: btn-claim-pressed
+  component_id: btn-claim
+  category: control
+  state: pressed
+  bbox:
+    - 356
+    - 168
+    - 308
+    - 112
+  dimensions:
+    - 308
+    - 112
+  transparent_background: true
+  path: assets/sprites/ui-components/items/btn-claim-pressed.png
+  slice:
+    type: 9-slice
+    margins:
+      - 44
+      - 44
+      - 36
+      - 36
+- id: nav-tab-default
+  semantic_name: nav-tab-default
+  component_id: nav-tab
+  category: control
+  state: default
+  bbox:
+    - 938
+    - 168
+    - 208
+    - 128
+  dimensions:
+    - 208
+    - 128
+  transparent_background: true
+  path: assets/sprites/ui-components/items/nav-tab-default.png
+  slice:
+    type: 9-slice
+    margins:
+      - 32
+      - 32
+      - 32
+      - 32
+- id: nav-tab-pressed
+  semantic_name: nav-tab-pressed
+  component_id: nav-tab
+  category: control
+  state: pressed
+  bbox:
+    - 1168
+    - 168
+    - 208
+    - 128
+  dimensions:
+    - 208
+    - 128
+  transparent_background: true
+  path: assets/sprites/ui-components/items/nav-tab-pressed.png
+  slice:
+    type: 9-slice
+    margins:
+      - 32
+      - 32
+      - 32
+      - 32
+- id: nav-tab-selected
+  semantic_name: nav-tab-selected
+  component_id: nav-tab
+  category: control
+  state: selected
+  bbox:
+    - 1398
+    - 168
+    - 208
+    - 128
+  dimensions:
+    - 208
+    - 128
+  transparent_background: true
+  path: assets/sprites/ui-components/items/nav-tab-selected.png
+  slice:
+    type: 9-slice
+    margins:
+      - 32
+      - 32
+      - 32
+      - 32
+- id: btn-close-default
+  semantic_name: btn-close-default
+  component_id: btn-close
+  category: control
+  state: default
+  bbox:
+    - 688
+    - 170
+    - 100
+    - 100
+  dimensions:
+    - 100
+    - 100
+  transparent_background: true
+  path: assets/sprites/ui-components/items/btn-close-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: btn-close-pressed
+  semantic_name: btn-close-pressed
+  component_id: btn-close
+  category: control
+  state: pressed
+  bbox:
+    - 814
+    - 170
+    - 100
+    - 100
+  dimensions:
+    - 100
+    - 100
+  transparent_background: true
+  path: assets/sprites/ui-components/items/btn-close-pressed.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: currency-bar-default
+  semantic_name: currency-bar-default
+  component_id: currency-bar
+  category: container
+  state: default
+  bbox:
+    - 26
+    - 318
+    - 728
+    - 104
+  dimensions:
+    - 728
+    - 104
+  transparent_background: true
+  path: assets/sprites/ui-components/items/currency-bar-default.png
+  slice:
+    type: 9-slice
+    margins:
+      - 48
+      - 48
+      - 32
+      - 32
+- id: panel-card-default
+  semantic_name: panel-card-default
+  component_id: panel-card
+  category: container
+  state: default
+  bbox:
+    - 776
+    - 318
+    - 568
+    - 408
+  dimensions:
+    - 568
+    - 408
+  transparent_background: true
+  path: assets/sprites/ui-components/items/panel-card-default.png
+  slice:
+    type: 9-slice
+    margins:
+      - 40
+      - 40
+      - 40
+      - 40
+- id: panel-modal-default
+  semantic_name: panel-modal-default
+  component_id: panel-modal
+  category: container
+  state: default
+  bbox:
+    - 1367
+    - 319
+    - 646
+    - 486
+  dimensions:
+    - 646
+    - 486
+  transparent_background: true
+  path: assets/sprites/ui-components/items/panel-modal-default.png
+  slice:
+    type: 9-slice
+    margins:
+      - 48
+      - 48
+      - 48
+      - 48
+- id: slot-item-default
+  semantic_name: slot-item-default
+  component_id: slot-item
+  category: container
+  state: default
+  bbox:
+    - 27
+    - 829
+    - 166
+    - 166
+  dimensions:
+    - 166
+    - 166
+  transparent_background: true
+  path: assets/sprites/ui-components/items/slot-item-default.png
+  slice:
+    type: 9-slice
+    margins:
+      - 28
+      - 28
+      - 28
+      - 28
+- id: progress-bar-default
+  semantic_name: progress-bar-default
+  component_id: progress-bar
+  category: container
+  state: default
+  bbox:
+    - 217
+    - 829
+    - 566
+    - 70
+  dimensions:
+    - 566
+    - 70
+  transparent_background: true
+  path: assets/sprites/ui-components/items/progress-bar-default.png
+  slice:
+    type: 9-slice
+    margins:
+      - 32
+      - 32
+      - 24
+      - 24
+- id: icon-wheat-default
+  semantic_name: icon-wheat-default
+  component_id: icon-wheat
+  category: icon
+  state: default
+  bbox:
+    - 1336
+    - 835
+    - 52
+    - 92
+  dimensions:
+    - 52
+    - 92
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-wheat-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-energy-default
+  semantic_name: icon-energy-default
+  component_id: icon-energy
+  category: icon
+  state: default
+  bbox:
+    - 1082
+    - 836
+    - 56
+    - 88
+  dimensions:
+    - 56
+    - 88
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-energy-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-carrot-default
+  semantic_name: icon-carrot-default
+  component_id: icon-carrot
+  category: icon
+  state: default
+  bbox:
+    - 1206
+    - 836
+    - 64
+    - 88
+  dimensions:
+    - 64
+    - 88
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-carrot-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-star-default
+  semantic_name: icon-star-default
+  component_id: icon-star
+  category: icon
+  state: default
+  bbox:
+    - 1695
+    - 836
+    - 90
+    - 86
+  dimensions:
+    - 90
+    - 86
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-star-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-gem-default
+  semantic_name: icon-gem-default
+  component_id: icon-gem
+  category: icon
+  state: default
+  bbox:
+    - 946
+    - 838
+    - 76
+    - 86
+  dimensions:
+    - 76
+    - 86
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-gem-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-water-default
+  semantic_name: icon-water-default
+  component_id: icon-water
+  category: icon
+  state: default
+  bbox:
+    - 1454
+    - 838
+    - 68
+    - 90
+  dimensions:
+    - 68
+    - 90
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-water-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-coin-default
+  semantic_name: icon-coin-default
+  component_id: icon-coin
+  category: icon
+  state: default
+  bbox:
+    - 818
+    - 840
+    - 80
+    - 80
+  dimensions:
+    - 80
+    - 80
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-coin-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-lock-default
+  semantic_name: icon-lock-default
+  component_id: icon-lock
+  category: icon
+  state: default
+  bbox:
+    - 1838
+    - 844
+    - 56
+    - 76
+  dimensions:
+    - 56
+    - 76
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-lock-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-seed-default
+  semantic_name: icon-seed-default
+  component_id: icon-seed
+  category: icon
+  state: default
+  bbox:
+    - 1578
+    - 855
+    - 72
+    - 72
+  dimensions:
+    - 72
+    - 72
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-seed-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: deco-badge-default
+  semantic_name: deco-badge-default
+  component_id: deco-badge
+  category: decoration
+  state: default
+  bbox:
+    - 1318
+    - 1026
+    - 100
+    - 118
+  dimensions:
+    - 100
+    - 118
+  transparent_background: true
+  path: assets/sprites/ui-components/items/deco-badge-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-gear-default
+  semantic_name: icon-gear-default
+  component_id: icon-gear
+  category: icon
+  state: default
+  bbox:
+    - 35
+    - 1027
+    - 86
+    - 86
+  dimensions:
+    - 86
+    - 86
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-gear-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-task-default
+  semantic_name: icon-task-default
+  component_id: icon-task
+  category: icon
+  state: default
+  bbox:
+    - 932
+    - 1030
+    - 56
+    - 82
+  dimensions:
+    - 56
+    - 82
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-task-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-barn-default
+  semantic_name: icon-barn-default
+  component_id: icon-barn
+  category: icon
+  state: default
+  bbox:
+    - 672
+    - 1034
+    - 72
+    - 78
+  dimensions:
+    - 72
+    - 78
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-barn-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-shop-default
+  semantic_name: icon-shop-default
+  component_id: icon-shop
+  category: icon
+  state: default
+  bbox:
+    - 548
+    - 1036
+    - 68
+    - 73
+  dimensions:
+    - 68
+    - 73
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-shop-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-social-default
+  semantic_name: icon-social-default
+  component_id: icon-social
+  category: icon
+  state: default
+  bbox:
+    - 798
+    - 1037
+    - 76
+    - 77
+  dimensions:
+    - 76
+    - 77
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-social-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-gift-default
+  semantic_name: icon-gift-default
+  component_id: icon-gift
+  category: icon
+  state: default
+  bbox:
+    - 294
+    - 1038
+    - 72
+    - 74
+  dimensions:
+    - 72
+    - 74
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-gift-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-heart-default
+  semantic_name: icon-heart-default
+  component_id: icon-heart
+  category: icon
+  state: default
+  bbox:
+    - 167
+    - 1039
+    - 74
+    - 73
+  dimensions:
+    - 74
+    - 73
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-heart-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: icon-farm-default
+  semantic_name: icon-farm-default
+  component_id: icon-farm
+  category: icon
+  state: default
+  bbox:
+    - 418
+    - 1039
+    - 76
+    - 71
+  dimensions:
+    - 76
+    - 71
+  transparent_background: true
+  path: assets/sprites/ui-components/items/icon-farm-default.png
+  slice:
+    type: '1:1'
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: char-farmer-default
+  semantic_name: char-farmer-default
+  component_id: char-farmer
+  category: character
+  state: default
+  bbox:
+    - 1071
+    - 1049
+    - 174
+    - 293
+  dimensions:
+    - 174
+    - 293
+  transparent_background: true
+  path: assets/sprites/ui-components/items/char-farmer-default.png
+  slice:
+    type: full
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0
+- id: bg-farm-default
+  semantic_name: bg-farm-default
+  component_id: bg-farm
+  category: background
+  state: default
+  bbox:
+    - 26
+    - 1368
+    - 1032
+    - 584
+  dimensions:
+    - 1032
+    - 584
+  transparent_background: true
+  path: assets/sprites/ui-components/items/bg-farm-default.png
+  slice:
+    type: full
+    margins:
+      - 0
+      - 0
+      - 0
+      - 0

@@ -1,0 +1,36 @@
+Creative Commons Attribution 4.0 International (CC-BY-4.0) — Asset License
+
+Scope
+-----
+This license applies to all visual / artwork assets and the design data that
+describes them, including but not limited to:
+
+  - page visuals and hero images (assets/pages/)
+  - UI component sprites and state variants (assets/components/)
+  - sprite sheets and split element PNGs (assets/sprites/)
+  - texture atlases and atlas JSON (assets/atlases/)
+  - design tokens, style / screen / component / sprite / atlas / export
+    contracts (contracts/, exports/web/tokens.css)
+  - engine handoff manifests derived from the artwork (exports/*/ui-main.json,
+    exports/taptap-maker/*)
+
+All source code, scripts and tooling (scripts/, render/*.js, build helpers)
+are instead licensed under the MIT License — see LICENSE.
+
+License
+-------
+The assets above are licensed under the Creative Commons Attribution 4.0
+International License. You are free to share and adapt them for any purpose,
+including commercially, provided you give appropriate credit, link to the
+license, and indicate if changes were made.
+
+Full legal text: https://creativecommons.org/licenses/by/4.0/legalcode
+Human-readable summary: https://creativecommons.org/licenses/by/4.0/
+
+Recommended attribution
+-----------------------
+    "UI assets from open-assets by kaying-ai
+     (https://github.com/kaying-ai/open-assets), licensed CC-BY-4.0."
+
+When redistributing a subset, keep this notice with the assets and credit the
+original project id (e.g. happy-farm) where practical.

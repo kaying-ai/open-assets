@@ -1,0 +1,371 @@
+{
+  "conventions": {
+    "events": "onClick / onChange on widgets; prefer self-describing handlers",
+    "layout": "Yoga flex props (flexDirection, justifyContent, alignItems, gap, padding)",
+    "root": "always UI.SetRoot after building the tree",
+    "safe_area": "interactive content in UI.SafeAreaView; full-bleed art outside",
+    "scale": "UI.Scale.DEFAULT"
+  },
+  "engine": "taptap-maker",
+  "lua_sample_modules": [
+    "-- scripts/ui/screens/farm.lua\nlocal UI = require(\"urhox-libs/UI\")\n\nlocal function buildFarmScreen(onAction)\n  return UI.SafeAreaView {\n    width = \"100%\",\n    height = \"100%\",\n    backgroundColor = UI.Theme.Color(\"background\"),\n    children = {\n      UI.Panel {\n        width = \"100%\",\n        height = \"100%\",\n        flexDirection = \"column\",\n        padding = { 16, 24, 16, 24 },\n        gap = 16,\n        children = {\n          UI.Label { text = \"农田主页\", fontSize = 22, fontWeight = \"bold\" },\n          -- map components via exports/taptap-maker/component-map.json\n          UI.Button {\n            text = \"开始\",\n            variant = \"primary\",\n            onClick = function() if onAction then onAction(\"primary\") end end,\n          },\n        },\n      },\n    },\n  }\nend\n\nreturn { id = \"farm\", build = buildFarmScreen }\n",
+    "-- scripts/ui/screens/shop.lua\nlocal UI = require(\"urhox-libs/UI\")\n\nlocal function buildShopScreen(onAction)\n  return UI.SafeAreaView {\n    width = \"100%\",\n    height = \"100%\",\n    backgroundColor = UI.Theme.Color(\"background\"),\n    children = {\n      UI.Panel {\n        width = \"100%\",\n        height = \"100%\",\n        flexDirection = \"column\",\n        padding = { 16, 24, 16, 24 },\n        gap = 16,\n        children = {\n          UI.Label { text = \"商店\", fontSize = 22, fontWeight = \"bold\" },\n          -- map components via exports/taptap-maker/component-map.json\n          UI.Button {\n            text = \"开始\",\n            variant = \"primary\",\n            onClick = function() if onAction then onAction(\"primary\") end end,\n          },\n        },\n      },\n    },\n  }\nend\n\nreturn { id = \"shop\", build = buildShopScreen }\n",
+    "-- scripts/ui/screens/barn.lua\nlocal UI = require(\"urhox-libs/UI\")\n\nlocal function buildBarnScreen(onAction)\n  return UI.SafeAreaView {\n    width = \"100%\",\n    height = \"100%\",\n    backgroundColor = UI.Theme.Color(\"background\"),\n    children = {\n      UI.Panel {\n        width = \"100%\",\n        height = \"100%\",\n        flexDirection = \"column\",\n        padding = { 16, 24, 16, 24 },\n        gap = 16,\n        children = {\n          UI.Label { text = \"仓库\", fontSize = 22, fontWeight = \"bold\" },\n          -- map components via exports/taptap-maker/component-map.json\n          UI.Button {\n            text = \"开始\",\n            variant = \"primary\",\n            onClick = function() if onAction then onAction(\"primary\") end end,\n          },\n        },\n      },\n    },\n  }\nend\n\nreturn { id = \"barn\", build = buildBarnScreen }\n",
+    "-- scripts/ui/screens/social.lua\nlocal UI = require(\"urhox-libs/UI\")\n\nlocal function buildSocialScreen(onAction)\n  return UI.SafeAreaView {\n    width = \"100%\",\n    height = \"100%\",\n    backgroundColor = UI.Theme.Color(\"background\"),\n    children = {\n      UI.Panel {\n        width = \"100%\",\n        height = \"100%\",\n        flexDirection = \"column\",\n        padding = { 16, 24, 16, 24 },\n        gap = 16,\n        children = {\n          UI.Label { text = \"好友邻居\", fontSize = 22, fontWeight = \"bold\" },\n          -- map components via exports/taptap-maker/component-map.json\n          UI.Button {\n            text = \"开始\",\n            variant = \"primary\",\n            onClick = function() if onAction then onAction(\"primary\") end end,\n          },\n        },\n      },\n    },\n  }\nend\n\nreturn { id = \"social\", build = buildSocialScreen }\n",
+    "-- scripts/ui/screens/task.lua\nlocal UI = require(\"urhox-libs/UI\")\n\nlocal function buildTaskScreen(onAction)\n  return UI.SafeAreaView {\n    width = \"100%\",\n    height = \"100%\",\n    backgroundColor = UI.Theme.Color(\"background\"),\n    children = {\n      UI.Panel {\n        width = \"100%\",\n        height = \"100%\",\n        flexDirection = \"column\",\n        padding = { 16, 24, 16, 24 },\n        gap = 16,\n        children = {\n          UI.Label { text = \"任务成就\", fontSize = 22, fontWeight = \"bold\" },\n          -- map components via exports/taptap-maker/component-map.json\n          UI.Button {\n            text = \"开始\",\n            variant = \"primary\",\n            onClick = function() if onAction then onAction(\"primary\") end end,\n          },\n        },\n      },\n    },\n  }\nend\n\nreturn { id = \"task\", build = buildTaskScreen }\n",
+    "-- scripts/ui/screens/settings.lua\nlocal UI = require(\"urhox-libs/UI\")\n\nlocal function buildSettingsScreen(onAction)\n  return UI.SafeAreaView {\n    width = \"100%\",\n    height = \"100%\",\n    backgroundColor = UI.Theme.Color(\"background\"),\n    children = {\n      UI.Panel {\n        width = \"100%\",\n        height = \"100%\",\n        flexDirection = \"column\",\n        padding = { 16, 24, 16, 24 },\n        gap = 16,\n        children = {\n          UI.Label { text = \"设置\", fontSize = 22, fontWeight = \"bold\" },\n          -- map components via exports/taptap-maker/component-map.json\n          UI.Button {\n            text = \"开始\",\n            variant = \"primary\",\n            onClick = function() if onAction then onAction(\"primary\") end end,\n          },\n        },\n      },\n    },\n  }\nend\n\nreturn { id = \"settings\", build = buildSettingsScreen }\n"
+  ],
+  "schema_version": 1,
+  "screens": [
+    {
+      "components": [
+        "currency-bar",
+        "panel-card",
+        "slot-item",
+        "btn-primary",
+        "btn-claim",
+        "btn-close",
+        "nav-tab",
+        "icon-coin",
+        "icon-gem",
+        "icon-energy",
+        "icon-carrot",
+        "icon-wheat",
+        "icon-water",
+        "icon-seed",
+        "icon-star",
+        "icon-lock",
+        "icon-gear",
+        "icon-farm",
+        "icon-shop",
+        "icon-barn",
+        "icon-social",
+        "icon-task",
+        "char-farmer",
+        "deco-badge",
+        "bg-farm"
+      ],
+      "id": "farm",
+      "layout": {
+        "bottom": [
+          "nav-tab",
+          "icon-farm",
+          "icon-shop",
+          "icon-barn",
+          "icon-social",
+          "icon-task"
+        ],
+        "center": [
+          "panel-card",
+          "slot-item",
+          "icon-carrot",
+          "icon-wheat",
+          "icon-water",
+          "icon-seed",
+          "char-farmer"
+        ],
+        "floating": [
+          "btn-primary",
+          "btn-claim",
+          "deco-badge",
+          "icon-gear"
+        ],
+        "top": [
+          "currency-bar"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/farm.lua",
+      "name": "农田主页",
+      "primary_actions": [
+        "播种 / 收获地块",
+        "领取离线收益",
+        "进入商店补种子"
+      ],
+      "priority": "must-have",
+      "purpose": "种植核心循环的主界面：播种 / 浇水 / 收获 / 领离线收益，顶部资源条与底部导航的基准页。",
+      "states": [
+        "default",
+        "loading",
+        "offline",
+        "low-currency",
+        "empty-plot",
+        "locked-plot"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "currency-bar",
+        "panel-card",
+        "panel-modal",
+        "slot-item",
+        "btn-primary",
+        "btn-secondary",
+        "btn-close",
+        "nav-tab",
+        "icon-coin",
+        "icon-gem",
+        "icon-seed",
+        "icon-water",
+        "icon-carrot",
+        "icon-wheat",
+        "icon-lock",
+        "deco-badge"
+      ],
+      "id": "shop",
+      "layout": {
+        "bottom": [
+          "nav-tab",
+          "icon-farm",
+          "icon-shop",
+          "icon-barn",
+          "icon-social",
+          "icon-task"
+        ],
+        "center": [
+          "panel-card",
+          "slot-item",
+          "icon-seed",
+          "icon-water",
+          "icon-carrot"
+        ],
+        "floating": [
+          "btn-primary",
+          "btn-secondary",
+          "panel-modal",
+          "btn-close"
+        ],
+        "top": [
+          "currency-bar"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/shop.lua",
+      "name": "商店",
+      "primary_actions": [
+        "购买种子 / 道具",
+        "钻石加速二次确认"
+      ],
+      "priority": "must-have",
+      "purpose": "购买种子 / 道具 / 装饰：选品 → 确认 → 货币扣减反馈，付费操作二次确认。",
+      "states": [
+        "default",
+        "loading",
+        "low-currency",
+        "confirm-purchase",
+        "empty-stock"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "currency-bar",
+        "progress-bar",
+        "panel-card",
+        "slot-item",
+        "btn-primary",
+        "btn-secondary",
+        "nav-tab",
+        "icon-coin",
+        "icon-carrot",
+        "icon-wheat",
+        "icon-seed",
+        "icon-star",
+        "icon-lock"
+      ],
+      "id": "barn",
+      "layout": {
+        "bottom": [
+          "nav-tab",
+          "icon-farm",
+          "icon-shop",
+          "icon-barn",
+          "icon-social",
+          "icon-task"
+        ],
+        "center": [
+          "panel-card",
+          "slot-item",
+          "icon-carrot",
+          "icon-wheat"
+        ],
+        "floating": [
+          "btn-primary",
+          "btn-secondary"
+        ],
+        "top": [
+          "currency-bar",
+          "progress-bar"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/barn.lua",
+      "name": "仓库",
+      "primary_actions": [
+        "出售作物换金币",
+        "查看图鉴收集度"
+      ],
+      "priority": "must-have",
+      "purpose": "作物 / 道具存储与出售：入库 → 选择 → 出售 → 金币增加；含图鉴收集进度。",
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "selling"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "currency-bar",
+        "panel-card",
+        "btn-secondary",
+        "btn-claim",
+        "nav-tab",
+        "icon-energy",
+        "icon-heart",
+        "icon-water",
+        "icon-gift",
+        "char-farmer",
+        "deco-badge"
+      ],
+      "id": "social",
+      "layout": {
+        "bottom": [
+          "nav-tab",
+          "icon-farm",
+          "icon-shop",
+          "icon-barn",
+          "icon-social",
+          "icon-task"
+        ],
+        "center": [
+          "panel-card",
+          "char-farmer",
+          "icon-heart"
+        ],
+        "floating": [
+          "btn-secondary",
+          "btn-claim",
+          "deco-badge"
+        ],
+        "top": [
+          "currency-bar"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/social.lua",
+      "name": "好友邻居",
+      "primary_actions": [
+        "串门好友农场",
+        "帮忙浇水 / 偷菜"
+      ],
+      "priority": "must-have",
+      "purpose": "好友列表与串门互助：进入好友农场 → 浇水 / 趣味偷菜，异步温暖互动。",
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "visiting",
+        "no-energy"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "currency-bar",
+        "panel-card",
+        "progress-bar",
+        "btn-claim",
+        "btn-secondary",
+        "nav-tab",
+        "icon-coin",
+        "icon-gem",
+        "icon-star",
+        "icon-gift",
+        "deco-badge"
+      ],
+      "id": "task",
+      "layout": {
+        "bottom": [
+          "nav-tab",
+          "icon-farm",
+          "icon-shop",
+          "icon-barn",
+          "icon-social",
+          "icon-task"
+        ],
+        "center": [
+          "panel-card",
+          "progress-bar",
+          "icon-star",
+          "icon-gift"
+        ],
+        "floating": [
+          "btn-claim",
+          "deco-badge"
+        ],
+        "top": [
+          "currency-bar"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/task.lua",
+      "name": "任务成就",
+      "primary_actions": [
+        "领取任务奖励",
+        "查看成长任务"
+      ],
+      "priority": "must-have",
+      "purpose": "日常 / 成长任务进度与奖励领取：任务进度 → 领取 → 奖励反馈。",
+      "states": [
+        "default",
+        "loading",
+        "claimable",
+        "empty",
+        "claimed"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "panel-modal",
+        "panel-card",
+        "btn-primary",
+        "btn-secondary",
+        "btn-close",
+        "icon-gear",
+        "icon-heart",
+        "icon-lock"
+      ],
+      "id": "settings",
+      "layout": {
+        "bottom": [
+          "btn-secondary",
+          "btn-close"
+        ],
+        "center": [
+          "panel-modal",
+          "panel-card",
+          "icon-gear"
+        ],
+        "floating": [
+          "btn-primary"
+        ],
+        "top": [
+          "currency-bar"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/settings.lua",
+      "name": "设置",
+      "primary_actions": [
+        "切换音效 / 通知",
+        "进入账号 / 帮助"
+      ],
+      "priority": "must-have",
+      "purpose": "音效 / 通知开关，账号 / 帮助入口；破坏性操作（退出/重置）二次确认。",
+      "states": [
+        "default",
+        "confirm-exit",
+        "offline"
+      ],
+      "status": "approved"
+    }
+  ]
+}

@@ -1,0 +1,1090 @@
+{
+  "atlas_id": "ui-main",
+  "components": [
+    {
+      "atlas_sprites": [
+        "btn-primary-default",
+        "btn-primary-disabled",
+        "btn-primary-pressed"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "btn-primary",
+      "name": "主按钮",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          48,
+          48,
+          40,
+          40
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default",
+        "pressed",
+        "disabled"
+      ],
+      "target_size": [
+        360,
+        112
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Button",
+      "widget_hint": "gradient/solid CTA; variant from token role"
+    },
+    {
+      "atlas_sprites": [
+        "btn-secondary-default",
+        "btn-secondary-pressed"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "btn-secondary",
+      "name": "次按钮",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default",
+        "pressed"
+      ],
+      "target_size": [
+        320,
+        104
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Button",
+      "widget_hint": "gradient/solid CTA; variant from token role"
+    },
+    {
+      "atlas_sprites": [
+        "btn-claim-default",
+        "btn-claim-pressed"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "btn-claim",
+      "name": "领取按钮",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default",
+        "pressed"
+      ],
+      "target_size": [
+        300,
+        104
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Button",
+      "widget_hint": "gradient/solid CTA; variant from token role"
+    },
+    {
+      "atlas_sprites": [
+        "btn-close-default",
+        "btn-close-pressed"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "btn-close",
+      "name": "关闭按钮",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default",
+        "pressed"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Button",
+      "widget_hint": "gradient/solid CTA; variant from token role"
+    },
+    {
+      "atlas_sprites": [
+        "nav-tab-default",
+        "nav-tab-pressed",
+        "nav-tab-selected"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "nav-tab",
+      "name": "导航标签",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default",
+        "pressed",
+        "selected"
+      ],
+      "target_size": [
+        200,
+        120
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Tabs",
+      "widget_hint": "primary navigation row"
+    },
+    {
+      "atlas_sprites": [
+        "currency-bar-default"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "currency-bar",
+      "name": "货币栏",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          48,
+          48,
+          32,
+          32
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        720,
+        96
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.ProgressBar",
+      "widget_hint": "determinate fill bar"
+    },
+    {
+      "atlas_sprites": [
+        "panel-card-default"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "panel-card",
+      "name": "卡片面板",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          40,
+          40,
+          40,
+          40
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        560,
+        400
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Card",
+      "widget_hint": "elevated panel / card surface"
+    },
+    {
+      "atlas_sprites": [
+        "panel-modal-default"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "panel-modal",
+      "name": "弹窗底板",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          48,
+          48,
+          48,
+          48
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        640,
+        480
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Modal",
+      "widget_hint": "overlay dialog with title / content / footer"
+    },
+    {
+      "atlas_sprites": [
+        "slot-item-default"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "slot-item",
+      "name": "物品格子",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          28,
+          28,
+          28,
+          28
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        160,
+        160
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.List",
+      "widget_hint": "scrollable inventory/list; see also UI.VirtualList"
+    },
+    {
+      "atlas_sprites": [
+        "progress-bar-default"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "progress-bar",
+      "name": "进度条",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          32,
+          32,
+          24,
+          24
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        560,
+        64
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.ProgressBar",
+      "widget_hint": "determinate fill bar"
+    },
+    {
+      "atlas_sprites": [
+        "icon-coin-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-coin",
+      "name": "金币图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-gem-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-gem",
+      "name": "钻石图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-energy-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-energy",
+      "name": "体力图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-carrot-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-carrot",
+      "name": "胡萝卜图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-wheat-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-wheat",
+      "name": "小麦图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-water-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-water",
+      "name": "水滴图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-seed-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-seed",
+      "name": "种子图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-star-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-star",
+      "name": "星星图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-lock-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-lock",
+      "name": "锁图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-gear-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-gear",
+      "name": "齿轮图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-heart-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-heart",
+      "name": "爱心图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-gift-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-gift",
+      "name": "礼物图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-farm-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-farm",
+      "name": "农田导航图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-shop-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-shop",
+      "name": "商店导航图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-barn-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-barn",
+      "name": "仓库导航图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-social-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-social",
+      "name": "好友导航图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-task-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-task",
+      "name": "任务导航图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "char-farmer-default"
+      ],
+      "category": "character",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "char-farmer",
+      "name": "农场主角色",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        240,
+        320
+      ],
+      "text_policy": "none",
+      "widget": "UI.Spine",
+      "widget_hint": "or UI.Sprite for static portraits"
+    },
+    {
+      "atlas_sprites": [
+        "deco-badge-default"
+      ],
+      "category": "decoration",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "deco-badge",
+      "name": "奖励角标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        120,
+        120
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "overlay decoration; keep pointer-events off if pure VFX"
+    },
+    {
+      "atlas_sprites": [
+        "bg-farm-default"
+      ],
+      "category": "background",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "bg-farm",
+      "name": "农田背景",
+      "reusable": false,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        1024,
+        576
+      ],
+      "text_policy": "none",
+      "widget": "UI.Panel",
+      "widget_hint": "full-bleed surface; place under SafeAreaView siblings"
+    }
+  ],
+  "engine": "taptap-maker",
+  "mapping_rules": {
+    "background": "UI.Panel",
+    "character": "UI.Spine or UI.Sprite",
+    "container/card": "UI.Card",
+    "container/modal": "UI.Modal",
+    "container/progress": "UI.ProgressBar",
+    "control/button": "UI.Button",
+    "control/input": "UI.TextField",
+    "control/toggle": "UI.Toggle",
+    "decoration": "UI.Sprite",
+    "icon": "UI.Sprite"
+  },
+  "nine_patch": "use slice.margins as NanoVG/image 9-patch insets when drawing stretched skins",
+  "schema_version": 1,
+  "text_policy": {
+    "composited": "text is baked; do not re-label in engine",
+    "no-text": "sprite is art only; compose Label on top",
+    "none": "no interactive text expected"
+  },
+  "texture": "assets/atlases/ui-main.png"
+}

@@ -1,0 +1,753 @@
+{
+  "atlas_id": "ui-main",
+  "atlas_size": [
+    2048,
+    2048
+  ],
+  "engine": "unity",
+  "schema_version": 1,
+  "spriteMode": "Multiple",
+  "sprites": [
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "bg-farm-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        2,
+        2,
+        1032,
+        584
+      ]
+    },
+    {
+      "border": [
+        44,
+        44,
+        36,
+        36
+      ],
+      "name": "btn-claim-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1504,
+        998,
+        308,
+        112
+      ]
+    },
+    {
+      "border": [
+        44,
+        44,
+        36,
+        36
+      ],
+      "name": "btn-claim-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        2,
+        1120,
+        308,
+        112
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "btn-close-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1042,
+        1120,
+        100,
+        100
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "btn-close-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1144,
+        1120,
+        100,
+        100
+      ]
+    },
+    {
+      "border": [
+        48,
+        48,
+        40,
+        40
+      ],
+      "name": "btn-primary-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1546,
+        588,
+        368,
+        120
+      ]
+    },
+    {
+      "border": [
+        48,
+        48,
+        40,
+        40
+      ],
+      "name": "btn-primary-disabled",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        2,
+        998,
+        368,
+        120
+      ]
+    },
+    {
+      "border": [
+        48,
+        48,
+        40,
+        40
+      ],
+      "name": "btn-primary-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        372,
+        998,
+        368,
+        120
+      ]
+    },
+    {
+      "border": [
+        44,
+        44,
+        36,
+        36
+      ],
+      "name": "btn-secondary-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        844,
+        998,
+        328,
+        112
+      ]
+    },
+    {
+      "border": [
+        44,
+        44,
+        36,
+        36
+      ],
+      "name": "btn-secondary-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1174,
+        998,
+        328,
+        112
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "char-farmer-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        572,
+        588,
+        174,
+        293
+      ]
+    },
+    {
+      "border": [
+        48,
+        48,
+        32,
+        32
+      ],
+      "name": "currency-bar-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        312,
+        1120,
+        728,
+        104
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "deco-badge-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        742,
+        998,
+        100,
+        118
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-barn-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1892,
+        1120,
+        72,
+        78
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-carrot-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1370,
+        1120,
+        64,
+        88
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-coin-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1810,
+        1120,
+        80,
+        80
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-energy-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1436,
+        1120,
+        56,
+        88
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-farm-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        354,
+        1234,
+        76,
+        71
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-gear-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1586,
+        1120,
+        86,
+        86
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-gem-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1674,
+        1120,
+        76,
+        86
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-gift-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        60,
+        1234,
+        72,
+        74
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-heart-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        134,
+        1234,
+        74,
+        73
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-lock-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        2,
+        1234,
+        56,
+        76
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-seed-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        280,
+        1234,
+        72,
+        72
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-shop-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        210,
+        1234,
+        68,
+        73
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-social-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1966,
+        1120,
+        76,
+        77
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-star-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1494,
+        1120,
+        90,
+        86
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-task-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1752,
+        1120,
+        56,
+        82
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-water-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1300,
+        1120,
+        68,
+        90
+      ]
+    },
+    {
+      "border": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "icon-wheat-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1246,
+        1120,
+        52,
+        92
+      ]
+    },
+    {
+      "border": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "name": "nav-tab-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        916,
+        588,
+        208,
+        128
+      ]
+    },
+    {
+      "border": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "name": "nav-tab-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1126,
+        588,
+        208,
+        128
+      ]
+    },
+    {
+      "border": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "name": "nav-tab-selected",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1336,
+        588,
+        208,
+        128
+      ]
+    },
+    {
+      "border": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "name": "panel-card-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        2,
+        588,
+        568,
+        408
+      ]
+    },
+    {
+      "border": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "name": "panel-modal-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        1036,
+        2,
+        646,
+        486
+      ]
+    },
+    {
+      "border": [
+        32,
+        32,
+        24,
+        24
+      ],
+      "name": "progress-bar-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        432,
+        1234,
+        566,
+        70
+      ]
+    },
+    {
+      "border": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "name": "slot-item-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "pixelsPerUnit": 100,
+      "rect": [
+        748,
+        588,
+        166,
+        166
+      ]
+    }
+  ],
+  "texture": "assets/atlases/ui-main.png"
+}

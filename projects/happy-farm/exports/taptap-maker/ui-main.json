@@ -1,0 +1,2723 @@
+{
+  "atlas_id": "ui-main",
+  "atlas_size": [
+    2048,
+    2048
+  ],
+  "components": [
+    {
+      "atlas_sprites": [
+        "btn-primary-default",
+        "btn-primary-disabled",
+        "btn-primary-pressed"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "btn-primary",
+      "name": "主按钮",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          48,
+          48,
+          40,
+          40
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default",
+        "pressed",
+        "disabled"
+      ],
+      "target_size": [
+        360,
+        112
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Button",
+      "widget_hint": "gradient/solid CTA; variant from token role"
+    },
+    {
+      "atlas_sprites": [
+        "btn-secondary-default",
+        "btn-secondary-pressed"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "btn-secondary",
+      "name": "次按钮",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default",
+        "pressed"
+      ],
+      "target_size": [
+        320,
+        104
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Button",
+      "widget_hint": "gradient/solid CTA; variant from token role"
+    },
+    {
+      "atlas_sprites": [
+        "btn-claim-default",
+        "btn-claim-pressed"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "btn-claim",
+      "name": "领取按钮",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default",
+        "pressed"
+      ],
+      "target_size": [
+        300,
+        104
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Button",
+      "widget_hint": "gradient/solid CTA; variant from token role"
+    },
+    {
+      "atlas_sprites": [
+        "btn-close-default",
+        "btn-close-pressed"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "btn-close",
+      "name": "关闭按钮",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default",
+        "pressed"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Button",
+      "widget_hint": "gradient/solid CTA; variant from token role"
+    },
+    {
+      "atlas_sprites": [
+        "nav-tab-default",
+        "nav-tab-pressed",
+        "nav-tab-selected"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "nav-tab",
+      "name": "导航标签",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default",
+        "pressed",
+        "selected"
+      ],
+      "target_size": [
+        200,
+        120
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Tabs",
+      "widget_hint": "primary navigation row"
+    },
+    {
+      "atlas_sprites": [
+        "currency-bar-default"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "currency-bar",
+      "name": "货币栏",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          48,
+          48,
+          32,
+          32
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        720,
+        96
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.ProgressBar",
+      "widget_hint": "determinate fill bar"
+    },
+    {
+      "atlas_sprites": [
+        "panel-card-default"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "panel-card",
+      "name": "卡片面板",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          40,
+          40,
+          40,
+          40
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        560,
+        400
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Card",
+      "widget_hint": "elevated panel / card surface"
+    },
+    {
+      "atlas_sprites": [
+        "panel-modal-default"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "panel-modal",
+      "name": "弹窗底板",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          48,
+          48,
+          48,
+          48
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        640,
+        480
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Modal",
+      "widget_hint": "overlay dialog with title / content / footer"
+    },
+    {
+      "atlas_sprites": [
+        "slot-item-default"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "slot-item",
+      "name": "物品格子",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          28,
+          28,
+          28,
+          28
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        160,
+        160
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.List",
+      "widget_hint": "scrollable inventory/list; see also UI.VirtualList"
+    },
+    {
+      "atlas_sprites": [
+        "progress-bar-default"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "progress-bar",
+      "name": "进度条",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          32,
+          32,
+          24,
+          24
+        ],
+        "type": "9-slice"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        560,
+        64
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.ProgressBar",
+      "widget_hint": "determinate fill bar"
+    },
+    {
+      "atlas_sprites": [
+        "icon-coin-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-coin",
+      "name": "金币图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-gem-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-gem",
+      "name": "钻石图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-energy-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-energy",
+      "name": "体力图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-carrot-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-carrot",
+      "name": "胡萝卜图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-wheat-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-wheat",
+      "name": "小麦图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-water-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-water",
+      "name": "水滴图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-seed-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-seed",
+      "name": "种子图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-star-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-star",
+      "name": "星星图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-lock-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-lock",
+      "name": "锁图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-gear-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-gear",
+      "name": "齿轮图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-heart-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-heart",
+      "name": "爱心图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-gift-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-gift",
+      "name": "礼物图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-farm-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-farm",
+      "name": "农田导航图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-shop-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-shop",
+      "name": "商店导航图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-barn-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-barn",
+      "name": "仓库导航图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-social-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-social",
+      "name": "好友导航图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-task-default"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-task",
+      "name": "任务导航图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "char-farmer-default"
+      ],
+      "category": "character",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "char-farmer",
+      "name": "农场主角色",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        240,
+        320
+      ],
+      "text_policy": "none",
+      "widget": "UI.Spine",
+      "widget_hint": "or UI.Sprite for static portraits"
+    },
+    {
+      "atlas_sprites": [
+        "deco-badge-default"
+      ],
+      "category": "decoration",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "deco-badge",
+      "name": "奖励角标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        120,
+        120
+      ],
+      "text_policy": "none",
+      "widget": "UI.Sprite",
+      "widget_hint": "overlay decoration; keep pointer-events off if pure VFX"
+    },
+    {
+      "atlas_sprites": [
+        "bg-farm-default"
+      ],
+      "category": "background",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "bg-farm",
+      "name": "农田背景",
+      "reusable": false,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        1024,
+        576
+      ],
+      "text_policy": "none",
+      "widget": "UI.Panel",
+      "widget_hint": "full-bleed surface; place under SafeAreaView siblings"
+    }
+  ],
+  "engine": "taptap-maker",
+  "platform": {
+    "asset_roots": {
+      "audio_sfx": "assets/audio/sfx",
+      "audio_voice": "assets/audio/voice",
+      "fonts": "assets/Fonts",
+      "images": "assets/image",
+      "scripts": "scripts",
+      "sprites": "assets/sprites"
+    },
+    "engine": "UrhoX",
+    "handoff_only": true,
+    "id": "taptap-maker",
+    "layout": "Yoga",
+    "native_project_files": false,
+    "render": "NanoVG",
+    "script": "Lua",
+    "ui": "urhox-libs/UI"
+  },
+  "schema_version": 1,
+  "screens": [
+    {
+      "components": [
+        "currency-bar",
+        "panel-card",
+        "slot-item",
+        "btn-primary",
+        "btn-claim",
+        "btn-close",
+        "nav-tab",
+        "icon-coin",
+        "icon-gem",
+        "icon-energy",
+        "icon-carrot",
+        "icon-wheat",
+        "icon-water",
+        "icon-seed",
+        "icon-star",
+        "icon-lock",
+        "icon-gear",
+        "icon-farm",
+        "icon-shop",
+        "icon-barn",
+        "icon-social",
+        "icon-task",
+        "char-farmer",
+        "deco-badge",
+        "bg-farm"
+      ],
+      "id": "farm",
+      "layout": {
+        "bottom": [
+          "nav-tab",
+          "icon-farm",
+          "icon-shop",
+          "icon-barn",
+          "icon-social",
+          "icon-task"
+        ],
+        "center": [
+          "panel-card",
+          "slot-item",
+          "icon-carrot",
+          "icon-wheat",
+          "icon-water",
+          "icon-seed",
+          "char-farmer"
+        ],
+        "floating": [
+          "btn-primary",
+          "btn-claim",
+          "deco-badge",
+          "icon-gear"
+        ],
+        "top": [
+          "currency-bar"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/farm.lua",
+      "name": "农田主页",
+      "primary_actions": [
+        "播种 / 收获地块",
+        "领取离线收益",
+        "进入商店补种子"
+      ],
+      "priority": "must-have",
+      "purpose": "种植核心循环的主界面：播种 / 浇水 / 收获 / 领离线收益，顶部资源条与底部导航的基准页。",
+      "states": [
+        "default",
+        "loading",
+        "offline",
+        "low-currency",
+        "empty-plot",
+        "locked-plot"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "currency-bar",
+        "panel-card",
+        "panel-modal",
+        "slot-item",
+        "btn-primary",
+        "btn-secondary",
+        "btn-close",
+        "nav-tab",
+        "icon-coin",
+        "icon-gem",
+        "icon-seed",
+        "icon-water",
+        "icon-carrot",
+        "icon-wheat",
+        "icon-lock",
+        "deco-badge"
+      ],
+      "id": "shop",
+      "layout": {
+        "bottom": [
+          "nav-tab",
+          "icon-farm",
+          "icon-shop",
+          "icon-barn",
+          "icon-social",
+          "icon-task"
+        ],
+        "center": [
+          "panel-card",
+          "slot-item",
+          "icon-seed",
+          "icon-water",
+          "icon-carrot"
+        ],
+        "floating": [
+          "btn-primary",
+          "btn-secondary",
+          "panel-modal",
+          "btn-close"
+        ],
+        "top": [
+          "currency-bar"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/shop.lua",
+      "name": "商店",
+      "primary_actions": [
+        "购买种子 / 道具",
+        "钻石加速二次确认"
+      ],
+      "priority": "must-have",
+      "purpose": "购买种子 / 道具 / 装饰：选品 → 确认 → 货币扣减反馈，付费操作二次确认。",
+      "states": [
+        "default",
+        "loading",
+        "low-currency",
+        "confirm-purchase",
+        "empty-stock"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "currency-bar",
+        "progress-bar",
+        "panel-card",
+        "slot-item",
+        "btn-primary",
+        "btn-secondary",
+        "nav-tab",
+        "icon-coin",
+        "icon-carrot",
+        "icon-wheat",
+        "icon-seed",
+        "icon-star",
+        "icon-lock"
+      ],
+      "id": "barn",
+      "layout": {
+        "bottom": [
+          "nav-tab",
+          "icon-farm",
+          "icon-shop",
+          "icon-barn",
+          "icon-social",
+          "icon-task"
+        ],
+        "center": [
+          "panel-card",
+          "slot-item",
+          "icon-carrot",
+          "icon-wheat"
+        ],
+        "floating": [
+          "btn-primary",
+          "btn-secondary"
+        ],
+        "top": [
+          "currency-bar",
+          "progress-bar"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/barn.lua",
+      "name": "仓库",
+      "primary_actions": [
+        "出售作物换金币",
+        "查看图鉴收集度"
+      ],
+      "priority": "must-have",
+      "purpose": "作物 / 道具存储与出售：入库 → 选择 → 出售 → 金币增加；含图鉴收集进度。",
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "selling"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "currency-bar",
+        "panel-card",
+        "btn-secondary",
+        "btn-claim",
+        "nav-tab",
+        "icon-energy",
+        "icon-heart",
+        "icon-water",
+        "icon-gift",
+        "char-farmer",
+        "deco-badge"
+      ],
+      "id": "social",
+      "layout": {
+        "bottom": [
+          "nav-tab",
+          "icon-farm",
+          "icon-shop",
+          "icon-barn",
+          "icon-social",
+          "icon-task"
+        ],
+        "center": [
+          "panel-card",
+          "char-farmer",
+          "icon-heart"
+        ],
+        "floating": [
+          "btn-secondary",
+          "btn-claim",
+          "deco-badge"
+        ],
+        "top": [
+          "currency-bar"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/social.lua",
+      "name": "好友邻居",
+      "primary_actions": [
+        "串门好友农场",
+        "帮忙浇水 / 偷菜"
+      ],
+      "priority": "must-have",
+      "purpose": "好友列表与串门互助：进入好友农场 → 浇水 / 趣味偷菜，异步温暖互动。",
+      "states": [
+        "default",
+        "loading",
+        "empty",
+        "visiting",
+        "no-energy"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "currency-bar",
+        "panel-card",
+        "progress-bar",
+        "btn-claim",
+        "btn-secondary",
+        "nav-tab",
+        "icon-coin",
+        "icon-gem",
+        "icon-star",
+        "icon-gift",
+        "deco-badge"
+      ],
+      "id": "task",
+      "layout": {
+        "bottom": [
+          "nav-tab",
+          "icon-farm",
+          "icon-shop",
+          "icon-barn",
+          "icon-social",
+          "icon-task"
+        ],
+        "center": [
+          "panel-card",
+          "progress-bar",
+          "icon-star",
+          "icon-gift"
+        ],
+        "floating": [
+          "btn-claim",
+          "deco-badge"
+        ],
+        "top": [
+          "currency-bar"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/task.lua",
+      "name": "任务成就",
+      "primary_actions": [
+        "领取任务奖励",
+        "查看成长任务"
+      ],
+      "priority": "must-have",
+      "purpose": "日常 / 成长任务进度与奖励领取：任务进度 → 领取 → 奖励反馈。",
+      "states": [
+        "default",
+        "loading",
+        "claimable",
+        "empty",
+        "claimed"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "panel-modal",
+        "panel-card",
+        "btn-primary",
+        "btn-secondary",
+        "btn-close",
+        "icon-gear",
+        "icon-heart",
+        "icon-lock"
+      ],
+      "id": "settings",
+      "layout": {
+        "bottom": [
+          "btn-secondary",
+          "btn-close"
+        ],
+        "center": [
+          "panel-modal",
+          "panel-card",
+          "icon-gear"
+        ],
+        "floating": [
+          "btn-primary"
+        ],
+        "top": [
+          "currency-bar"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/settings.lua",
+      "name": "设置",
+      "primary_actions": [
+        "切换音效 / 通知",
+        "进入账号 / 帮助"
+      ],
+      "priority": "must-have",
+      "purpose": "音效 / 通知开关，账号 / 帮助入口；破坏性操作（退出/重置）二次确认。",
+      "states": [
+        "default",
+        "confirm-exit",
+        "offline"
+      ],
+      "status": "approved"
+    }
+  ],
+  "sprites": {
+    "bg-farm-default": {
+      "component_id": "bg-farm",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        2,
+        1032,
+        584
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "slice_type": "full",
+      "state": "default"
+    },
+    "btn-claim-default": {
+      "component_id": "btn-claim",
+      "nine_patch": [
+        44,
+        44,
+        36,
+        36
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1504,
+        998,
+        308,
+        112
+      ],
+      "slice": {
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "btn-claim-pressed": {
+      "component_id": "btn-claim",
+      "nine_patch": [
+        44,
+        44,
+        36,
+        36
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        1120,
+        308,
+        112
+      ],
+      "slice": {
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "pressed"
+    },
+    "btn-close-default": {
+      "component_id": "btn-close",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1042,
+        1120,
+        100,
+        100
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "btn-close-pressed": {
+      "component_id": "btn-close",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1144,
+        1120,
+        100,
+        100
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "pressed"
+    },
+    "btn-primary-default": {
+      "component_id": "btn-primary",
+      "nine_patch": [
+        48,
+        48,
+        40,
+        40
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1546,
+        588,
+        368,
+        120
+      ],
+      "slice": {
+        "margins": [
+          48,
+          48,
+          40,
+          40
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "btn-primary-disabled": {
+      "component_id": "btn-primary",
+      "nine_patch": [
+        48,
+        48,
+        40,
+        40
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        998,
+        368,
+        120
+      ],
+      "slice": {
+        "margins": [
+          48,
+          48,
+          40,
+          40
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "disabled"
+    },
+    "btn-primary-pressed": {
+      "component_id": "btn-primary",
+      "nine_patch": [
+        48,
+        48,
+        40,
+        40
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        372,
+        998,
+        368,
+        120
+      ],
+      "slice": {
+        "margins": [
+          48,
+          48,
+          40,
+          40
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "pressed"
+    },
+    "btn-secondary-default": {
+      "component_id": "btn-secondary",
+      "nine_patch": [
+        44,
+        44,
+        36,
+        36
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        844,
+        998,
+        328,
+        112
+      ],
+      "slice": {
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "btn-secondary-pressed": {
+      "component_id": "btn-secondary",
+      "nine_patch": [
+        44,
+        44,
+        36,
+        36
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1174,
+        998,
+        328,
+        112
+      ],
+      "slice": {
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "pressed"
+    },
+    "char-farmer-default": {
+      "component_id": "char-farmer",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        572,
+        588,
+        174,
+        293
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "slice_type": "full",
+      "state": "default"
+    },
+    "currency-bar-default": {
+      "component_id": "currency-bar",
+      "nine_patch": [
+        48,
+        48,
+        32,
+        32
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        312,
+        1120,
+        728,
+        104
+      ],
+      "slice": {
+        "margins": [
+          48,
+          48,
+          32,
+          32
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "deco-badge-default": {
+      "component_id": "deco-badge",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        742,
+        998,
+        100,
+        118
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-barn-default": {
+      "component_id": "icon-barn",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1892,
+        1120,
+        72,
+        78
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-carrot-default": {
+      "component_id": "icon-carrot",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1370,
+        1120,
+        64,
+        88
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-coin-default": {
+      "component_id": "icon-coin",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1810,
+        1120,
+        80,
+        80
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-energy-default": {
+      "component_id": "icon-energy",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1436,
+        1120,
+        56,
+        88
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-farm-default": {
+      "component_id": "icon-farm",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        354,
+        1234,
+        76,
+        71
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-gear-default": {
+      "component_id": "icon-gear",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1586,
+        1120,
+        86,
+        86
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-gem-default": {
+      "component_id": "icon-gem",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1674,
+        1120,
+        76,
+        86
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-gift-default": {
+      "component_id": "icon-gift",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        60,
+        1234,
+        72,
+        74
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-heart-default": {
+      "component_id": "icon-heart",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        134,
+        1234,
+        74,
+        73
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-lock-default": {
+      "component_id": "icon-lock",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        1234,
+        56,
+        76
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-seed-default": {
+      "component_id": "icon-seed",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        280,
+        1234,
+        72,
+        72
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-shop-default": {
+      "component_id": "icon-shop",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        210,
+        1234,
+        68,
+        73
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-social-default": {
+      "component_id": "icon-social",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1966,
+        1120,
+        76,
+        77
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-star-default": {
+      "component_id": "icon-star",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1494,
+        1120,
+        90,
+        86
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-task-default": {
+      "component_id": "icon-task",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1752,
+        1120,
+        56,
+        82
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-water-default": {
+      "component_id": "icon-water",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1300,
+        1120,
+        68,
+        90
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "icon-wheat-default": {
+      "component_id": "icon-wheat",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1246,
+        1120,
+        52,
+        92
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "slice_type": "1:1",
+      "state": "default"
+    },
+    "nav-tab-default": {
+      "component_id": "nav-tab",
+      "nine_patch": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        916,
+        588,
+        208,
+        128
+      ],
+      "slice": {
+        "margins": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "nav-tab-pressed": {
+      "component_id": "nav-tab",
+      "nine_patch": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1126,
+        588,
+        208,
+        128
+      ],
+      "slice": {
+        "margins": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "pressed"
+    },
+    "nav-tab-selected": {
+      "component_id": "nav-tab",
+      "nine_patch": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1336,
+        588,
+        208,
+        128
+      ],
+      "slice": {
+        "margins": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "selected"
+    },
+    "panel-card-default": {
+      "component_id": "panel-card",
+      "nine_patch": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        588,
+        568,
+        408
+      ],
+      "slice": {
+        "margins": [
+          40,
+          40,
+          40,
+          40
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "panel-modal-default": {
+      "component_id": "panel-modal",
+      "nine_patch": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1036,
+        2,
+        646,
+        486
+      ],
+      "slice": {
+        "margins": [
+          48,
+          48,
+          48,
+          48
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "progress-bar-default": {
+      "component_id": "progress-bar",
+      "nine_patch": [
+        32,
+        32,
+        24,
+        24
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        432,
+        1234,
+        566,
+        70
+      ],
+      "slice": {
+        "margins": [
+          32,
+          32,
+          24,
+          24
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "slot-item-default": {
+      "component_id": "slot-item",
+      "nine_patch": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        748,
+        588,
+        166,
+        166
+      ],
+      "slice": {
+        "margins": [
+          28,
+          28,
+          28,
+          28
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    }
+  },
+  "texture": "assets/atlases/ui-main.png",
+  "theme": {
+    "base": "DefaultTaptap",
+    "colors": {
+      "accent": [
+        79,
+        182,
+        232,
+        255
+      ],
+      "accent_hex": "#4FB6E8",
+      "background": [
+        205,
+        234,
+        247,
+        255
+      ],
+      "background_hex": "#CDEAF7",
+      "disabled": [
+        201,
+        194,
+        182,
+        255
+      ],
+      "disabled_hex": "#C9C2B6",
+      "primary": [
+        255,
+        138,
+        61,
+        255
+      ],
+      "primary_hex": "#FF8A3D",
+      "reward": [
+        255,
+        201,
+        60,
+        255
+      ],
+      "reward_hex": "#FFC93C",
+      "secondary": [
+        111,
+        191,
+        74,
+        255
+      ],
+      "secondary_hex": "#6FBF4A",
+      "token.action-danger": [
+        232,
+        93,
+        74,
+        255
+      ],
+      "token.action-primary": [
+        255,
+        138,
+        61,
+        255
+      ],
+      "token.action-primary-pressed": [
+        219,
+        119,
+        52,
+        255
+      ],
+      "token.surface-panel": [
+        255,
+        246,
+        227,
+        255
+      ],
+      "token.text-primary": [
+        90,
+        58,
+        34,
+        255
+      ],
+      "warning": [
+        232,
+        93,
+        74,
+        255
+      ],
+      "warning_hex": "#E85D4A"
+    },
+    "name": "Happy Farm Pastoral",
+    "platform": {
+      "orientation": "landscape",
+      "reference_size": [
+        1792,
+        1024
+      ],
+      "safe_area": {
+        "bottom": 40,
+        "left": 64,
+        "right": 64,
+        "top": 36
+      },
+      "target": "mobile"
+    },
+    "radius": {
+      "full": 9999,
+      "lg": 20,
+      "sm": 12,
+      "xl": 28
+    },
+    "source": "style-contract.yaml",
+    "spacing": {
+      "lg": 24,
+      "md": 16,
+      "sm": 8,
+      "xl": 32,
+      "xs": 4
+    },
+    "style_packs": {
+      "DefaultTaptap": "clean flat rounded · teal/mint · Resource Han Rounded",
+      "ui-astroon": "cosmic cartoon · purple/gradient/glow · Inter",
+      "ui-brawlforge": "sci-fi HUD · sharp edges · Noto Sans SC bold",
+      "ui-pixelforge": "retro pixel · radius 0 · Fusion Pixel"
+    },
+    "typography": {
+      "body": {
+        "size": 26,
+        "weight": 500
+      },
+      "button": {
+        "size": 30,
+        "weight": 700
+      },
+      "number": {
+        "size": 34,
+        "weight": 700
+      },
+      "section": {
+        "size": 32,
+        "weight": 700
+      },
+      "title": {
+        "size": 44,
+        "weight": 700
+      }
+    },
+    "ui_language": {
+      "engine": "UrhoX / TapTap Maker",
+      "fonts": "copy TTF into assets/Fonts/ and register in UI.Init fonts",
+      "init": [
+        "UI.Init(config)",
+        "build widget tree",
+        "UI.SetRoot(root)"
+      ],
+      "layout": "Yoga (Flexbox-like; defaults differ from CSS)",
+      "render": "NanoVG",
+      "safe_area": "UI.SafeAreaView for interactive HUD; background outside",
+      "scale": "UI.Scale.DEFAULT (1 base px ≈ 1 CSS px)",
+      "script": "Lua 5.4"
+    },
+    "visual_keywords": [
+      "chibi",
+      "cartoon",
+      "pastoral",
+      "farm",
+      "hand-drawn",
+      "cozy",
+      "high-saturation",
+      "rounded"
+    ]
+  }
+}

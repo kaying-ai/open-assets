@@ -1,0 +1,95 @@
+schema_version: 1
+project_id: "happy-farm"
+name: "Happy Farm Pastoral"
+status: approved
+platform:
+  target: mobile
+  orientation: landscape
+  aspect_ratio: "16:9"
+  reference_size: [1792, 1024]
+  safe_area:
+    top: 36
+    right: 64
+    bottom: 40
+    left: 64
+visual:
+  theme: "Q版卡通田园"
+  keywords:
+    - chibi
+    - cartoon
+    - pastoral
+    - farm
+    - hand-drawn
+    - cozy
+    - high-saturation
+    - rounded
+  mood: "轻松治愈、明亮欢快，像午后阳光下的卡通农场"
+  complexity: medium
+  materials:
+    - matte-paint
+    - soft-candy
+    - wood
+    - grass
+    - cream-paper
+  lighting:
+    direction: top-left
+    softness: soft
+colors:
+  primary: "#FF8A3D"        # 主操作：暖橙（种植/收获/购买等核心 CTA）
+  pressed: "#DB7734"        # 主色加深约 14%（255*0.86≈219=DB, 138*0.86≈119=77, 61*0.86≈52=34）
+  secondary: "#6FBF4A"      # 次级面：草地绿（次按钮/确认/成长）
+  accent: "#4FB6E8"         # 强调：晴空蓝（选中/链接/信息）
+  background: "#CDEAF7"     # 底色：浅天空蓝（页面场景基底）
+  warning: "#E85D4A"        # 破坏性：番茄红（删除/退出/不足）
+  reward: "#FFC93C"         # 奖励：麦穗金（领取/金币/稀有）
+  disabled: "#C9C2B6"       # 禁用：暖灰
+  surface:
+    board: "#8FCB6B"        # 草地棋盘
+    cell: "#C68A4B"         # 翻耕土壤格
+    card: "#FFF6E3"         # 奶油卡片
+    card-hi: "#FFFFFF"      # 卡片高光面
+typography:
+  language: zh-CN
+  title: {size: 44, weight: 700}
+  section: {size: 32, weight: 700}
+  body: {size: 26, weight: 500}
+  number: {size: 34, weight: 700}
+  button: {size: 30, weight: 700}
+  policy: "生图底板不含文字；中文标题/数字后期排版，描边 2px 暖棕 + 柔和投影保证复杂背景可读"
+geometry:
+  radius: {small: 12, card: 20, modal: 28}
+  stroke: {thin: 2, regular: 4, strong: 6}
+  button_height: {small: 56, primary: 76}
+  icon_size: {utility: 56, navigation: 48, currency: 36}
+effects:
+  shadow: "柔和落影，右下偏移 4px、模糊 8px，暖棕 #5A3A22 约 18% 不透明度"
+  highlight: "左上内高光，白色约 35% 不透明度，柔边，营造软糖质感"
+  selected: "晴空蓝 #4FB6E8 外发光 3px + 轻微放大 1.03"
+  disabled: "降饱和 60% + 不透明度 55%，移除高光与投影"
+tokens:
+  color:
+    action-primary: "#FF8A3D"
+    action-primary-pressed: "#DB7734"
+    action-danger: "#E85D4A"
+    surface-panel: "#FFF6E3"
+    text-primary: "#5A3A22"
+  spacing:
+    xs: 4
+    sm: 8
+    md: 16
+    lg: 24
+    xl: 32
+  interaction:
+    pressed-scale: 0.97     # 按下缩放
+    pressed-dim: 0.86       # 按下亮度系数（≈14% 压暗）
+    pressed-offset-y: 2     # 按下下沉像素
+  motion:
+    fast-ms: 120
+    normal-ms: 220
+    slow-ms: 360
+consistency_rules:
+  - All pages use the same top-left soft light and matte-paint / soft-candy material vocabulary.
+  - Navigation icons share perspective, 4px stroke weight, and the sky-blue selected state.
+  - Generated text must be short, readable Chinese or composited later; base art is text-free.
+  - Every clickable control ships default + pressed; pressed = primary darkened ~14% + 2px sink, identical outline.
+  - Large radius (card 20 / modal 28) and thick warm-brown outline are shared across all pages and components.

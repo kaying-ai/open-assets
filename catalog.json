@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-11T08:28:15.975Z",
+  "repository": "kaying-ai/open-assets",
+  "pages_url": "https://kaying-ai.github.io/open-assets/",
+  "projects": [
+    {
+      "id": "happy-farm",
+      "title": "Happy Farm Pastoral",
+      "title_zh": "开心农场",
+      "tags": [
+        "farm",
+        "chibi",
+        "cartoon",
+        "pastoral",
+        "cozy",
+        "mobile-landscape",
+        "16:9"
+      ],
+      "platform": "mobile-landscape",
+      "ratio": "16:9",
+      "resolution": [
+        1792,
+        1024
+      ],
+      "style": "Q版卡通田园",
+      "counts": {
+        "pages": 6,
+        "components": 30,
+        "sprites": 37,
+        "engines": 5
+      },
+      "atlas": {
+        "size": [
+          2048,
+          2048
+        ],
+        "image": "assets/atlases/ui-main.png",
+        "data": "assets/atlases/ui-main.json"
+      },
+      "version": "1.0.0",
+      "status": "active",
+      "license": {
+        "assets": "CC-BY-4.0",
+        "code": "MIT"
+      },
+      "preview": "assets/pages/farm-v1.png",
+      "entry": "index.html",
+      "readme": "README.md",
+      "path": "projects/happy-farm/"
+    }
+  ]
+}

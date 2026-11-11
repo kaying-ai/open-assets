@@ -1,0 +1,826 @@
+{
+  "atlas_id": "ui-main",
+  "atlas_size": [
+    2048,
+    2048
+  ],
+  "engine": "cocos",
+  "frames": {
+    "bg-farm-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 584,
+        "width": 1032
+      },
+      "rect": {
+        "height": 584,
+        "width": 1032,
+        "x": 2,
+        "y": 2
+      }
+    },
+    "btn-claim-default": {
+      "capInsets": [
+        44,
+        44,
+        36,
+        36
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 112,
+        "width": 308
+      },
+      "rect": {
+        "height": 112,
+        "width": 308,
+        "x": 1504,
+        "y": 998
+      }
+    },
+    "btn-claim-pressed": {
+      "capInsets": [
+        44,
+        44,
+        36,
+        36
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 112,
+        "width": 308
+      },
+      "rect": {
+        "height": 112,
+        "width": 308,
+        "x": 2,
+        "y": 1120
+      }
+    },
+    "btn-close-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 100,
+        "width": 100
+      },
+      "rect": {
+        "height": 100,
+        "width": 100,
+        "x": 1042,
+        "y": 1120
+      }
+    },
+    "btn-close-pressed": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 100,
+        "width": 100
+      },
+      "rect": {
+        "height": 100,
+        "width": 100,
+        "x": 1144,
+        "y": 1120
+      }
+    },
+    "btn-primary-default": {
+      "capInsets": [
+        48,
+        48,
+        40,
+        40
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 120,
+        "width": 368
+      },
+      "rect": {
+        "height": 120,
+        "width": 368,
+        "x": 1546,
+        "y": 588
+      }
+    },
+    "btn-primary-disabled": {
+      "capInsets": [
+        48,
+        48,
+        40,
+        40
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 120,
+        "width": 368
+      },
+      "rect": {
+        "height": 120,
+        "width": 368,
+        "x": 2,
+        "y": 998
+      }
+    },
+    "btn-primary-pressed": {
+      "capInsets": [
+        48,
+        48,
+        40,
+        40
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 120,
+        "width": 368
+      },
+      "rect": {
+        "height": 120,
+        "width": 368,
+        "x": 372,
+        "y": 998
+      }
+    },
+    "btn-secondary-default": {
+      "capInsets": [
+        44,
+        44,
+        36,
+        36
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 112,
+        "width": 328
+      },
+      "rect": {
+        "height": 112,
+        "width": 328,
+        "x": 844,
+        "y": 998
+      }
+    },
+    "btn-secondary-pressed": {
+      "capInsets": [
+        44,
+        44,
+        36,
+        36
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 112,
+        "width": 328
+      },
+      "rect": {
+        "height": 112,
+        "width": 328,
+        "x": 1174,
+        "y": 998
+      }
+    },
+    "char-farmer-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 293,
+        "width": 174
+      },
+      "rect": {
+        "height": 293,
+        "width": 174,
+        "x": 572,
+        "y": 588
+      }
+    },
+    "currency-bar-default": {
+      "capInsets": [
+        48,
+        48,
+        32,
+        32
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 104,
+        "width": 728
+      },
+      "rect": {
+        "height": 104,
+        "width": 728,
+        "x": 312,
+        "y": 1120
+      }
+    },
+    "deco-badge-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 118,
+        "width": 100
+      },
+      "rect": {
+        "height": 118,
+        "width": 100,
+        "x": 742,
+        "y": 998
+      }
+    },
+    "icon-barn-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 78,
+        "width": 72
+      },
+      "rect": {
+        "height": 78,
+        "width": 72,
+        "x": 1892,
+        "y": 1120
+      }
+    },
+    "icon-carrot-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 88,
+        "width": 64
+      },
+      "rect": {
+        "height": 88,
+        "width": 64,
+        "x": 1370,
+        "y": 1120
+      }
+    },
+    "icon-coin-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 80,
+        "width": 80
+      },
+      "rect": {
+        "height": 80,
+        "width": 80,
+        "x": 1810,
+        "y": 1120
+      }
+    },
+    "icon-energy-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 88,
+        "width": 56
+      },
+      "rect": {
+        "height": 88,
+        "width": 56,
+        "x": 1436,
+        "y": 1120
+      }
+    },
+    "icon-farm-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 71,
+        "width": 76
+      },
+      "rect": {
+        "height": 71,
+        "width": 76,
+        "x": 354,
+        "y": 1234
+      }
+    },
+    "icon-gear-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 86,
+        "width": 86
+      },
+      "rect": {
+        "height": 86,
+        "width": 86,
+        "x": 1586,
+        "y": 1120
+      }
+    },
+    "icon-gem-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 86,
+        "width": 76
+      },
+      "rect": {
+        "height": 86,
+        "width": 76,
+        "x": 1674,
+        "y": 1120
+      }
+    },
+    "icon-gift-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 74,
+        "width": 72
+      },
+      "rect": {
+        "height": 74,
+        "width": 72,
+        "x": 60,
+        "y": 1234
+      }
+    },
+    "icon-heart-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 73,
+        "width": 74
+      },
+      "rect": {
+        "height": 73,
+        "width": 74,
+        "x": 134,
+        "y": 1234
+      }
+    },
+    "icon-lock-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 76,
+        "width": 56
+      },
+      "rect": {
+        "height": 76,
+        "width": 56,
+        "x": 2,
+        "y": 1234
+      }
+    },
+    "icon-seed-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 72,
+        "width": 72
+      },
+      "rect": {
+        "height": 72,
+        "width": 72,
+        "x": 280,
+        "y": 1234
+      }
+    },
+    "icon-shop-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 73,
+        "width": 68
+      },
+      "rect": {
+        "height": 73,
+        "width": 68,
+        "x": 210,
+        "y": 1234
+      }
+    },
+    "icon-social-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 77,
+        "width": 76
+      },
+      "rect": {
+        "height": 77,
+        "width": 76,
+        "x": 1966,
+        "y": 1120
+      }
+    },
+    "icon-star-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 86,
+        "width": 90
+      },
+      "rect": {
+        "height": 86,
+        "width": 90,
+        "x": 1494,
+        "y": 1120
+      }
+    },
+    "icon-task-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 82,
+        "width": 56
+      },
+      "rect": {
+        "height": 82,
+        "width": 56,
+        "x": 1752,
+        "y": 1120
+      }
+    },
+    "icon-water-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 90,
+        "width": 68
+      },
+      "rect": {
+        "height": 90,
+        "width": 68,
+        "x": 1300,
+        "y": 1120
+      }
+    },
+    "icon-wheat-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 92,
+        "width": 52
+      },
+      "rect": {
+        "height": 92,
+        "width": 52,
+        "x": 1246,
+        "y": 1120
+      }
+    },
+    "nav-tab-default": {
+      "capInsets": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 128,
+        "width": 208
+      },
+      "rect": {
+        "height": 128,
+        "width": 208,
+        "x": 916,
+        "y": 588
+      }
+    },
+    "nav-tab-pressed": {
+      "capInsets": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 128,
+        "width": 208
+      },
+      "rect": {
+        "height": 128,
+        "width": 208,
+        "x": 1126,
+        "y": 588
+      }
+    },
+    "nav-tab-selected": {
+      "capInsets": [
+        32,
+        32,
+        32,
+        32
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 128,
+        "width": 208
+      },
+      "rect": {
+        "height": 128,
+        "width": 208,
+        "x": 1336,
+        "y": 588
+      }
+    },
+    "panel-card-default": {
+      "capInsets": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 408,
+        "width": 568
+      },
+      "rect": {
+        "height": 408,
+        "width": 568,
+        "x": 2,
+        "y": 588
+      }
+    },
+    "panel-modal-default": {
+      "capInsets": [
+        48,
+        48,
+        48,
+        48
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 486,
+        "width": 646
+      },
+      "rect": {
+        "height": 486,
+        "width": 646,
+        "x": 1036,
+        "y": 2
+      }
+    },
+    "progress-bar-default": {
+      "capInsets": [
+        32,
+        32,
+        24,
+        24
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 70,
+        "width": 566
+      },
+      "rect": {
+        "height": 70,
+        "width": 566,
+        "x": 432,
+        "y": 1234
+      }
+    },
+    "slot-item-default": {
+      "capInsets": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 166,
+        "width": 166
+      },
+      "rect": {
+        "height": 166,
+        "width": 166,
+        "x": 748,
+        "y": 588
+      }
+    }
+  },
+  "schema_version": 1,
+  "texture": "assets/atlases/ui-main.png"
+}

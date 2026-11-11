@@ -1,0 +1,800 @@
+schema_version: 1
+project_id: happy-farm
+status: approved
+atlas_id: ui-main
+source_sprite_pack: ui-components
+settings:
+  max_size:
+  - 2048
+  - 2048
+  padding: 2
+  power_of_two: true
+  allow_rotation: false
+output:
+  image_path: assets/atlases/ui-main.png
+  data_path: assets/atlases/ui-main.json
+items:
+- id: bg-farm-default
+  semantic_name: bg-farm-default
+  component_id: bg-farm
+  state: default
+  source_path: assets/sprites/ui-components/items/bg-farm-default.png
+  region:
+  - 2
+  - 2
+  - 1032
+  - 584
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: panel-modal-default
+  semantic_name: panel-modal-default
+  component_id: panel-modal
+  state: default
+  source_path: assets/sprites/ui-components/items/panel-modal-default.png
+  region:
+  - 1036
+  - 2
+  - 646
+  - 486
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 48
+    - 48
+    - 48
+    - 48
+- id: panel-card-default
+  semantic_name: panel-card-default
+  component_id: panel-card
+  state: default
+  source_path: assets/sprites/ui-components/items/panel-card-default.png
+  region:
+  - 2
+  - 588
+  - 568
+  - 408
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 40
+    - 40
+    - 40
+    - 40
+- id: char-farmer-default
+  semantic_name: char-farmer-default
+  component_id: char-farmer
+  state: default
+  source_path: assets/sprites/ui-components/items/char-farmer-default.png
+  region:
+  - 572
+  - 588
+  - 174
+  - 293
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: slot-item-default
+  semantic_name: slot-item-default
+  component_id: slot-item
+  state: default
+  source_path: assets/sprites/ui-components/items/slot-item-default.png
+  region:
+  - 748
+  - 588
+  - 166
+  - 166
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 28
+    - 28
+    - 28
+    - 28
+- id: nav-tab-default
+  semantic_name: nav-tab-default
+  component_id: nav-tab
+  state: default
+  source_path: assets/sprites/ui-components/items/nav-tab-default.png
+  region:
+  - 916
+  - 588
+  - 208
+  - 128
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 32
+    - 32
+    - 32
+    - 32
+- id: nav-tab-pressed
+  semantic_name: nav-tab-pressed
+  component_id: nav-tab
+  state: pressed
+  source_path: assets/sprites/ui-components/items/nav-tab-pressed.png
+  region:
+  - 1126
+  - 588
+  - 208
+  - 128
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 32
+    - 32
+    - 32
+    - 32
+- id: nav-tab-selected
+  semantic_name: nav-tab-selected
+  component_id: nav-tab
+  state: selected
+  source_path: assets/sprites/ui-components/items/nav-tab-selected.png
+  region:
+  - 1336
+  - 588
+  - 208
+  - 128
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 32
+    - 32
+    - 32
+    - 32
+- id: btn-primary-default
+  semantic_name: btn-primary-default
+  component_id: btn-primary
+  state: default
+  source_path: assets/sprites/ui-components/items/btn-primary-default.png
+  region:
+  - 1546
+  - 588
+  - 368
+  - 120
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 48
+    - 48
+    - 40
+    - 40
+- id: btn-primary-disabled
+  semantic_name: btn-primary-disabled
+  component_id: btn-primary
+  state: disabled
+  source_path: assets/sprites/ui-components/items/btn-primary-disabled.png
+  region:
+  - 2
+  - 998
+  - 368
+  - 120
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 48
+    - 48
+    - 40
+    - 40
+- id: btn-primary-pressed
+  semantic_name: btn-primary-pressed
+  component_id: btn-primary
+  state: pressed
+  source_path: assets/sprites/ui-components/items/btn-primary-pressed.png
+  region:
+  - 372
+  - 998
+  - 368
+  - 120
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 48
+    - 48
+    - 40
+    - 40
+- id: deco-badge-default
+  semantic_name: deco-badge-default
+  component_id: deco-badge
+  state: default
+  source_path: assets/sprites/ui-components/items/deco-badge-default.png
+  region:
+  - 742
+  - 998
+  - 100
+  - 118
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: btn-secondary-default
+  semantic_name: btn-secondary-default
+  component_id: btn-secondary
+  state: default
+  source_path: assets/sprites/ui-components/items/btn-secondary-default.png
+  region:
+  - 844
+  - 998
+  - 328
+  - 112
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 44
+    - 44
+    - 36
+    - 36
+- id: btn-secondary-pressed
+  semantic_name: btn-secondary-pressed
+  component_id: btn-secondary
+  state: pressed
+  source_path: assets/sprites/ui-components/items/btn-secondary-pressed.png
+  region:
+  - 1174
+  - 998
+  - 328
+  - 112
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 44
+    - 44
+    - 36
+    - 36
+- id: btn-claim-default
+  semantic_name: btn-claim-default
+  component_id: btn-claim
+  state: default
+  source_path: assets/sprites/ui-components/items/btn-claim-default.png
+  region:
+  - 1504
+  - 998
+  - 308
+  - 112
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 44
+    - 44
+    - 36
+    - 36
+- id: btn-claim-pressed
+  semantic_name: btn-claim-pressed
+  component_id: btn-claim
+  state: pressed
+  source_path: assets/sprites/ui-components/items/btn-claim-pressed.png
+  region:
+  - 2
+  - 1120
+  - 308
+  - 112
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 44
+    - 44
+    - 36
+    - 36
+- id: currency-bar-default
+  semantic_name: currency-bar-default
+  component_id: currency-bar
+  state: default
+  source_path: assets/sprites/ui-components/items/currency-bar-default.png
+  region:
+  - 312
+  - 1120
+  - 728
+  - 104
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 48
+    - 48
+    - 32
+    - 32
+- id: btn-close-default
+  semantic_name: btn-close-default
+  component_id: btn-close
+  state: default
+  source_path: assets/sprites/ui-components/items/btn-close-default.png
+  region:
+  - 1042
+  - 1120
+  - 100
+  - 100
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: btn-close-pressed
+  semantic_name: btn-close-pressed
+  component_id: btn-close
+  state: pressed
+  source_path: assets/sprites/ui-components/items/btn-close-pressed.png
+  region:
+  - 1144
+  - 1120
+  - 100
+  - 100
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-wheat-default
+  semantic_name: icon-wheat-default
+  component_id: icon-wheat
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-wheat-default.png
+  region:
+  - 1246
+  - 1120
+  - 52
+  - 92
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-water-default
+  semantic_name: icon-water-default
+  component_id: icon-water
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-water-default.png
+  region:
+  - 1300
+  - 1120
+  - 68
+  - 90
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-carrot-default
+  semantic_name: icon-carrot-default
+  component_id: icon-carrot
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-carrot-default.png
+  region:
+  - 1370
+  - 1120
+  - 64
+  - 88
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-energy-default
+  semantic_name: icon-energy-default
+  component_id: icon-energy
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-energy-default.png
+  region:
+  - 1436
+  - 1120
+  - 56
+  - 88
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-star-default
+  semantic_name: icon-star-default
+  component_id: icon-star
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-star-default.png
+  region:
+  - 1494
+  - 1120
+  - 90
+  - 86
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-gear-default
+  semantic_name: icon-gear-default
+  component_id: icon-gear
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-gear-default.png
+  region:
+  - 1586
+  - 1120
+  - 86
+  - 86
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-gem-default
+  semantic_name: icon-gem-default
+  component_id: icon-gem
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-gem-default.png
+  region:
+  - 1674
+  - 1120
+  - 76
+  - 86
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-task-default
+  semantic_name: icon-task-default
+  component_id: icon-task
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-task-default.png
+  region:
+  - 1752
+  - 1120
+  - 56
+  - 82
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-coin-default
+  semantic_name: icon-coin-default
+  component_id: icon-coin
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-coin-default.png
+  region:
+  - 1810
+  - 1120
+  - 80
+  - 80
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-barn-default
+  semantic_name: icon-barn-default
+  component_id: icon-barn
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-barn-default.png
+  region:
+  - 1892
+  - 1120
+  - 72
+  - 78
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-social-default
+  semantic_name: icon-social-default
+  component_id: icon-social
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-social-default.png
+  region:
+  - 1966
+  - 1120
+  - 76
+  - 77
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-lock-default
+  semantic_name: icon-lock-default
+  component_id: icon-lock
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-lock-default.png
+  region:
+  - 2
+  - 1234
+  - 56
+  - 76
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-gift-default
+  semantic_name: icon-gift-default
+  component_id: icon-gift
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-gift-default.png
+  region:
+  - 60
+  - 1234
+  - 72
+  - 74
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-heart-default
+  semantic_name: icon-heart-default
+  component_id: icon-heart
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-heart-default.png
+  region:
+  - 134
+  - 1234
+  - 74
+  - 73
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-shop-default
+  semantic_name: icon-shop-default
+  component_id: icon-shop
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-shop-default.png
+  region:
+  - 210
+  - 1234
+  - 68
+  - 73
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-seed-default
+  semantic_name: icon-seed-default
+  component_id: icon-seed
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-seed-default.png
+  region:
+  - 280
+  - 1234
+  - 72
+  - 72
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-farm-default
+  semantic_name: icon-farm-default
+  component_id: icon-farm
+  state: default
+  source_path: assets/sprites/ui-components/items/icon-farm-default.png
+  region:
+  - 354
+  - 1234
+  - 76
+  - 71
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 1:1
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: progress-bar-default
+  semantic_name: progress-bar-default
+  component_id: progress-bar
+  state: default
+  source_path: assets/sprites/ui-components/items/progress-bar-default.png
+  region:
+  - 432
+  - 1234
+  - 566
+  - 70
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 32
+    - 32
+    - 24
+    - 24
+review:
+  complete: true
+  notes:
+  - "default-mode auto-close: 37 sprites packed into 2048x2048 power-of-two atlas (padding 2, no rotation)."
+  - "9-slice margins verified against region dims: every 9-slice leaves a stretchable center (left+right<width, top+bottom<height)."
+  - "Controls btn-primary/btn-secondary/btn-claim/btn-close/nav-tab all have pressed sprites packed; state coverage complete."
+  - "Icons/character/decoration use 1:1 or full slice (no stretch); bg-farm full-frame opaque background."

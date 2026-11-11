@@ -1,0 +1,8 @@
+node_modules/
+**/_detect/
+**/_preview*.png
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log

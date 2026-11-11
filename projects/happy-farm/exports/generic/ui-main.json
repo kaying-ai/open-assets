@@ -1,0 +1,1011 @@
+{
+  "atlas_id": "ui-main",
+  "atlas_size": [
+    2048,
+    2048
+  ],
+  "engine": "generic",
+  "schema_version": 1,
+  "sprites": {
+    "bg-farm-default": {
+      "component_id": "bg-farm",
+      "id": "bg-farm-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        2,
+        1032,
+        584
+      ],
+      "rotated": false,
+      "semantic_name": "bg-farm-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "source_path": "assets/sprites/ui-components/items/bg-farm-default.png",
+      "state": "default"
+    },
+    "btn-claim-default": {
+      "component_id": "btn-claim",
+      "id": "btn-claim-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1504,
+        998,
+        308,
+        112
+      ],
+      "rotated": false,
+      "semantic_name": "btn-claim-default",
+      "slice": {
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/btn-claim-default.png",
+      "state": "default"
+    },
+    "btn-claim-pressed": {
+      "component_id": "btn-claim",
+      "id": "btn-claim-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        1120,
+        308,
+        112
+      ],
+      "rotated": false,
+      "semantic_name": "btn-claim-pressed",
+      "slice": {
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/btn-claim-pressed.png",
+      "state": "pressed"
+    },
+    "btn-close-default": {
+      "component_id": "btn-close",
+      "id": "btn-close-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1042,
+        1120,
+        100,
+        100
+      ],
+      "rotated": false,
+      "semantic_name": "btn-close-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/btn-close-default.png",
+      "state": "default"
+    },
+    "btn-close-pressed": {
+      "component_id": "btn-close",
+      "id": "btn-close-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1144,
+        1120,
+        100,
+        100
+      ],
+      "rotated": false,
+      "semantic_name": "btn-close-pressed",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/btn-close-pressed.png",
+      "state": "pressed"
+    },
+    "btn-primary-default": {
+      "component_id": "btn-primary",
+      "id": "btn-primary-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1546,
+        588,
+        368,
+        120
+      ],
+      "rotated": false,
+      "semantic_name": "btn-primary-default",
+      "slice": {
+        "margins": [
+          48,
+          48,
+          40,
+          40
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/btn-primary-default.png",
+      "state": "default"
+    },
+    "btn-primary-disabled": {
+      "component_id": "btn-primary",
+      "id": "btn-primary-disabled",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        998,
+        368,
+        120
+      ],
+      "rotated": false,
+      "semantic_name": "btn-primary-disabled",
+      "slice": {
+        "margins": [
+          48,
+          48,
+          40,
+          40
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/btn-primary-disabled.png",
+      "state": "disabled"
+    },
+    "btn-primary-pressed": {
+      "component_id": "btn-primary",
+      "id": "btn-primary-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        372,
+        998,
+        368,
+        120
+      ],
+      "rotated": false,
+      "semantic_name": "btn-primary-pressed",
+      "slice": {
+        "margins": [
+          48,
+          48,
+          40,
+          40
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/btn-primary-pressed.png",
+      "state": "pressed"
+    },
+    "btn-secondary-default": {
+      "component_id": "btn-secondary",
+      "id": "btn-secondary-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        844,
+        998,
+        328,
+        112
+      ],
+      "rotated": false,
+      "semantic_name": "btn-secondary-default",
+      "slice": {
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/btn-secondary-default.png",
+      "state": "default"
+    },
+    "btn-secondary-pressed": {
+      "component_id": "btn-secondary",
+      "id": "btn-secondary-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1174,
+        998,
+        328,
+        112
+      ],
+      "rotated": false,
+      "semantic_name": "btn-secondary-pressed",
+      "slice": {
+        "margins": [
+          44,
+          44,
+          36,
+          36
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/btn-secondary-pressed.png",
+      "state": "pressed"
+    },
+    "char-farmer-default": {
+      "component_id": "char-farmer",
+      "id": "char-farmer-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        572,
+        588,
+        174,
+        293
+      ],
+      "rotated": false,
+      "semantic_name": "char-farmer-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "source_path": "assets/sprites/ui-components/items/char-farmer-default.png",
+      "state": "default"
+    },
+    "currency-bar-default": {
+      "component_id": "currency-bar",
+      "id": "currency-bar-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        312,
+        1120,
+        728,
+        104
+      ],
+      "rotated": false,
+      "semantic_name": "currency-bar-default",
+      "slice": {
+        "margins": [
+          48,
+          48,
+          32,
+          32
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/currency-bar-default.png",
+      "state": "default"
+    },
+    "deco-badge-default": {
+      "component_id": "deco-badge",
+      "id": "deco-badge-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        742,
+        998,
+        100,
+        118
+      ],
+      "rotated": false,
+      "semantic_name": "deco-badge-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/deco-badge-default.png",
+      "state": "default"
+    },
+    "icon-barn-default": {
+      "component_id": "icon-barn",
+      "id": "icon-barn-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1892,
+        1120,
+        72,
+        78
+      ],
+      "rotated": false,
+      "semantic_name": "icon-barn-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-barn-default.png",
+      "state": "default"
+    },
+    "icon-carrot-default": {
+      "component_id": "icon-carrot",
+      "id": "icon-carrot-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1370,
+        1120,
+        64,
+        88
+      ],
+      "rotated": false,
+      "semantic_name": "icon-carrot-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-carrot-default.png",
+      "state": "default"
+    },
+    "icon-coin-default": {
+      "component_id": "icon-coin",
+      "id": "icon-coin-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1810,
+        1120,
+        80,
+        80
+      ],
+      "rotated": false,
+      "semantic_name": "icon-coin-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-coin-default.png",
+      "state": "default"
+    },
+    "icon-energy-default": {
+      "component_id": "icon-energy",
+      "id": "icon-energy-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1436,
+        1120,
+        56,
+        88
+      ],
+      "rotated": false,
+      "semantic_name": "icon-energy-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-energy-default.png",
+      "state": "default"
+    },
+    "icon-farm-default": {
+      "component_id": "icon-farm",
+      "id": "icon-farm-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        354,
+        1234,
+        76,
+        71
+      ],
+      "rotated": false,
+      "semantic_name": "icon-farm-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-farm-default.png",
+      "state": "default"
+    },
+    "icon-gear-default": {
+      "component_id": "icon-gear",
+      "id": "icon-gear-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1586,
+        1120,
+        86,
+        86
+      ],
+      "rotated": false,
+      "semantic_name": "icon-gear-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-gear-default.png",
+      "state": "default"
+    },
+    "icon-gem-default": {
+      "component_id": "icon-gem",
+      "id": "icon-gem-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1674,
+        1120,
+        76,
+        86
+      ],
+      "rotated": false,
+      "semantic_name": "icon-gem-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-gem-default.png",
+      "state": "default"
+    },
+    "icon-gift-default": {
+      "component_id": "icon-gift",
+      "id": "icon-gift-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        60,
+        1234,
+        72,
+        74
+      ],
+      "rotated": false,
+      "semantic_name": "icon-gift-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-gift-default.png",
+      "state": "default"
+    },
+    "icon-heart-default": {
+      "component_id": "icon-heart",
+      "id": "icon-heart-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        134,
+        1234,
+        74,
+        73
+      ],
+      "rotated": false,
+      "semantic_name": "icon-heart-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-heart-default.png",
+      "state": "default"
+    },
+    "icon-lock-default": {
+      "component_id": "icon-lock",
+      "id": "icon-lock-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        1234,
+        56,
+        76
+      ],
+      "rotated": false,
+      "semantic_name": "icon-lock-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-lock-default.png",
+      "state": "default"
+    },
+    "icon-seed-default": {
+      "component_id": "icon-seed",
+      "id": "icon-seed-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        280,
+        1234,
+        72,
+        72
+      ],
+      "rotated": false,
+      "semantic_name": "icon-seed-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-seed-default.png",
+      "state": "default"
+    },
+    "icon-shop-default": {
+      "component_id": "icon-shop",
+      "id": "icon-shop-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        210,
+        1234,
+        68,
+        73
+      ],
+      "rotated": false,
+      "semantic_name": "icon-shop-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-shop-default.png",
+      "state": "default"
+    },
+    "icon-social-default": {
+      "component_id": "icon-social",
+      "id": "icon-social-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1966,
+        1120,
+        76,
+        77
+      ],
+      "rotated": false,
+      "semantic_name": "icon-social-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-social-default.png",
+      "state": "default"
+    },
+    "icon-star-default": {
+      "component_id": "icon-star",
+      "id": "icon-star-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1494,
+        1120,
+        90,
+        86
+      ],
+      "rotated": false,
+      "semantic_name": "icon-star-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-star-default.png",
+      "state": "default"
+    },
+    "icon-task-default": {
+      "component_id": "icon-task",
+      "id": "icon-task-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1752,
+        1120,
+        56,
+        82
+      ],
+      "rotated": false,
+      "semantic_name": "icon-task-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-task-default.png",
+      "state": "default"
+    },
+    "icon-water-default": {
+      "component_id": "icon-water",
+      "id": "icon-water-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1300,
+        1120,
+        68,
+        90
+      ],
+      "rotated": false,
+      "semantic_name": "icon-water-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-water-default.png",
+      "state": "default"
+    },
+    "icon-wheat-default": {
+      "component_id": "icon-wheat",
+      "id": "icon-wheat-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1246,
+        1120,
+        52,
+        92
+      ],
+      "rotated": false,
+      "semantic_name": "icon-wheat-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "1:1"
+      },
+      "source_path": "assets/sprites/ui-components/items/icon-wheat-default.png",
+      "state": "default"
+    },
+    "nav-tab-default": {
+      "component_id": "nav-tab",
+      "id": "nav-tab-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        916,
+        588,
+        208,
+        128
+      ],
+      "rotated": false,
+      "semantic_name": "nav-tab-default",
+      "slice": {
+        "margins": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/nav-tab-default.png",
+      "state": "default"
+    },
+    "nav-tab-pressed": {
+      "component_id": "nav-tab",
+      "id": "nav-tab-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1126,
+        588,
+        208,
+        128
+      ],
+      "rotated": false,
+      "semantic_name": "nav-tab-pressed",
+      "slice": {
+        "margins": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/nav-tab-pressed.png",
+      "state": "pressed"
+    },
+    "nav-tab-selected": {
+      "component_id": "nav-tab",
+      "id": "nav-tab-selected",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1336,
+        588,
+        208,
+        128
+      ],
+      "rotated": false,
+      "semantic_name": "nav-tab-selected",
+      "slice": {
+        "margins": [
+          32,
+          32,
+          32,
+          32
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/nav-tab-selected.png",
+      "state": "selected"
+    },
+    "panel-card-default": {
+      "component_id": "panel-card",
+      "id": "panel-card-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        588,
+        568,
+        408
+      ],
+      "rotated": false,
+      "semantic_name": "panel-card-default",
+      "slice": {
+        "margins": [
+          40,
+          40,
+          40,
+          40
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/panel-card-default.png",
+      "state": "default"
+    },
+    "panel-modal-default": {
+      "component_id": "panel-modal",
+      "id": "panel-modal-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1036,
+        2,
+        646,
+        486
+      ],
+      "rotated": false,
+      "semantic_name": "panel-modal-default",
+      "slice": {
+        "margins": [
+          48,
+          48,
+          48,
+          48
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/panel-modal-default.png",
+      "state": "default"
+    },
+    "progress-bar-default": {
+      "component_id": "progress-bar",
+      "id": "progress-bar-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        432,
+        1234,
+        566,
+        70
+      ],
+      "rotated": false,
+      "semantic_name": "progress-bar-default",
+      "slice": {
+        "margins": [
+          32,
+          32,
+          24,
+          24
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/progress-bar-default.png",
+      "state": "default"
+    },
+    "slot-item-default": {
+      "component_id": "slot-item",
+      "id": "slot-item-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        748,
+        588,
+        166,
+        166
+      ],
+      "rotated": false,
+      "semantic_name": "slot-item-default",
+      "slice": {
+        "margins": [
+          28,
+          28,
+          28,
+          28
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/sprites/ui-components/items/slot-item-default.png",
+      "state": "default"
+    }
+  },
+  "texture": "assets/atlases/ui-main.png"
+}
