@@ -135,7 +135,7 @@ function main() {
   const args = parseArgs(process.argv.slice(2));
   const srcArg = args.pos[0];
   if (!srcArg) {
-    console.error("usage: publish-project.mjs <spec-dir> --id <id> [--force] [--title-en T] [--title-zh T] [--tags a,b] [--style S] [--version V]");
+    console.error("usage: publish-project.mjs <spec-dir> --id <id> [--force] [--title-en T] [--title-zh T] [--tags a,b] [--style S] [--version V] [--desc-en T] [--desc-zh T]");
     process.exit(2);
   }
   const src = path.resolve(srcArg);
@@ -180,6 +180,12 @@ function main() {
     id,
     title: meta.title,
     title_zh: meta.title_zh,
+    description:
+      args.opt["desc-en"] ||
+      `${meta.title}: ${meta.counts.pages} page visuals, ${meta.counts.components} components, ${meta.counts.sprites} state sprites.`,
+    description_zh:
+      args.opt["desc-zh"] ||
+      `${meta.title_zh}：${meta.counts.pages} 张页面视觉、${meta.counts.components} 个组件、${meta.counts.sprites} 个状态精灵。`,
     platform: meta.platform,
     ratio: meta.ratio,
     resolution: meta.resolution,

@@ -22,35 +22,100 @@ export function loadProjects(root = ROOT) {
     .sort((a, b) => a.id.localeCompare(b.id));
 }
 
-function countsLine(p, lang) {
+function readPages(root, id) {
+  const m = path.join(root, "projects", id, "exports", "web", "manifest.json");
+  if (!fs.existsSync(m)) return [];
+  try {
+    return JSON.parse(fs.readFileSync(m, "utf8")).pages || [];
+  } catch {
+    return [];
+  }
+}
+
+function assetBullets(p, lang) {
+  const zh = lang === "zh";
   const c = p.counts || {};
   const atlas = p.atlas && p.atlas.size ? p.atlas.size.join("×") : "—";
-  return lang === "zh"
-    ? `${c.pages ?? 0} 页 · ${c.components ?? 0} 组件 · ${c.sprites ?? 0} 精灵 · ${c.engines ?? 0} 引擎 · 图集 ${atlas}`
-    : `${c.pages ?? 0} pages · ${c.components ?? 0} components · ${c.sprites ?? 0} sprites · ${c.engines ?? 0} engines · atlas ${atlas}`;
+  const engines = Object.keys((p.resources && p.resources.engines) || {}).join(" / ");
+  return zh
+    ? [
+        `- 组件 ${c.components || 0} 个（状态精灵 ${c.sprites || 0} 个，可点击控件含 default + pressed 两态）`,
+        `- 雪碧图 + 切分元素 ${c.sprites || 0} PNG + sprite-manifest + ZIP 包`,
+        `- 纹理图集 ${atlas}（ui-main.png + ui-main.json，含 9-slice）`,
+        `- 引擎交付 ${c.engines || 0} 份（${engines}）`,
+        `- Web 设计令牌 tokens.css + manifest.json`,
+      ].join("\n")
+    : [
+        `- ${c.components || 0} components (${c.sprites || 0} state sprites; clickable controls ship default + pressed)`,
+        `- sprite sheet + ${c.sprites || 0} split element PNGs + sprite-manifest + ZIP package`,
+        `- texture atlas ${atlas} (ui-main.png + ui-main.json, with 9-slice)`,
+        `- ${c.engines || 0} engine handoffs (${engines})`,
+        `- web design tokens tokens.css + manifest.json`,
+      ].join("\n");
 }
 
 function readmeBlock(projects, lang) {
   const zh = lang === "zh";
   if (!projects.length) return zh ? "_（暂无项目）_\n" : "_（no projects yet）_\n";
   const head = zh
-    ? "| 预览 | 项目 | 平台 · 比例 | 内容 | 入口 |\n|---|---|---|---|---|\n"
-    : "| Preview | Project | Platform · ratio | Contents | Links |\n|---|---|---|---|---|\n";
+    ? "| 预览 | 项目 | 简介 | 模块效果图 | 素材 | 入口 |\n|---|---|---|---|---|---|\n"
+    : "| Preview | Project | Intro | Effect images | Assets | Links |\n|---|---|---|---|---|---|\n";
   const rows = projects
     .map((p) => {
       const base = `projects/${p.id}/`;
-      const prev = p.preview ? `<img src="${base}${p.preview}" width="220" alt="${p.id}">` : "";
+      const prev = p.preview ? `<img src="${base}${p.preview}" width="200" alt="${p.id}">` : "";
       const title = zh ? p.title_zh || p.title : p.title || p.title_zh;
+      const desc = zh ? p.description_zh || p.description || "" : p.description || p.description_zh || "";
+      const c = p.counts || {};
+      const assets = zh ? `${c.components || 0} 组件 / ${c.sprites || 0} 精灵` : `${c.components || 0} comp / ${c.sprites || 0} sprites`;
       const links = [
         `[${zh ? "目录" : "catalog"}](${base}index.html)`,
         `[README](${base}README.md)`,
         `[manifest](${base}exports/web/manifest.json)`,
       ].join(" · ");
       const deprecated = p.status === "deprecated" ? (zh ? "（已弃用）" : " (deprecated)") : "";
-      return `| ${prev} | [**${p.id}**](${base}) ${title}${deprecated} | ${p.platform} · ${p.ratio} | ${countsLine(p, lang)} | ${links} |`;
+      return `| ${prev} | [**${p.id}**](${base}) ${title}${deprecated} | ${desc} | ${c.pages || 0} | ${assets} | ${links} |`;
     })
     .join("\n");
-  return head + rows + "\n";
+
+  const details = projects
+    .map((p) => {
+      const base = `projects/${p.id}/`;
+      const title = zh ? p.title_zh || p.title : p.title || p.title_zh;
+      const desc = zh ? p.description_zh || p.description || "" : p.description || p.description_zh || "";
+      const c = p.counts || {};
+      const pages = readPages(ROOT, p.id);
+      const modHead = zh ? "| 模块 | 效果图 |\n|---|---|\n" : "| Module | Effect image |\n|---|---|\n";
+      const modRows = pages
+        .map((pg) => {
+          const rel = String(pg.image || "").replace(/^\.\.\/\.\.\//, "");
+          const name = rel.split("/").pop() || pg.id;
+          return `| ${pg.id}${pg.title ? " " + pg.title : ""} | [${name}](${base}${rel}) |`;
+        })
+        .join("\n");
+      const pkg = p.resources && p.resources.package ? p.resources.package : "";
+      return [
+        `### ${p.id} — ${title}`,
+        "",
+        desc,
+        "",
+        `**${zh ? "规格" : "Specs"}:** ${p.platform} · ${p.ratio} · ${(p.resolution || []).join("×")} · ${p.style} · v${p.version} · CC-BY-4.0`,
+        "",
+        `**${zh ? "模块效果图" : "Module effect images"} (${c.pages || 0}):**`,
+        "",
+        modHead + modRows,
+        "",
+        `**${zh ? "素材清单" : "Asset inventory"}:**`,
+        assetBullets(p, lang),
+        "",
+        `**${zh ? "入口" : "Links"}:** [${zh ? "浏览目录" : "browse"}](${base}index.html) · [README](${base}README.md) · [manifest](${base}exports/web/manifest.json)` +
+          (pkg ? ` · [${zh ? "精灵包" : "sprite zip"}](${base}${pkg})` : ""),
+        "",
+      ].join("\n");
+    })
+    .join("\n");
+
+  return head + rows + "\n\n" + details;
 }
 
 function injectReadme(root, projects) {
@@ -176,6 +241,8 @@ export function buildCatalog(root = ROOT) {
       id: p.id,
       title: p.title,
       title_zh: p.title_zh,
+      description: p.description,
+      description_zh: p.description_zh,
       tags: p.tags || [],
       platform: p.platform,
       ratio: p.ratio,

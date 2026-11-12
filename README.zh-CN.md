@@ -2,29 +2,116 @@
 
 [English](README.md) | **中文**
 
-开放、可直接投产的游戏 UI 资产包 —— 页面视觉、组件精灵、纹理图集、设计令牌与引擎交付清单 —— 由可复现的「设计→交付」流水线生成，以自包含项目形式发布。
+> **一个免费、Agent 优先的游戏 UI 素材库。**
+> 这里的每个资产包都**免费**，可自由使用、修改并商用 —— 美术采用
+> [CC-BY-4.0](LICENSE-ASSETS)（需署名），代码采用 [MIT](LICENSE)。
+> 本仓库 **Agent 优先**：机器可读总索引、确定性的单项目清单与稳定路径，
+> 让 Agent 无需爬取或猜测即可发现、拉取并集成素材；人类则在其上获得可视化画廊。
 
-- **统一浏览入口：** <https://kaying-ai.github.io/open-assets/>（画廊）· 或克隆后本地打开 [`index.html`](index.html)。
-- **机器可读总索引：** [`catalog.json`](catalog.json) · 单项目 [`projects/<id>/project.json`](projects/)。
-- **许可证：** 美术与设计数据 [CC-BY-4.0](LICENSE-ASSETS) · 代码与脚本 [MIT](LICENSE)。
+[**浏览画廊**](https://kaying-ai.github.io/open-assets/) ·
+[`catalog.json`](catalog.json) ·
+[`AGENTS.md`](AGENTS.md) ·
+[许可证](#许可证)
 
-## 资源总表
+- **免费开放** —— 无付费墙、无注册；CC-BY-4.0 美术 + MIT 代码。
+- **Agent 优先** —— `catalog.json` → `project.json` → `manifest.json` → 引擎 JSON 是稳定、有文档的消费链路（见 [`AGENTS.md`](AGENTS.md)）。
+- **自包含资产包** —— 每个 `projects/<id>/` 都自带页面、精灵、图集、令牌、引擎交付与可浏览目录。
+- **可复现** —— 契约、生成提示词与确定性渲染源码随每个资产包一起发布。
 
-全部项目及其内容，由 `scripts/build-catalog.mjs` 自动再生成。
+## 面向 Agent —— 如何使用
+
+1. **发现：** `GET` [`catalog.json`](catalog.json)（或 `https://raw.githubusercontent.com/kaying-ai/open-assets/main/catalog.json`）。按 `tags`、`platform`、`ratio` 过滤 `projects[]`。
+2. **查看：** 读 `projects/<id>/project.json`（简介、计数、版本、入口、`resources` 映射）。
+3. **加载素材：** 读 `projects/<id>/exports/web/manifest.json` —— 权威页面列表与图集精灵表（`region [x,y,w,h]`、`pivot`、`slice {type,margins}`、`state`）。与 `assets/atlases/ui-main.png` 配套使用。
+4. **集成：** 消费 `projects/<id>/exports/<engine>/ui-main.json`（`godot | unity | cocos | generic | taptap-maker`），或为 web 引用 `exports/web/tokens.css`。每个控件都要同时接线 `default` 与 `pressed` 两态精灵。
+5. **署名：** 再分发美术时保留 CC-BY-4.0 署名。
+
+```bash
+curl -s https://raw.githubusercontent.com/kaying-ai/open-assets/main/catalog.json
+curl -s https://raw.githubusercontent.com/kaying-ai/open-assets/main/projects/happy-farm/exports/web/manifest.json
+```
+
+完整消费契约见 [`AGENTS.md`](AGENTS.md)。
+
+## 面向人 —— 如何使用
+
+1. 打开[画廊](https://kaying-ai.github.io/open-assets/)（或克隆后的 `index.html`）；按标签 / 平台搜索筛选；可切换 EN/中文。
+2. 点击项目打开其资产目录（`projects/<id>/index.html`）—— 页面视觉与全部透明底组件精灵，含状态变体。
+3. 按需下载：单个 PNG、精灵 ZIP（`packages/*.zip`），或打包图集（`assets/atlases/`）。
+4. 用匹配的 `exports/<engine>/ui-main.json` + 图集 JSON（含 9-slice 边距）导入引擎，或为 web 构建引用 `exports/web/tokens.css`。单项目 README 说明布局、状态与安全区。
+5. 署名「open-assets by kaying-ai」（CC-BY-4.0）并注明改动。
+
+## 素材总表
+
+单项目列表 —— 简介、模块效果图与素材清单 —— 由 `scripts/build-catalog.mjs` 自动再生成。
+请勿在标记之间手工编辑。
 
 <!-- catalog:start -->
-| 预览 | 项目 | 平台 · 比例 | 内容 | 入口 |
-|---|---|---|---|---|
-| <img src="projects/happy-farm/assets/pages/farm-v1.png" width="220" alt="happy-farm"> | [**happy-farm**](projects/happy-farm/) 开心农场 | mobile-landscape · 16:9 | 6 页 · 30 组件 · 37 精灵 · 5 引擎 · 图集 2048×2048 | [目录](projects/happy-farm/index.html) · [README](projects/happy-farm/README.md) · [manifest](projects/happy-farm/exports/web/manifest.json) |
+| 预览 | 项目 | 简介 | 模块效果图 | 素材 | 入口 |
+|---|---|---|---|---|---|
+| <img src="projects/happy-farm/assets/pages/farm-v1.png" width="200" alt="happy-farm"> | [**happy-farm**](projects/happy-farm/) 开心农场 | Q版卡通田园农场 UI 套件：种植/收获核心循环，含商店、仓库、社交、任务与设置；控件两态、面板 9-slice。 | 6 | 30 组件 / 37 精灵 | [目录](projects/happy-farm/index.html) · [README](projects/happy-farm/README.md) · [manifest](projects/happy-farm/exports/web/manifest.json) |
+
+### happy-farm — 开心农场
+
+Q版卡通田园农场 UI 套件：种植/收获核心循环，含商店、仓库、社交、任务与设置；控件两态、面板 9-slice。
+
+**规格:** mobile-landscape · 16:9 · 1792×1024 · Q版卡通田园 · v1.0.0 · CC-BY-4.0
+
+**模块效果图 (6):**
+
+| 模块 | 效果图 |
+|---|---|
+| farm 农田主页 | [farm-v1.png](projects/happy-farm/assets/pages/farm-v1.png) |
+| shop 商店 | [shop-v1.png](projects/happy-farm/assets/pages/shop-v1.png) |
+| barn 仓库 | [barn-v1.png](projects/happy-farm/assets/pages/barn-v1.png) |
+| social 好友邻居 | [social-v1.png](projects/happy-farm/assets/pages/social-v1.png) |
+| task 任务成就 | [task-v1.png](projects/happy-farm/assets/pages/task-v1.png) |
+| settings 设置 | [settings-v1.png](projects/happy-farm/assets/pages/settings-v1.png) |
+
+**素材清单:**
+- 组件 30 个（状态精灵 37 个，可点击控件含 default + pressed 两态）
+- 雪碧图 + 切分元素 37 PNG + sprite-manifest + ZIP 包
+- 纹理图集 2048×2048（ui-main.png + ui-main.json，含 9-slice）
+- 引擎交付 5 份（cocos / generic / godot / taptap-maker / unity）
+- Web 设计令牌 tokens.css + manifest.json
+
+**入口:** [浏览目录](projects/happy-farm/index.html) · [README](projects/happy-farm/README.md) · [manifest](projects/happy-farm/exports/web/manifest.json) · [精灵包](projects/happy-farm/packages/ui-components-png.zip)
 <!-- catalog:end -->
 
-## 使用介绍 —— 面向人
+## 面向 Agent —— 通过 PR 贡献新资产包
 
-从[画廊](https://kaying-ai.github.io/open-assets/)（或克隆后的 `index.html`）进入，按标签或平台筛选，打开某个项目即可看到页面视觉与全部透明底组件精灵。每个项目自带可浏览的资产目录（`projects/<id>/index.html`）、交互壳（`result.html`）、可直接解压的精灵包（`packages/*.zip`）、带 9-slice 元数据的打包图集（`assets/atlases/`）、各引擎交付清单（`exports/godot|unity|cocos|generic|taptap-maker/`）以及 web 令牌（`exports/web/tokens.css`）。把 PNG 与图集 JSON 导入引擎，或在 web 构建中引用 `tokens.css`；单项目 README 说明布局、状态与安全区。美术可在 CC-BY-4.0 下商用与改编，只需署名「open-assets by kaying-ai」并注明改动。
+欢迎新美术。按以下流程提交（细节见 [`docs/MAINTAINING.md`](docs/MAINTAINING.md)）：
 
-## 使用介绍 —— 面向 Agent
+```bash
+# 1. 在 GitHub 上 fork，然后克隆你的 fork 并建分支
+git clone git@github.com:<you>/open-assets.git && cd open-assets
+git checkout -b add/<project-id>
 
-先取 [`catalog.json`](catalog.json) 枚举项目，按 `tags` / `platform` / `ratio` 选定一个，再读 `projects/<id>/project.json` 获取计数与入口、读 `projects/<id>/exports/web/manifest.json` 获取权威页面列表与图集精灵表（每个精灵含 `region [x,y,w,h]`、`pivot`、`slice {type,margins}`、`state`）。引擎集成消费 `projects/<id>/exports/<engine>/ui-main.json`（godot / unity / cocos / generic / taptap-maker），设计令牌用 `exports/web/tokens.css`；原始文件可按 `https://raw.githubusercontent.com/kaying-ai/open-assets/main/<path>` 直取。可点击控件恒含 `default` + `pressed` 两态精灵，请同时接线。再分发美术时遵守 `LICENSE-ASSETS` 的 CC-BY-4.0 署名要求。完整消费契约见 [`AGENTS.md`](AGENTS.md)。
+# 2. 准备一个 kui spec 项目（或任何同布局的资产包），然后发布它
+node scripts/publish-project.mjs /path/to/specs/<id> --id <id> \
+  --title-zh "<中文名>" --desc-en "<one-line intro>" --desc-zh "<一句话简介>"
+
+# 3. 重新生成浏览面（画廊 + catalog.json + README 表格）
+node scripts/build-catalog.mjs
+
+# 4. 自检、提交、推送、开 PR
+git status --short          # 不得包含 node_modules / _detect / _preview
+git add -A && git commit -m "add <id> UI pack"
+git push -u origin add/<id>
+gh pr create --title "add <id> UI pack" --fill
+```
+
+**PR 检查清单**（同样见 [`.github/pull_request_template.md`](.github/pull_request_template.md)）：
+
+- [ ] 美术为你原创 / 兼容 CC-BY-4.0；保留署名。
+- [ ] `projects/<id>/project.json` 存在；简介、计数、比例、分辨率、标签正确。
+- [ ] `catalog.json`、根 `index.html` 与两个 README 的素材总表块已重新生成。
+- [ ] 未提交 `node_modules/`、`_detect/`、`_preview*` 等临时文件。
+- [ ] 遵守体积预算（资产包 ≲ 50 MB；每张页面主图 ≲ 3 MB）；不使用 Git LFS。
+- [ ] 可点击控件含 `default` + `pressed`；图集 9-slice 边距保留可拉伸中心。
+- [ ] 画廊显示新卡片，且图片在 GitHub Pages 上能加载。
+
+维护者合并 → Pages 自动重建 → 资产包上线。
 
 ## 仓库结构
 
@@ -35,33 +122,18 @@ open-assets/
 ├─ README.md / README.zh-CN.md
 ├─ LICENSE / LICENSE-ASSETS
 ├─ AGENTS.md               # agent 消费契约
+├─ .github/pull_request_template.md
 ├─ projects/<kebab-id>/    # 每项目一个自包含资产包
-│  ├─ project.json         # 元数据：id、标题、平台、比例、标签、计数、版本
-│  ├─ index.html           # 可浏览资产目录
-│  ├─ result.html          # 交互壳
+│  ├─ project.json         # 元数据 + 简介 + 计数 + resources
+│  ├─ index.html / result.html
 │  ├─ assets/              # pages / components / sprites / atlases
 │  ├─ exports/             # godot / unity / cocos / generic / taptap-maker / web
-│  ├─ contracts/ prompts/  # 溯源 + 可复现生成提示词
-│  ├─ packages/            # 精灵 PNG zip
-│  ├─ render/              # 确定性渲染源码（不含 node_modules）
-│  └─ docs/                # gdd / prd / interaction / spec / research / plan
+│  ├─ contracts/ prompts/ docs/ render/ packages/
 ├─ scripts/                # publish-project.mjs · build-catalog.mjs
 └─ docs/MAINTAINING.md     # 新增 / 更新 / 弃用 流程
 ```
 
-## 发布与维护
-
-一条命令新增资产包，然后 commit + push（Pages 自动重建）：
-
-```bash
-node scripts/publish-project.mjs /path/to/specs/<project-id> --id <project-id>
-node scripts/build-catalog.mjs
-git add -A && git commit -m "publish <project-id>" && git push
-```
-
-完整流程、体积预算与排除规则见 [`docs/MAINTAINING.md`](docs/MAINTAINING.md)。
-
 ## 许可证
 
-- 美术与设计数据：[CC-BY-4.0](LICENSE-ASSETS) —— 署名即可分享/改编。
+- 美术与设计数据：[CC-BY-4.0](LICENSE-ASSETS) —— 署名即可自由分享/改编，含商用。
 - 代码与脚本：[MIT](LICENSE)。
