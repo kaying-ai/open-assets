@@ -3,6 +3,7 @@
   "id": "happy-farm",
   "title": "Happy Farm Pastoral",
   "title_zh": "开心农场",
+  "publisher": "kaying-ai",
   "description": "A cozy chibi-cartoon farm UI kit: planting/harvest core loop, shop, barn, social, tasks and settings, with two-state controls and 9-slice panels.",
   "description_zh": "Q版卡通田园农场 UI 套件：种植/收获核心循环，含商店、仓库、社交、任务与设置；控件两态、面板 9-slice。",
   "platform": "mobile-landscape",

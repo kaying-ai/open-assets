@@ -3,6 +3,7 @@
 // Zero dependencies. Usage:
 //   node scripts/publish-project.mjs <spec-dir> --id <id> [--force]
 //        [--title-en T] [--title-zh T] [--tags a,b,c] [--style S] [--version V]
+//        [--desc-en T] [--desc-zh T] [--publisher P]
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -135,7 +136,7 @@ function main() {
   const args = parseArgs(process.argv.slice(2));
   const srcArg = args.pos[0];
   if (!srcArg) {
-    console.error("usage: publish-project.mjs <spec-dir> --id <id> [--force] [--title-en T] [--title-zh T] [--tags a,b] [--style S] [--version V] [--desc-en T] [--desc-zh T]");
+    console.error("usage: publish-project.mjs <spec-dir> --id <id> [--force] [--title-en T] [--title-zh T] [--tags a,b] [--style S] [--version V] [--desc-en T] [--desc-zh T] [--publisher P]");
     process.exit(2);
   }
   const src = path.resolve(srcArg);
@@ -180,6 +181,7 @@ function main() {
     id,
     title: meta.title,
     title_zh: meta.title_zh,
+    publisher: args.opt["publisher"] || "kaying-ai",
     description:
       args.opt["desc-en"] ||
       `${meta.title}: ${meta.counts.pages} page visuals, ${meta.counts.components} components, ${meta.counts.sprites} state sprites.`,

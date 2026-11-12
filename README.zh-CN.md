@@ -55,39 +55,13 @@ curl -s https://raw.githubusercontent.com/kaying-ai/open-assets/main/projects/ha
 
 ## 素材总表
 
-单项目列表 —— 简介、模块效果图与素材清单 —— 由 `scripts/build-catalog.mjs` 自动再生成。
-请勿在标记之间手工编辑。
+单项目列表 —— 简介、发布者、效果图与素材数量 —— 由 `scripts/build-catalog.mjs` 自动再生成。
+新资产包发布后会追加到此列表。请勿在标记之间手工编辑。
 
 <!-- catalog:start -->
-| 预览 | 项目 | 简介 | 模块效果图 | 素材 | 入口 |
-|---|---|---|---|---|---|
-| <img src="projects/happy-farm/assets/pages/farm-v1.png" width="200" alt="happy-farm"> | [**happy-farm**](projects/happy-farm/) 开心农场 | Q版卡通田园农场 UI 套件：种植/收获核心循环，含商店、仓库、社交、任务与设置；控件两态、面板 9-slice。 | 6 | 30 组件 / 37 精灵 | [目录](projects/happy-farm/index.html) · [README](projects/happy-farm/README.md) · [manifest](projects/happy-farm/exports/web/manifest.json) |
-
-### happy-farm — 开心农场
-
-Q版卡通田园农场 UI 套件：种植/收获核心循环，含商店、仓库、社交、任务与设置；控件两态、面板 9-slice。
-
-**规格:** mobile-landscape · 16:9 · 1792×1024 · Q版卡通田园 · v1.0.0 · CC-BY-4.0
-
-**模块效果图 (6):**
-
-| 模块 | 效果图 |
-|---|---|
-| farm 农田主页 | [farm-v1.png](projects/happy-farm/assets/pages/farm-v1.png) |
-| shop 商店 | [shop-v1.png](projects/happy-farm/assets/pages/shop-v1.png) |
-| barn 仓库 | [barn-v1.png](projects/happy-farm/assets/pages/barn-v1.png) |
-| social 好友邻居 | [social-v1.png](projects/happy-farm/assets/pages/social-v1.png) |
-| task 任务成就 | [task-v1.png](projects/happy-farm/assets/pages/task-v1.png) |
-| settings 设置 | [settings-v1.png](projects/happy-farm/assets/pages/settings-v1.png) |
-
-**素材清单:**
-- 组件 30 个（状态精灵 37 个，可点击控件含 default + pressed 两态）
-- 雪碧图 + 切分元素 37 PNG + sprite-manifest + ZIP 包
-- 纹理图集 2048×2048（ui-main.png + ui-main.json，含 9-slice）
-- 引擎交付 5 份（cocos / generic / godot / taptap-maker / unity）
-- Web 设计令牌 tokens.css + manifest.json
-
-**入口:** [浏览目录](projects/happy-farm/index.html) · [README](projects/happy-farm/README.md) · [manifest](projects/happy-farm/exports/web/manifest.json) · [精灵包](projects/happy-farm/packages/ui-components-png.zip)
+| 预览 | 项目 | 发布者 | 简介 | 模块效果图 | 素材 | 入口 |
+|---|---|---|---|---|---|---|
+| <img src="projects/happy-farm/assets/pages/farm-v1.png" width="200" alt="happy-farm"> | [**happy-farm**](projects/happy-farm/) 开心农场 | [kaying-ai](https://github.com/kaying-ai) | Q版卡通田园农场 UI 套件：种植/收获核心循环，含商店、仓库、社交、任务与设置；控件两态、面板 9-slice。 | 6 | 30 组件 / 37 精灵 | [目录](projects/happy-farm/index.html) · [README](projects/happy-farm/README.md) · [manifest](projects/happy-farm/exports/web/manifest.json) |
 <!-- catalog:end -->
 
 ## 面向 Agent —— 通过 PR 贡献新资产包
@@ -101,7 +75,8 @@ git checkout -b add/<project-id>
 
 # 2. 准备一个 kui spec 项目（或任何同布局的资产包），然后发布它
 node scripts/publish-project.mjs /path/to/specs/<id> --id <id> \
-  --title-zh "<中文名>" --desc-en "<one-line intro>" --desc-zh "<一句话简介>"
+  --title-zh "<中文名>" --publisher <your-github-handle> \
+  --desc-en "<one-line intro>" --desc-zh "<一句话简介>"
 
 # 3. 重新生成浏览面（画廊 + catalog.json + README 表格）
 node scripts/build-catalog.mjs
