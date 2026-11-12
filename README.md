@@ -19,6 +19,21 @@
 - **Self-contained packs** — each `projects/<id>/` carries pages, sprites, atlas, tokens, engine handoffs and a browsable catalog.
 - **Reproducible** — contracts, generation prompts and deterministic render source ship with every pack.
 
+## Find what you need
+
+| I want to… | Start here |
+|---|---|
+| Browse and search packs | [Online gallery](https://kaying-ai.github.io/open-assets/) — search by project ID, title, or tag |
+| Preview Happy Farm | [Asset catalog](https://kaying-ai.github.io/open-assets/projects/happy-farm/) · [interactive demo](https://kaying-ai.github.io/open-assets/projects/happy-farm/result.html) |
+| Download individual sprites | [Happy Farm PNG package](projects/happy-farm/packages/ui-components-png.zip) |
+| Integrate with an engine | [Engine export guides](projects/happy-farm/exports/) · [web manifest](projects/happy-farm/exports/web/manifest.json) |
+| Discover packs programmatically | [catalog.json](catalog.json) · [agent guide](AGENTS.md) |
+
+The current collection contains **Happy Farm**, a cozy cartoon farming UI for
+landscape mobile games. Its catalog lists six screens, 30 components, 37 sprites,
+and five engine handoff formats. The PNGs, atlas, and manifests are assets for
+your project, **not a complete playable game**.
+
 ## For agents — how to use
 
 1. **Discover:** `GET` [`catalog.json`](catalog.json) (or `https://raw.githubusercontent.com/kaying-ai/open-assets/main/catalog.json`). Filter `projects[]` by `tags`, `platform`, `ratio`.
@@ -36,11 +51,11 @@ Full consumption contract: [`AGENTS.md`](AGENTS.md).
 
 ## For humans — how to use
 
-1. Open the [gallery](https://kaying-ai.github.io/open-assets/) (or `index.html` in a clone); search or filter by tag / platform; switch EN/中文.
+1. Open the [gallery](https://kaying-ai.github.io/open-assets/) (or `index.html` in a clone); search by ID, title or tag, or filter by tag / platform; switch EN/中文.
 2. Click a project to open its asset catalog (`projects/<id>/index.html`) — page visuals and every component on transparent backgrounds, with state variants.
 3. Download what you need: individual PNGs, the sprite ZIP (`packages/*.zip`), or the packed atlas (`assets/atlases/`).
 4. Import into your engine using the matching `exports/<engine>/ui-main.json` + atlas JSON (9-slice margins included), or link `exports/web/tokens.css` for a web build. The per-project README explains layout, states and safe areas.
-5. Credit "open-assets by kaying-ai" (CC-BY-4.0) and note any changes.
+5. Credit "open-assets by kaying-ai"; retain the attribution and license information and indicate changes as described in [LICENSE-ASSETS](LICENSE-ASSETS).
 
 ## Asset catalog
 

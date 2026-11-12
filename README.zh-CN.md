@@ -18,6 +18,18 @@
 - **自包含资产包** —— 每个 `projects/<id>/` 都自带页面、精灵、图集、令牌、引擎交付与可浏览目录。
 - **可复现** —— 契约、生成提示词与确定性渲染源码随每个资产包一起发布。
 
+## 快速查找
+
+| 想做什么 | 入口 |
+|---|---|
+| 浏览和搜索资产包 | [在线画廊](https://kaying-ai.github.io/open-assets/)：按项目 ID、名称或标签搜索 |
+| 预览开心农场 | [资产目录](https://kaying-ai.github.io/open-assets/projects/happy-farm/) · [交互演示](https://kaying-ai.github.io/open-assets/projects/happy-farm/result.html) |
+| 下载独立精灵 | [开心农场 PNG 素材包](projects/happy-farm/packages/ui-components-png.zip) |
+| 接入游戏引擎 | [引擎导出说明](projects/happy-farm/exports/) · [Web 清单](projects/happy-farm/exports/web/manifest.json) |
+| 通过程序检索 | [catalog.json](catalog.json) · [Agent 使用指南](AGENTS.md) |
+
+目前收录 **开心农场（Happy Farm）**，适用于横屏移动游戏的温馨卡通农场 UI。目录记录了 6 张页面、30 个组件、37 个精灵和 5 种引擎交付格式。PNG、图集和清单是可集成的素材，**并非完整可玩的游戏**。
+
 ## 面向 Agent —— 如何使用
 
 1. **发现：** `GET` [`catalog.json`](catalog.json)（或 `https://raw.githubusercontent.com/kaying-ai/open-assets/main/catalog.json`）。按 `tags`、`platform`、`ratio` 过滤 `projects[]`。
@@ -35,11 +47,11 @@ curl -s https://raw.githubusercontent.com/kaying-ai/open-assets/main/projects/ha
 
 ## 面向人 —— 如何使用
 
-1. 打开[画廊](https://kaying-ai.github.io/open-assets/)（或克隆后的 `index.html`）；按标签 / 平台搜索筛选；可切换 EN/中文。
+1. 打开[画廊](https://kaying-ai.github.io/open-assets/)（或克隆后的 `index.html`）；按项目 ID、名称或标签搜索，或按标签 / 平台筛选；可切换 EN/中文。
 2. 点击项目打开其资产目录（`projects/<id>/index.html`）—— 页面视觉与全部透明底组件精灵，含状态变体。
 3. 按需下载：单个 PNG、精灵 ZIP（`packages/*.zip`），或打包图集（`assets/atlases/`）。
 4. 用匹配的 `exports/<engine>/ui-main.json` + 图集 JSON（含 9-slice 边距）导入引擎，或为 web 构建引用 `exports/web/tokens.css`。单项目 README 说明布局、状态与安全区。
-5. 署名「open-assets by kaying-ai」（CC-BY-4.0）并注明改动。
+5. 署名「open-assets by kaying-ai」；请按照 [LICENSE-ASSETS](LICENSE-ASSETS) 保留署名与许可信息并注明改动。
 
 ## 素材总表
 
