@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../ui.css" />
+<style>
+  .artwrap { position: absolute; inset: 0; overflow: hidden; z-index: 1; background: #14110f; }
+  .artwrap img {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    width: 1280px;
+    filter: brightness(1.04) contrast(1.03) saturate(0.94);
+  }
+  .veil-top {
+    position: absolute; left: 0; right: 0; top: 0; height: 230px; z-index: 3;
+    background: linear-gradient(to bottom, rgba(12,10,8,0.92) 0%, rgba(12,10,8,0.6) 52%, rgba(12,10,8,0) 100%);
+  }
+  .veil-bottom {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 700px; z-index: 3;
+    background: linear-gradient(to top, rgba(12,10,8,0.36) 0%, rgba(12,10,8,0.1) 46%, rgba(12,10,8,0) 100%);
+  }
+  .side-tag {
+    position: absolute;
+    right: 46px;
+    top: 268px;
+    writing-mode: vertical-rl;
+    font-size: 23px;
+    letter-spacing: 0.4em;
+    color: rgba(245, 238, 219, 0.62);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
+    z-index: 12;
+  }
+  .script {
+    position: absolute; left: 54px; right: 54px; top: 1208px; height: 296px;
+    border-radius: var(--r-card);
+    --surface: rgba(242, 234, 218, 0.97);
+    --edge: var(--ink);
+    padding: 28px 32px 24px;
+    z-index: 16;
+    display: flex;
+    flex-direction: column;
+  }
+  .script .sp { display: flex; align-items: center; gap: 14px; }
+  .script .sp .nm { font-size: 29px; font-weight: 700; letter-spacing: 0.12em; }
+  .script .sp .tag {
+    font-size: 19px; letter-spacing: 0.12em; color: #6b4d18;
+    padding: 4px 11px; border-radius: 3px;
+    background: rgba(185, 138, 60, 0.14);
+    box-shadow: inset 0 0 0 1.5px rgba(185, 138, 60, 0.8);
+  }
+  .script .sp .idx { margin-left: auto; font-size: 20px; color: var(--text-2); letter-spacing: 0.1em; }
+  .script .say { margin-top: 20px; font-size: 31px; line-height: 1.55; letter-spacing: 0.05em; color: var(--ink); }
+  .script .reply {
+    margin-top: 16px; padding-top: 16px;
+    border-top: 1px solid rgba(25, 21, 18, 0.16);
+    display: flex; align-items: baseline; gap: 14px;
+  }
+  .script .reply .who { font-size: 21px; letter-spacing: 0.14em; color: var(--primary); font-weight: 700; }
+  .script .reply .txt { font-size: 27px; line-height: 1.5; color: #2f2a24; letter-spacing: 0.04em; }
+  .hint {
+    position: absolute; left: 0; right: 0; top: 1714px; z-index: 12;
+    text-align: center; font-size: 21px; letter-spacing: 0.22em;
+    color: rgba(74, 65, 55, 0.62);
+  }
+</style>
+</head>
+<body>
+<div class="page" style="background:#14110f;">
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <filter id="rough" x="-8%" y="-8%" width="116%" height="116%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="3" seed="11" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="2.0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="artwrap"><img src="../art/rival-art.png" alt="" /></div>
+  <div class="veil-top"></div>
+  <div class="veil-bottom"></div>
+  <div class="fiber"></div>
+
+  <div class="icon-btn dark mounted topleft" style="z-index:14;">
+    <svg viewBox="0 0 32 32"><path d="M21 6.5 9.5 16 21 25.5" /><path d="M9.5 16h15" /></svg>
+  </div>
+  <div class="stagebar mounted">
+    <span class="dot"></span>
+    <span>关底 · 断桥雪渡</span>
+    <span style="width:1.5px; height:26px; background:rgba(245,238,219,0.28);"></span>
+    <span style="font-size:23px; opacity:.78;">情敌 5/9</span>
+  </div>
+  <div style="position:absolute; right:44px; top:62px; height:60px; padding:0 22px; display:flex; align-items:center; z-index:14; font-size:24px; letter-spacing:0.24em; color:rgba(245,238,219,0.82); text-shadow:0 2px 8px rgba(0,0,0,.9);">跳过 ›</div>
+
+  <div class="side-tag">情敌 · 之五</div>
+
+  <!-- 对峙台词 -->
+  <div class="script mounted">
+    <div class="sp">
+      <div class="seal sm"><span>五</span></div>
+      <div class="nm">白衣镖头 · 霍九</div>
+      <div class="tag">话少</div>
+      <div class="idx">对话 2 / 3</div>
+    </div>
+    <div class="say">「穿皮衣的。打了七个才上来。」</div>
+    <div class="reply">
+      <span class="who">老黄</span>
+      <span class="txt">「我不容易了三十年。」</span>
+    </div>
+  </div>
+
+  <div class="hint">轻点继续 · 右上可跳过</div>
+
+  <div class="btn primary" style="position:absolute; left:54px; top:1544px; width:600px; z-index:16;"><span>拔刀</span></div>
+  <div class="btn secondary mounted" style="position:absolute; left:678px; top:1558px; width:348px; z-index:16;"><span>听他念完</span></div>
+
+  <div class="grain"></div>
+</div>
+</body>
+</html>

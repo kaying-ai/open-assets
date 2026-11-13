@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../ui.css" />
+<style>
+  .artwrap { position: absolute; inset: 0; overflow: hidden; z-index: 1; background: #14110f; }
+  .artwrap img {
+    position: absolute;
+    left: -10px;
+    top: 260px;
+    width: 1100px;
+    filter: brightness(1.03) contrast(1.05) saturate(0.93);
+  }
+  .veil-top {
+    position: absolute; left: 0; right: 0; top: 0; height: 340px; z-index: 3;
+    background: linear-gradient(to bottom, rgba(10,8,7,0.72) 0%, rgba(10,8,7,0.4) 62%, rgba(10,8,7,0) 100%);
+  }
+  .veil-bottom {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 560px; z-index: 3;
+    background: linear-gradient(to top, rgba(12,10,8,0.34) 0%, rgba(12,10,8,0.14) 52%, rgba(12,10,8,0) 100%);
+  }
+
+  /* ---- 头目名条 ---- */
+  .bossplate {
+    position: absolute; left: 116px; right: 40px; top: 56px; height: 88px;
+    border-radius: var(--r-sm);
+    --surface: rgba(242, 234, 218, 0.96);
+    --edge: var(--ink);
+    display: flex; align-items: center; gap: 18px;
+    padding: 0 22px;
+    z-index: 16;
+  }
+  .bossplate .nm { font-size: 38px; font-weight: 700; letter-spacing: 0.14em; }
+  .bossplate .sub { font-size: 21px; color: var(--text-2); letter-spacing: 0.12em; padding-top: 6px; }
+  .bossplate .rival { margin-left: auto; font-size: 20px; color: var(--primary); letter-spacing: 0.16em; font-weight: 700; }
+
+  .bossbar { position: absolute; left: 40px; width: 1000px; top: 162px; z-index: 16; }
+  .bossbar .track {
+    position: relative; height: 22px; border-radius: 2px;
+    background: #241f1b;
+    box-shadow: inset 0 0 0 2px rgba(10,8,6,0.85), 0 0 0 1px rgba(245,238,219,0.28);
+    overflow: hidden;
+  }
+  .bossbar .track > i {
+    position: absolute; inset: 0 auto 0 0; width: 56%;
+    background: linear-gradient(to bottom, #c2452f, #99301f);
+    box-shadow: inset 0 2px 0 rgba(245,238,219,0.24);
+  }
+  .bossbar .ticks { position: absolute; inset: 0; display: flex; pointer-events: none; }
+  .bossbar .ticks span { flex: 1; border-right: 2px solid rgba(10,8,6,0.55); }
+  .bossbar .ticks span:last-child { border-right: none; }
+  .bossmeta {
+    display: flex; align-items: center; gap: 22px; margin-top: 12px;
+    font-size: 22px; letter-spacing: 0.1em; color: rgba(245,238,219,0.86);
+    text-shadow: 0 2px 6px rgba(0,0,0,0.9);
+  }
+  .bossmeta b { font-size: 26px; font-weight: 700; color: #f7d9c4; }
+  .bossmeta .intent { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+  .bossmeta .intent svg { width: 34px; height: 34px; stroke: #f0c9b6; fill: none; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+
+  /* ---- 嘲讽 ---- */
+  .taunt {
+    position: absolute; left: 0; right: 0; top: 1092px; z-index: 12;
+    text-align: center;
+    font-size: 30px; letter-spacing: 0.14em;
+    color: rgba(245, 238, 219, 0.9);
+    text-shadow: 0 3px 12px rgba(0,0,0,0.95);
+  }
+  .taunt .who {
+    display: block; margin-bottom: 14px;
+    font-size: 21px; letter-spacing: 0.34em; color: rgba(178, 58, 40, 0.95);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+  }
+
+  .hand { bottom: 322px; height: 250px; z-index: 16; }
+  .hand .card.mounted::before {
+    box-shadow:
+      inset 0 0 0 3px var(--ink, #191512),
+      inset 0 0 0 5px rgba(242, 234, 218, 0.55),
+      0 10px 22px rgba(24, 30, 30, 0.42);
+  }
+  .card { height: 238px; justify-content: center; }
+  .card .blot {
+    position: absolute; left: 50%; top: 60px; transform: translateX(-50%);
+    width: 150px; height: 150px; border-radius: 50%;
+    background: radial-gradient(circle at 44% 38%, rgba(25, 21, 18, 0.26), rgba(25, 21, 18, 0) 66%);
+  }
+  .card .dmg { font-size: 19px; letter-spacing: 0; white-space: nowrap; }
+  .card .nm { height: 72px; margin-top: 0; }
+  .hud { position: absolute; z-index: 16; }
+  .ap-chip {
+    position: absolute; z-index: 16; height: 56px; padding: 0 20px;
+    display: flex; align-items: center; gap: 12px; border-radius: var(--r-sm);
+    --surface: rgba(242, 234, 218, 0.9); --edge: var(--ink);
+  }
+  .broken { color: #8e2b22; }
+</style>
+</head>
+<body>
+<div class="page" style="background:#14110f;">
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <filter id="rough" x="-8%" y="-8%" width="116%" height="116%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="3" seed="11" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="2.0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="artwrap"><img src="../art/boss-art.png" alt="" /></div>
+  <div class="veil-top"></div>
+  <div class="veil-bottom"></div>
+  <div class="fiber"></div>
+
+  <div class="icon-btn dark mounted topleft" style="z-index:16;">
+    <svg viewBox="0 0 32 32"><path d="M11 7v18M21 7v18" /></svg>
+  </div>
+
+  <!-- 头目名条 -->
+  <div class="bossplate mounted">
+    <div class="seal sm"><span>九</span></div>
+    <div class="nm">三少爷</div>
+    <div class="sub">少庄主</div>
+    <div class="rival">关底 · 情敌之九</div>
+  </div>
+
+  <div class="bossbar">
+    <div class="track">
+      <i></i>
+      <div class="ticks"><span></span><span></span><span></span><span></span></div>
+    </div>
+    <div class="bossmeta">
+      <span>血 <b>560</b> / 1000</span>
+      <span style="opacity:.5">|</span>
+      <span>甲 <b>20</b></span>
+      <span style="opacity:.5">|</span>
+      <span>阶段 <b>二</b></span>
+      <span class="intent">
+        <svg viewBox="0 0 32 32"><path d="M16 5v18" /><path d="M9 16l7 7 7-7" /><path d="M8 27h16" /></svg>
+        <span>蓄力</span><b>28</b>
+      </span>
+    </div>
+  </div>
+
+  <!-- 嘲讽 -->
+  <div class="taunt">
+    <span class="who">三少爷</span>
+    「你以为你赢了？我爹还没来。」
+  </div>
+
+  <!-- 己方信息 -->
+  <div class="hud" style="left:40px; top:1682px; width:392px;">
+    <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:12px;">
+      <span style="font-size:25px; letter-spacing:0.12em; color:#1a1613;">老黄</span>
+      <span style="font-size:25px; font-weight:700; color:#8e2b22;">56 <span style="opacity:.5; color:#1a1613;">/ 120</span></span>
+    </div>
+    <div class="bar" style="height:16px;"><i style="width:46.6%"></i></div>
+    <div style="display:flex; align-items:center; gap:10px; margin-top:14px; font-size:21px; letter-spacing:0.1em;" class="broken">
+      <svg viewBox="0 0 32 32" style="width:24px;height:24px;stroke:#8e2b22;fill:none;stroke-width:2.4;stroke-linejoin:round;">
+        <path d="M16 5l10 3.6v8.2c0 6.2-4 9.4-10 11.2-6-1.8-10-5-10-11.2V8.6z" />
+        <path d="M16 8v14" />
+      </svg>
+      <span>皮衣已破</span>
+      <span style="font-weight:700; font-size:22px;">0</span>
+    </div>
+  </div>
+
+  <div class="ap-chip mounted" style="left:462px; top:1684px;">
+    <span style="font-size:22px; letter-spacing:0.16em; color:#4a4137;">气</span>
+    <div class="pips" style="gap:8px;"><i class="pip" style="width:22px;height:22px;"></i><i class="pip" style="width:22px;height:22px;"></i><i class="pip off" style="width:22px;height:22px;"></i></div>
+    <span style="font-size:24px; font-weight:700; color:#1a1613;">2<span style="opacity:.5">/3</span></span>
+  </div>
+
+  <div class="btn outline" style="position:absolute; left:680px; top:1686px; width:340px; z-index:16;"><span>结束回合</span></div>
+
+  <!-- 手牌 -->
+  <div class="hand">
+    <div class="card mounted" style="transform:rotate(-9deg);">
+      <div class="cost">1</div><div class="blot"></div>
+      <div class="nm">横刀</div>
+      <div class="dmg">伤12</div>
+    </div>
+    <div class="card mounted" style="transform:rotate(-4.5deg) translateY(-8px);">
+      <div class="cost">1</div><div class="blot"></div>
+      <div class="nm">回锋</div>
+      <div class="dmg">伤8 抽1</div>
+    </div>
+    <div class="card mounted" style="transform:rotate(0deg) translateY(-18px); --edge:#8e2a1c;">
+      <div class="cost">0</div><div class="blot"></div>
+      <div class="nm">借力</div>
+      <div class="dmg">伤4 气+1</div>
+    </div>
+    <div class="card mounted" style="transform:rotate(4.5deg) translateY(-8px);">
+      <div class="cost">2</div><div class="blot"></div>
+      <div class="nm">破甲</div>
+      <div class="dmg">伤10 破甲</div>
+    </div>
+    <div class="card mounted" style="transform:rotate(9deg);">
+      <div class="cost">3</div><div class="blot"></div>
+      <div class="nm">降维</div>
+      <div class="dmg">伤30</div>
+    </div>
+  </div>
+
+  <div class="grain"></div>
+</div>
+</body>
+</html>

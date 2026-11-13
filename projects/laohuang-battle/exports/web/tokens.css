@@ -1,0 +1,19 @@
+/* laohuang-battle · game design tokens (from contracts/style-contract.yaml) */
+/* These are GAME tokens (--game-*). Web delivery chrome uses fixed --shell-* in index/result.html. */
+:root {
+  --game-primary: #B23A28;
+  --game-secondary: #2C4A57;
+  --game-accent: #B98A3C;
+  --game-bg: #E9DFC6;
+  --game-warning: #B4652A;
+  --game-reward: #B98A3C;
+  --game-disabled: #9A907C;
+  --game-surface-board: #888888;
+  --game-surface-cell: #888888;
+  --game-surface-card: #888888;
+  --game-surface-card-hi: #888888;
+  --game-ref-width: 1080;
+  --game-ref-height: 1920;
+  --game-radius-md: 20px;
+  --game-radius-lg: 28px;
+}

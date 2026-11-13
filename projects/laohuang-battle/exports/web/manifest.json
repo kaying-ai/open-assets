@@ -1,0 +1,432 @@
+{
+  "atlas": {
+    "data": "../../assets/atlases/ui-main.json",
+    "image": "../../assets/atlases/ui-main.png",
+    "size": [
+      2048,
+      1024
+    ],
+    "sprites": {
+      "container-bar-hp": {
+        "component_id": "bar-hp",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          1004,
+          490,
+          420,
+          16
+        ],
+        "slice": {
+          "margins": [
+            6,
+            6,
+            6,
+            6
+          ],
+          "type": "9-slice"
+        },
+        "state": "default"
+      },
+      "container-card-paper": {
+        "component_id": "panel-card",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          606,
+          2,
+          600,
+          360
+        ],
+        "slice": {
+          "margins": [
+            28,
+            28,
+            28,
+            28
+          ],
+          "type": "9-slice"
+        },
+        "state": "default"
+      },
+      "container-skillcard-default": {
+        "component_id": "card-skill-lg",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          2,
+          2,
+          300,
+          400
+        ],
+        "slice": {
+          "margins": [
+            30,
+            30,
+            30,
+            30
+          ],
+          "type": "9-slice"
+        },
+        "state": "default"
+      },
+      "container-skillcard-pressed": {
+        "component_id": "card-skill-lg",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          304,
+          2,
+          300,
+          400
+        ],
+        "slice": {
+          "margins": [
+            30,
+            30,
+            30,
+            30
+          ],
+          "type": "9-slice"
+        },
+        "state": "pressed"
+      },
+      "control-primary-default": {
+        "component_id": "btn-primary",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          2,
+          404,
+          600,
+          84
+        ],
+        "slice": {
+          "margins": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "type": "9-slice"
+        },
+        "state": "default"
+      },
+      "control-primary-pressed": {
+        "component_id": "btn-primary",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          604,
+          404,
+          600,
+          84
+        ],
+        "slice": {
+          "margins": [
+            24,
+            24,
+            24,
+            24
+          ],
+          "type": "9-slice"
+        },
+        "state": "pressed"
+      },
+      "control-route-default": {
+        "component_id": "route-node",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          1208,
+          2,
+          110,
+          110
+        ],
+        "slice": {
+          "margins": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "type": "full"
+        },
+        "state": "default"
+      },
+      "control-route-pressed": {
+        "component_id": "route-node",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          1320,
+          2,
+          110,
+          110
+        ],
+        "slice": {
+          "margins": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "type": "full"
+        },
+        "state": "pressed"
+      },
+      "control-secondary-default": {
+        "component_id": "btn-secondary",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          1206,
+          404,
+          288,
+          56
+        ],
+        "slice": {
+          "margins": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "type": "9-slice"
+        },
+        "state": "default"
+      },
+      "control-secondary-pressed": {
+        "component_id": "btn-secondary",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          1496,
+          404,
+          288,
+          56
+        ],
+        "slice": {
+          "margins": [
+            18,
+            18,
+            18,
+            18
+          ],
+          "type": "9-slice"
+        },
+        "state": "pressed"
+      },
+      "gauge-boss-default": {
+        "component_id": "bar-boss",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          2,
+          490,
+          1000,
+          22
+        ],
+        "slice": {
+          "margins": [
+            8,
+            8,
+            8,
+            8
+          ],
+          "type": "9-slice"
+        },
+        "state": "default"
+      },
+      "icon-back-default": {
+        "component_id": "icon-back",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          1432,
+          2,
+          96,
+          96
+        ],
+        "slice": {
+          "margins": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "type": "full"
+        },
+        "state": "default"
+      },
+      "icon-back-pressed": {
+        "component_id": "icon-back",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          1530,
+          2,
+          96,
+          96
+        ],
+        "slice": {
+          "margins": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "type": "full"
+        },
+        "state": "pressed"
+      },
+      "icon-settings-default": {
+        "component_id": "icon-settings",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          1628,
+          2,
+          96,
+          96
+        ],
+        "slice": {
+          "margins": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "type": "full"
+        },
+        "state": "default"
+      },
+      "icon-settings-pressed": {
+        "component_id": "icon-settings",
+        "pivot": [
+          0.5,
+          0.5
+        ],
+        "region": [
+          1726,
+          2,
+          96,
+          96
+        ],
+        "slice": {
+          "margins": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "type": "full"
+        },
+        "state": "pressed"
+      }
+    }
+  },
+  "colors": {
+    "accent": "#B98A3C",
+    "background": "#E9DFC6",
+    "danger": "#8E2B22",
+    "disabled": "#9A907C",
+    "ink": "#191512",
+    "ink-deep": "#0E0C0A",
+    "paper-edge": "#D6C6A4",
+    "paper-raised": "#F2EADA",
+    "pressed": "#8E2A1C",
+    "primary": "#B23A28",
+    "reward": "#B98A3C",
+    "secondary": "#2C4A57",
+    "warning": "#B4652A"
+  },
+  "description": "Web handoff for laohuang-battle: tokens, page artboards, atlas sprite regions. Not a native engine project.",
+  "engine": "web",
+  "entry": "home",
+  "format": "json-manifest",
+  "pages": [
+    {
+      "id": "home",
+      "image": "../../assets/pages/home-v2.png",
+      "title": "客栈首页"
+    },
+    {
+      "id": "battle",
+      "image": "../../assets/pages/battle-v2.png",
+      "title": "断桥雪渡 · 常规战"
+    },
+    {
+      "id": "settings",
+      "image": "../../assets/pages/settings-v1.png",
+      "title": "设置"
+    },
+    {
+      "id": "map",
+      "image": "../../assets/pages/map-v1.png",
+      "title": "上山路线图"
+    },
+    {
+      "id": "rival-intro",
+      "image": "../../assets/pages/rival-v1.png",
+      "title": "情敌登场（对峙）"
+    },
+    {
+      "id": "boss-battle",
+      "image": "../../assets/pages/boss-v1.png",
+      "title": "关底情敌战"
+    },
+    {
+      "id": "victory",
+      "image": "../../assets/pages/victory-v1.png",
+      "title": "战后三选一"
+    }
+  ],
+  "platform": {
+    "aspect_ratio": "9:16",
+    "orientation": "portrait",
+    "reference_size": [
+      1080,
+      1920
+    ],
+    "target": "mobile"
+  },
+  "project_id": "laohuang-battle",
+  "runtime": {
+    "index_html": "../../index.html",
+    "note": "Open result.html for interactive shell; index.html for asset catalog.",
+    "result_html": "../../result.html"
+  },
+  "schema_version": 1,
+  "style_status": "approved",
+  "theme": "laohuang-battle",
+  "tokens_css": "tokens.css"
+}

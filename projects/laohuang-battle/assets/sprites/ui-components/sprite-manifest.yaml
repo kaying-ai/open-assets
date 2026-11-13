@@ -1,0 +1,340 @@
+schema_version: 1
+source_sheet: assets/atlases/ui-main.png
+derived_from: assets/atlases/ui-main.json
+detected_mode: alpha
+sampled_background: null
+settings:
+  method: atlas-region-crop
+  padding: 0
+item_count: 15
+items:
+- id: bar-boss-default
+  path: items/bar-boss-default.png
+  bbox:
+  - 2
+  - 490
+  - 1000
+  - 22
+  dimensions:
+  - 1000
+  - 22
+  transparent_background: true
+  semantic_name: gauge-boss-default
+  component_id: bar-boss
+  category: container
+  state: default
+  slice:
+    type: 9-slice
+    margins:
+    - 8
+    - 8
+    - 8
+    - 8
+- id: bar-hp-default
+  path: items/bar-hp-default.png
+  bbox:
+  - 1004
+  - 490
+  - 420
+  - 16
+  dimensions:
+  - 420
+  - 16
+  transparent_background: true
+  semantic_name: container-bar-hp
+  component_id: bar-hp
+  category: container
+  state: default
+  slice:
+    type: 9-slice
+    margins:
+    - 6
+    - 6
+    - 6
+    - 6
+- id: btn-primary-default
+  path: items/btn-primary-default.png
+  bbox:
+  - 2
+  - 404
+  - 600
+  - 84
+  dimensions:
+  - 600
+  - 84
+  transparent_background: true
+  semantic_name: control-primary-default
+  component_id: btn-primary
+  category: control
+  state: default
+  slice:
+    type: 9-slice
+    margins:
+    - 24
+    - 24
+    - 24
+    - 24
+- id: btn-primary-pressed
+  path: items/btn-primary-pressed.png
+  bbox:
+  - 604
+  - 404
+  - 600
+  - 84
+  dimensions:
+  - 600
+  - 84
+  transparent_background: true
+  semantic_name: control-primary-pressed
+  component_id: btn-primary
+  category: control
+  state: pressed
+  slice:
+    type: 9-slice
+    margins:
+    - 24
+    - 24
+    - 24
+    - 24
+- id: btn-secondary-default
+  path: items/btn-secondary-default.png
+  bbox:
+  - 1206
+  - 404
+  - 288
+  - 56
+  dimensions:
+  - 288
+  - 56
+  transparent_background: true
+  semantic_name: control-secondary-default
+  component_id: btn-secondary
+  category: control
+  state: default
+  slice:
+    type: 9-slice
+    margins:
+    - 18
+    - 18
+    - 18
+    - 18
+- id: btn-secondary-pressed
+  path: items/btn-secondary-pressed.png
+  bbox:
+  - 1496
+  - 404
+  - 288
+  - 56
+  dimensions:
+  - 288
+  - 56
+  transparent_background: true
+  semantic_name: control-secondary-pressed
+  component_id: btn-secondary
+  category: control
+  state: pressed
+  slice:
+    type: 9-slice
+    margins:
+    - 18
+    - 18
+    - 18
+    - 18
+- id: card-skill-lg-default
+  path: items/card-skill-lg-default.png
+  bbox:
+  - 2
+  - 2
+  - 300
+  - 400
+  dimensions:
+  - 300
+  - 400
+  transparent_background: true
+  semantic_name: container-skillcard-default
+  component_id: card-skill-lg
+  category: container
+  state: default
+  slice:
+    type: 9-slice
+    margins:
+    - 30
+    - 30
+    - 30
+    - 30
+- id: card-skill-lg-pressed
+  path: items/card-skill-lg-pressed.png
+  bbox:
+  - 304
+  - 2
+  - 300
+  - 400
+  dimensions:
+  - 300
+  - 400
+  transparent_background: true
+  semantic_name: container-skillcard-pressed
+  component_id: card-skill-lg
+  category: container
+  state: pressed
+  slice:
+    type: 9-slice
+    margins:
+    - 30
+    - 30
+    - 30
+    - 30
+- id: icon-back-default
+  path: items/icon-back-default.png
+  bbox:
+  - 1432
+  - 2
+  - 96
+  - 96
+  dimensions:
+  - 96
+  - 96
+  transparent_background: true
+  semantic_name: icon-back-default
+  component_id: icon-back
+  category: icon
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-back-pressed
+  path: items/icon-back-pressed.png
+  bbox:
+  - 1530
+  - 2
+  - 96
+  - 96
+  dimensions:
+  - 96
+  - 96
+  transparent_background: true
+  semantic_name: icon-back-pressed
+  component_id: icon-back
+  category: icon
+  state: pressed
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-settings-default
+  path: items/icon-settings-default.png
+  bbox:
+  - 1628
+  - 2
+  - 96
+  - 96
+  dimensions:
+  - 96
+  - 96
+  transparent_background: true
+  semantic_name: icon-settings-default
+  component_id: icon-settings
+  category: icon
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-settings-pressed
+  path: items/icon-settings-pressed.png
+  bbox:
+  - 1726
+  - 2
+  - 96
+  - 96
+  dimensions:
+  - 96
+  - 96
+  transparent_background: true
+  semantic_name: icon-settings-pressed
+  component_id: icon-settings
+  category: icon
+  state: pressed
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: panel-card-default
+  path: items/panel-card-default.png
+  bbox:
+  - 606
+  - 2
+  - 600
+  - 360
+  dimensions:
+  - 600
+  - 360
+  transparent_background: true
+  semantic_name: container-card-paper
+  component_id: panel-card
+  category: container
+  state: default
+  slice:
+    type: 9-slice
+    margins:
+    - 28
+    - 28
+    - 28
+    - 28
+- id: route-node-default
+  path: items/route-node-default.png
+  bbox:
+  - 1208
+  - 2
+  - 110
+  - 110
+  dimensions:
+  - 110
+  - 110
+  transparent_background: true
+  semantic_name: control-route-default
+  component_id: route-node
+  category: control
+  state: default
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: route-node-pressed
+  path: items/route-node-pressed.png
+  bbox:
+  - 1320
+  - 2
+  - 110
+  - 110
+  dimensions:
+  - 110
+  - 110
+  transparent_background: true
+  semantic_name: control-route-pressed
+  component_id: route-node
+  category: control
+  state: pressed
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0

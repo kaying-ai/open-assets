@@ -1,0 +1,283 @@
+schema_version: 1
+project_id: "laohuang-battle"
+assets:
+  # ---------------- 页面 ----------------
+  - id: page-home-v2
+    kind: page
+    screen_id: home
+    status: approved
+    path: assets/pages/home-v2.png
+    dimensions: [1080, 1920]
+    transparent_background: false
+    prompt_path: prompts/pages/home.md
+    version: 2
+    approved_by: "default-mode auto-close (quality pass)"
+    lineage: "ImageGen 底图 render/art/home2-art.png（皮衣银发立绘）+ render/pages/home.html 排版合成"
+
+  - id: page-battle-v2
+    kind: page
+    screen_id: battle
+    status: approved
+    path: assets/pages/battle-v2.png
+    dimensions: [1080, 1920]
+    transparent_background: false
+    prompt_path: prompts/pages/battle.md
+    version: 2
+    approved_by: "default-mode auto-close (quality pass)"
+    lineage: "ImageGen 底图 render/art/battle2-art.png + render/pages/battle.html 排版合成"
+
+  - id: page-map-v1
+    kind: page
+    screen_id: map
+    status: approved
+    path: assets/pages/map-v1.png
+    dimensions: [1080, 1920]
+    transparent_background: false
+    prompt_path: prompts/pages/map.md
+    version: 1
+    approved_by: "default-mode auto-close (quality pass)"
+    lineage: "ImageGen 底图 render/art/map-art.png + render/pages/map.html 排版合成"
+
+  - id: page-rival-v1
+    kind: page
+    screen_id: rival-intro
+    status: approved
+    path: assets/pages/rival-v1.png
+    dimensions: [1080, 1920]
+    transparent_background: false
+    prompt_path: prompts/pages/rival-intro.md
+    version: 1
+    approved_by: "default-mode auto-close (quality pass)"
+    lineage: "ImageGen 底图 render/art/rival-art.png + render/pages/rival-intro.html 排版合成"
+
+  - id: page-boss-v1
+    kind: page
+    screen_id: boss-battle
+    status: approved
+    path: assets/pages/boss-v1.png
+    dimensions: [1080, 1920]
+    transparent_background: false
+    prompt_path: prompts/pages/boss-battle.md
+    version: 1
+    approved_by: "default-mode auto-close (quality pass)"
+    lineage: "ImageGen 底图 render/art/boss-art.png + render/pages/boss-battle.html 排版合成"
+
+  - id: page-victory-v1
+    kind: page
+    screen_id: victory
+    status: approved
+    path: assets/pages/victory-v1.png
+    dimensions: [1080, 1920]
+    transparent_background: false
+    prompt_path: prompts/pages/victory.md
+    version: 1
+    approved_by: "default-mode auto-close (quality pass)"
+    lineage: "底图 render/art/map-art.png（重度纸雾化）+ render/pages/victory.html 排版合成"
+
+  - id: page-settings-v1
+    kind: page
+    screen_id: settings
+    status: approved
+    path: assets/pages/settings-v1.png
+    dimensions: [1080, 1920]
+    transparent_background: false
+    prompt_path: prompts/pages/settings.md
+    version: 1
+    approved_by: "default-mode auto-close (quality pass)"
+    lineage: "ImageGen 底图 render/art/settings-art.png + render/pages/settings.html 排版合成"
+
+  # ---------------- 组件 ----------------
+  - id: comp-btn-primary-default
+    kind: component
+    screen_id: home
+    component_id: btn-primary
+    state: default
+    status: approved
+    path: assets/components/btn-primary-default-v1.png
+    dimensions: [600, 84]
+    transparent_background: true
+    prompt_path: prompts/components/btn-primary.md
+    version: 1
+    lineage: "render/components/btn-primary.html"
+
+  - id: comp-btn-primary-pressed
+    kind: component
+    screen_id: home
+    component_id: btn-primary
+    state: pressed
+    status: approved
+    path: assets/components/btn-primary-pressed-v1.png
+    dimensions: [600, 84]
+    transparent_background: true
+    prompt_path: prompts/components/btn-primary.md
+    version: 1
+    lineage: "render/components/btn-primary.html?pressed"
+
+  - id: comp-btn-secondary-default
+    kind: component
+    screen_id: home
+    component_id: btn-secondary
+    state: default
+    status: approved
+    path: assets/components/btn-secondary-default-v1.png
+    dimensions: [288, 56]
+    transparent_background: true
+    prompt_path: prompts/components/btn-secondary.md
+    version: 1
+    lineage: "render/components/btn-secondary.html"
+
+  - id: comp-btn-secondary-pressed
+    kind: component
+    screen_id: home
+    component_id: btn-secondary
+    state: pressed
+    status: approved
+    path: assets/components/btn-secondary-pressed-v1.png
+    dimensions: [288, 56]
+    transparent_background: true
+    prompt_path: prompts/components/btn-secondary.md
+    version: 1
+    lineage: "render/components/btn-secondary.html?pressed"
+
+  - id: comp-panel-card-default
+    kind: component
+    screen_id: settings
+    component_id: panel-card
+    state: default
+    status: approved
+    path: assets/components/panel-card-default-v1.png
+    dimensions: [600, 360]
+    transparent_background: true
+    prompt_path: prompts/components/panel-card.md
+    version: 1
+    lineage: "render/components/panel-card.html"
+
+  - id: comp-bar-hp-default
+    kind: component
+    screen_id: battle
+    component_id: bar-hp
+    state: default
+    status: approved
+    path: assets/components/bar-hp-default-v1.png
+    dimensions: [420, 16]
+    transparent_background: true
+    prompt_path: prompts/components/bar-hp.md
+    version: 1
+    lineage: "render/components/bar-hp.html"
+
+  - id: comp-icon-settings-default
+    kind: component
+    screen_id: home
+    component_id: icon-settings
+    state: default
+    status: approved
+    path: assets/components/icon-settings-default-v1.png
+    dimensions: [96, 96]
+    transparent_background: true
+    prompt_path: prompts/components/icon-settings.md
+    version: 1
+    lineage: "render/components/icon-settings.html"
+
+  - id: comp-icon-settings-pressed
+    kind: component
+    screen_id: home
+    component_id: icon-settings
+    state: pressed
+    status: approved
+    path: assets/components/icon-settings-pressed-v1.png
+    dimensions: [96, 96]
+    transparent_background: true
+    prompt_path: prompts/components/icon-settings.md
+    version: 1
+    lineage: "render/components/icon-settings.html?pressed"
+
+  - id: comp-icon-back-default
+    kind: component
+    screen_id: settings
+    component_id: icon-back
+    state: default
+    status: approved
+    path: assets/components/icon-back-default-v1.png
+    dimensions: [96, 96]
+    transparent_background: true
+    prompt_path: prompts/components/icon-back.md
+    version: 1
+    lineage: "render/components/icon-back.html"
+
+  - id: comp-icon-back-pressed
+    kind: component
+    screen_id: settings
+    component_id: icon-back
+    state: pressed
+    status: approved
+    path: assets/components/icon-back-pressed-v1.png
+    dimensions: [96, 96]
+    transparent_background: true
+    prompt_path: prompts/components/icon-back.md
+    version: 1
+    lineage: "render/components/icon-back.html?pressed"
+
+  - id: comp-route-node-default
+    kind: component
+    screen_id: map
+    component_id: route-node
+    state: default
+    status: approved
+    path: assets/components/route-node-default-v1.png
+    dimensions: [110, 110]
+    transparent_background: true
+    prompt_path: prompts/components/route-node.md
+    version: 1
+    lineage: "render/components/route-node.html"
+
+  - id: comp-route-node-pressed
+    kind: component
+    screen_id: map
+    component_id: route-node
+    state: pressed
+    status: approved
+    path: assets/components/route-node-pressed-v1.png
+    dimensions: [110, 110]
+    transparent_background: true
+    prompt_path: prompts/components/route-node.md
+    version: 1
+    lineage: "render/components/route-node.html?pressed"
+
+  - id: comp-card-skill-lg-default
+    kind: component
+    screen_id: victory
+    component_id: card-skill-lg
+    state: default
+    status: approved
+    path: assets/components/card-skill-lg-default-v1.png
+    dimensions: [300, 400]
+    transparent_background: true
+    prompt_path: prompts/components/card-skill-lg.md
+    version: 1
+    lineage: "render/components/card-skill-lg.html"
+
+  - id: comp-card-skill-lg-pressed
+    kind: component
+    screen_id: victory
+    component_id: card-skill-lg
+    state: pressed
+    status: approved
+    path: assets/components/card-skill-lg-pressed-v1.png
+    dimensions: [300, 400]
+    transparent_background: true
+    prompt_path: prompts/components/card-skill-lg.md
+    version: 1
+    lineage: "render/components/card-skill-lg.html?pressed"
+
+  - id: comp-bar-boss-default
+    kind: component
+    screen_id: boss-battle
+    component_id: bar-boss
+    state: default
+    status: approved
+    path: assets/components/bar-boss-default-v1.png
+    dimensions: [1000, 22]
+    transparent_background: true
+    prompt_path: prompts/components/bar-boss.md
+    version: 1
+    lineage: "render/components/bar-boss.html"

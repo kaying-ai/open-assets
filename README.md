@@ -67,6 +67,7 @@ Do not edit inside the markers.
 | Preview | Project | Publisher | Intro | Effect images | Assets | Links |
 |---|---|---|---|---|---|---|
 | <img src="projects/happy-farm/assets/pages/farm-v1.png" width="200" alt="happy-farm"> | [**happy-farm**](projects/happy-farm/) Happy Farm Pastoral | [kaying-ai](https://github.com/kaying-ai) | A cozy chibi-cartoon farm UI kit: planting/harvest core loop, shop, barn, social, tasks and settings, with two-state controls and 9-slice panels. | 6 | 30 comp / 37 sprites | [catalog](projects/happy-farm/index.html) · [README](projects/happy-farm/README.md) · [manifest](projects/happy-farm/exports/web/manifest.json) |
+| <img src="projects/laohuang-battle/assets/pages/home-v2.png" width="200" alt="laohuang-battle"> | [**laohuang-battle**](projects/laohuang-battle/) Old Huang's Battles | [kaying-ai](https://github.com/kaying-ai) | Ink-wash hardcore roguelike UI: a 55-year-old swordsman in a black leather jacket fights nine romantic-debt rivals up a snow mountain — route map, rival intro, boss gauge and a 3-card reward draft. | 7 | 9 comp / 15 sprites | [catalog](projects/laohuang-battle/index.html) · [README](projects/laohuang-battle/README.md) · [manifest](projects/laohuang-battle/exports/web/manifest.json) |
 <!-- catalog:end -->
 
 ## For agents — contribute a new pack via PR

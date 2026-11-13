@@ -62,6 +62,7 @@ curl -s https://raw.githubusercontent.com/kaying-ai/open-assets/main/projects/ha
 | 预览 | 项目 | 发布者 | 简介 | 模块效果图 | 素材 | 入口 |
 |---|---|---|---|---|---|---|
 | <img src="projects/happy-farm/assets/pages/farm-v1.png" width="200" alt="happy-farm"> | [**happy-farm**](projects/happy-farm/) 开心农场 | [kaying-ai](https://github.com/kaying-ai) | Q版卡通田园农场 UI 套件：种植/收获核心循环，含商店、仓库、社交、任务与设置；控件两态、面板 9-slice。 | 6 | 30 组件 / 37 精灵 | [目录](projects/happy-farm/index.html) · [README](projects/happy-farm/README.md) · [manifest](projects/happy-farm/exports/web/manifest.json) |
+| <img src="projects/laohuang-battle/assets/pages/home-v2.png" width="200" alt="laohuang-battle"> | [**laohuang-battle**](projects/laohuang-battle/) 老黄的战斗 | [kaying-ai](https://github.com/kaying-ai) | 中式水墨硬核肉鸽 UI：黑皮衣银发刀客为九场桃花债雪夜登山——山道路线图、情敌登场、关底血条与战后三选一。 | 7 | 9 组件 / 15 精灵 | [目录](projects/laohuang-battle/index.html) · [README](projects/laohuang-battle/README.md) · [manifest](projects/laohuang-battle/exports/web/manifest.json) |
 <!-- catalog:end -->
 
 ## 面向 Agent —— 通过 PR 贡献新资产包

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../ui.css" />
+<style>
+  .artwrap { position: absolute; inset: 0; overflow: hidden; z-index: 1; background: #14110f; }
+  .artwrap img {
+    position: absolute;
+    left: -36px;
+    top: 192px;
+    width: 1152px;
+    filter: brightness(1.03) contrast(1.04) saturate(0.94);
+  }
+  .veil-bottom {
+    height: 560px;
+    background: linear-gradient(to top,
+      rgba(12, 10, 8, 0.34) 0%,
+      rgba(12, 10, 8, 0.14) 52%,
+      rgba(12, 10, 8, 0) 100%);
+  }
+  .enemy { z-index: 12; }
+  .hand { bottom: 322px; height: 250px; z-index: 16; }
+  .hand .card.mounted::before {
+    box-shadow:
+      inset 0 0 0 3px var(--ink, #191512),
+      inset 0 0 0 5px rgba(242, 234, 218, 0.55),
+      0 10px 22px rgba(24, 30, 30, 0.42);
+  }
+  .card { height: 238px; }
+  .card { justify-content: center; }
+  .card .blot {
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 44% 38%, rgba(25, 21, 18, 0.26), rgba(25, 21, 18, 0) 66%);
+  }
+  .card .dmg { font-size: 19px; letter-spacing: 0; white-space: nowrap; }
+  .card .nm { height: 72px; margin-top: 0; }
+  .hud { position: absolute; z-index: 16; }
+  .ap-chip {
+    position: absolute;
+    z-index: 16;
+    height: 56px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-radius: var(--r-sm);
+    --surface: rgba(242, 234, 218, 0.9);
+    --edge: var(--ink);
+  }
+  .shield {
+    display: flex; align-items: center; gap: 10px; margin-top: 14px;
+    font-size: 21px; letter-spacing: 0.1em; color: #6b5223;
+  }
+  .shield svg { stroke: #6b5223; }
+  .shield .bar { width: 148px; height: 10px; }
+  .shield .bar > i { background: #b98a3c; }
+</style>
+</head>
+<body>
+<div class="page" style="background:#14110f;">
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <filter id="rough" x="-8%" y="-8%" width="116%" height="116%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="3" seed="11" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="2.0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="artwrap"><img src="../art/battle2-art.png" alt="" /></div>
+  <div class="veil-top"></div>
+  <div class="veil-bottom"></div>
+  <div class="fiber"></div>
+
+  <!-- 顶部：暂停 / 层签 / 设置 -->
+  <div class="icon-btn dark mounted topleft" style="z-index:14;">
+    <svg viewBox="0 0 32 32"><path d="M11 7v18M21 7v18" /></svg>
+  </div>
+  <div class="stagebar mounted">
+    <span class="dot"></span>
+    <span>二 · 断桥雪渡</span>
+    <span style="width:1.5px; height:26px; background:rgba(245,238,219,0.28);"></span>
+    <span style="font-size:23px; opacity:.78;">帮闲 3</span>
+    <span style="width:1.5px; height:26px; background:rgba(245,238,219,0.28);"></span>
+    <span style="font-size:23px; opacity:.78;">回合 3</span>
+  </div>
+  <div class="icon-btn dark mounted topright" style="z-index:14;">
+    <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="5.2" /><circle cx="16" cy="16" r="11" stroke-dasharray="3 3.2" /><path d="M16 2.6v3M16 26.4v3M2.6 16h3M26.4 16h3" /></svg>
+  </div>
+
+  <!-- 敌方三单位 -->
+  <div class="enemy" style="left:62px; top:156px; width:240px;">
+    <div class="intent">
+      <svg viewBox="0 0 32 32"><path d="M25 6 11 20l-2.4 4.4L13 22 27 8z" /><path d="M9 23.5 12.5 27" /></svg>
+      <b>14</b>
+    </div>
+    <div class="name">庄丁 · 刀</div>
+    <div class="bar"><i style="width:100%"></i></div>
+  </div>
+  <div class="enemy" style="left:409px; top:156px; width:240px;">
+    <div class="intent">
+      <svg viewBox="0 0 32 32"><path d="M16 5l10 3.6v8.2c0 6.2-4 9.4-10 11.2-6-1.8-10-5-10-11.2V8.6z" /></svg>
+      <b>9</b>
+    </div>
+    <div class="name">庄丁 · 盾</div>
+    <div class="bar"><i style="width:88%"></i></div>
+  </div>
+  <div class="enemy" style="left:745px; top:156px; width:240px;">
+    <div class="intent">
+      <svg viewBox="0 0 32 32"><path d="M16 26V7" /><path d="M9 14l7-7 7 7" /><path d="M9 21l7-7 7 7" opacity="0.45" /></svg>
+      <b>3</b>
+    </div>
+    <div class="name">庄丁 · 弓</div>
+    <div class="bar"><i style="width:78%"></i></div>
+  </div>
+
+  <!-- 己方血条 -->
+  <div class="hud" style="left:40px; top:1682px; width:392px;">
+    <div style="display:flex; align-items:baseline; gap:16px; margin-bottom:12px;">
+      <span style="font-size:25px; letter-spacing:0.12em; color:#1a1613;">老黄</span>
+      <span style="font-size:25px; font-weight:700; color:#1a1613;">84 <span style="opacity:.5">/ 120</span></span>
+    </div>
+    <div class="bar" style="height:16px;"><i style="width:70%"></i></div>
+    <div class="shield">
+      <svg viewBox="0 0 32 32" style="width:24px;height:24px;stroke:#cbb27a;fill:none;stroke-width:2.4;stroke-linejoin:round;">
+        <path d="M16 5l10 3.6v8.2c0 6.2-4 9.4-10 11.2-6-1.8-10-5-10-11.2V8.6z" />
+      </svg>
+      <span>皮衣</span>
+      <span style="font-weight:700; font-size:22px;">6</span>
+      <div class="bar"><i style="width:60%"></i></div>
+    </div>
+  </div>
+
+  <!-- 气 -->
+  <div class="ap-chip mounted" style="left:462px; top:1684px;">
+    <span style="font-size:22px; letter-spacing:0.16em; color:#4a4137;">气</span>
+    <div class="pips" style="gap:8px;"><i class="pip" style="width:22px;height:22px;"></i><i class="pip" style="width:22px;height:22px;"></i><i class="pip" style="width:22px;height:22px;"></i></div>
+    <span style="font-size:24px; font-weight:700; color:#1a1613;">3<span style="opacity:.5">/3</span></span>
+  </div>
+
+  <!-- 结束回合 -->
+  <div class="btn outline" style="position:absolute; left:680px; top:1686px; width:340px; z-index:16;"><span>结束回合</span></div>
+
+  <!-- 手牌 -->
+  <div class="hand">
+    <div class="card mounted" style="transform:rotate(-9deg);">
+      <div class="cost">1</div><div class="blot"></div>
+      <div class="nm">横刀</div>
+      <div class="dmg">伤12</div>
+    </div>
+    <div class="card mounted" style="transform:rotate(-4.5deg) translateY(-8px);">
+      <div class="cost">1</div><div class="blot"></div>
+      <div class="nm">回锋</div>
+      <div class="dmg">伤8 抽1</div>
+    </div>
+    <div class="card mounted" style="transform:rotate(0deg) translateY(-18px); --edge:#8e2a1c;">
+      <div class="cost">0</div><div class="blot"></div>
+      <div class="nm">借力</div>
+      <div class="dmg">伤4 气+1</div>
+    </div>
+    <div class="card mounted" style="transform:rotate(4.5deg) translateY(-8px);">
+      <div class="cost">1</div><div class="blot"></div>
+      <div class="nm">皮衣</div>
+      <div class="dmg">护 6</div>
+    </div>
+    <div class="card mounted" style="transform:rotate(9deg);">
+      <div class="cost">2</div><div class="blot"></div>
+      <div class="nm">并行三刀</div>
+      <div class="dmg">伤18</div>
+    </div>
+  </div>
+
+  <div class="grain"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+/* 组件资产渲染：透明底、外投影关闭（引擎侧绘制投影），仅保留裱边内阴影 */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.stage {
+  position: relative;
+  overflow: visible;
+}
+
+/* 关闭外投影，避免透明 PNG 出现硬裁切 */
+.sprite .btn.primary::before {
+  box-shadow:
+    inset 0 0 0 3px rgba(14, 12, 10, 0.32),
+    inset 0 0 0 6px rgba(245, 238, 219, 0.24);
+}
+.sprite .btn.secondary::before {
+  background: #f2eada;
+}
+.sprite .mounted::before {
+  box-shadow:
+    inset 0 0 0 var(--stroke) var(--edge, var(--ink)),
+    inset 0 0 0 calc(var(--stroke) + 2px) rgba(242, 234, 218, 0.5);
+}
+.sprite .bar {
+  box-shadow: inset 0 0 0 2px rgba(10, 8, 6, 0.55);
+}
+.sprite .btn.outline::before {
+  box-shadow: inset 0 0 0 3px rgba(245, 238, 219, 0.7);
+}
+
+/* 按下态：只压暗 + 顶缘内阴影（模拟下沉 2px），几何与轮廓完全不变，
+   保证两张资产像素级对齐、9-slice 切图不位移 */
+.pressed .pressable {
+  transform: none;
+}
+.pressed .btn.primary::before {
+  box-shadow:
+    inset 0 0 0 3px rgba(14, 12, 10, 0.42),
+    inset 0 0 0 6px rgba(245, 238, 219, 0.16),
+    inset 0 4px 0 rgba(0, 0, 0, 0.28);
+}
+.pressed .btn.primary::before {
+  background: var(--primary-pressed);
+}
+.pressed .btn.secondary::before {
+  background: #ded1b4;
+  box-shadow:
+    inset 0 0 0 3px var(--ink),
+    inset 0 4px 0 rgba(0, 0, 0, 0.16);
+}
+.pressed .icon-btn::before {
+  background: #ded1b4;
+}
+.pressed .icon-btn.dark::before {
+  background: rgba(10, 8, 6, 0.9);
+}
+.pressed .pressable-icon {
+  transform: scale(0.94);
+}
+.pressed .ink-glyph {
+  stroke: #0e0c0a;
+  stroke-width: 3;
+}
+
+/* ---- 地图节点：按下态 ---- */
+.pressed .nd::before {
+  background: #ded1b4;
+  box-shadow:
+    0 0 0 3px var(--ink),
+    0 0 0 8px rgba(242, 234, 218, 0.5),
+    inset 0 5px 0 rgba(0, 0, 0, 0.16),
+    0 4px 10px rgba(44, 58, 56, 0.24);
+}
+
+/* ---- 三选一大卡：按下态 ---- */
+.pressed .pick::before {
+  background: #ece1cb;
+  box-shadow:
+    inset 0 0 0 3px var(--ink),
+    inset 0 0 0 5px rgba(242, 234, 218, 0.5),
+    inset 0 6px 0 rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(44, 58, 56, 0.24);
+}

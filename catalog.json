@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-12T05:29:26.053Z",
+  "generated_at": "2026-11-13T08:54:20.891Z",
   "repository": "kaying-ai/open-assets",
   "pages_url": "https://kaying-ai.github.io/open-assets/",
   "projects": [
@@ -51,6 +51,56 @@
       "entry": "index.html",
       "readme": "README.md",
       "path": "projects/happy-farm/"
+    },
+    {
+      "id": "laohuang-battle",
+      "title": "Old Huang's Battles",
+      "title_zh": "老黄的战斗",
+      "publisher": "kaying-ai",
+      "description": "Ink-wash hardcore roguelike UI: a 55-year-old swordsman in a black leather jacket fights nine romantic-debt rivals up a snow mountain — route map, rival intro, boss gauge and a 3-card reward draft.",
+      "description_zh": "中式水墨硬核肉鸽 UI：黑皮衣银发刀客为九场桃花债雪夜登山——山道路线图、情敌登场、关底血条与战后三选一。",
+      "tags": [
+        "roguelike",
+        "deckbuilder",
+        "card-battler",
+        "wuxia",
+        "chinese-ink",
+        "ink-wash",
+        "dark-fantasy",
+        "mobile-portrait",
+        "9:16"
+      ],
+      "platform": "mobile-portrait",
+      "ratio": "9:16",
+      "resolution": [
+        1080,
+        1920
+      ],
+      "style": "中式水墨硬核（ink-wash hardcore）",
+      "counts": {
+        "pages": 7,
+        "components": 9,
+        "sprites": 15,
+        "engines": 5
+      },
+      "atlas": {
+        "size": [
+          2048,
+          1024
+        ],
+        "image": "assets/atlases/ui-main.png",
+        "data": "assets/atlases/ui-main.json"
+      },
+      "version": "1.0.0",
+      "status": "active",
+      "license": {
+        "assets": "CC-BY-4.0",
+        "code": "MIT"
+      },
+      "preview": "assets/pages/home-v2.png",
+      "entry": "index.html",
+      "readme": "README.md",
+      "path": "projects/laohuang-battle/"
     }
   ]
 }

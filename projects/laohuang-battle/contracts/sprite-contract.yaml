@@ -1,0 +1,183 @@
+schema_version: 1
+project_id: "laohuang-battle"
+# 本迭代组件为「一文件一资产」直接产出，未经精灵表切片，
+# 因此 source.sheet_path 留空、status 保持 draft；items 仍按语义命名登记，
+# 供 kui atlas 打包图集使用。
+status: draft
+pack_id: ui-components
+text_policy: remove-all
+source:
+  screen_id: home
+  sheet_asset_id: null
+  sheet_path: ""
+detection:
+  mode: auto
+  alpha_threshold: 8
+  background_tolerance: 24
+  connect_gap: 2
+  min_area: 64
+  padding: 4
+output:
+  items_dir: assets/components
+  manifest_path: contracts/asset-manifest.yaml
+  package_path: ""
+semantic_mapping:
+  required: true
+  naming_pattern: "{category}-{variant}-{state}"
+items:
+  - id: btn-primary-default
+    semantic_name: control-primary-default
+    component_id: btn-primary
+    category: control
+    state: default
+    path: assets/components/btn-primary-default-v1.png
+    dimensions: [600, 84]
+    bbox: [0, 0, 600, 84]
+    slice: {type: 9-slice, margins: [24, 24, 24, 24]}
+
+  - id: btn-primary-pressed
+    semantic_name: control-primary-pressed
+    component_id: btn-primary
+    category: control
+    state: pressed
+    path: assets/components/btn-primary-pressed-v1.png
+    dimensions: [600, 84]
+    bbox: [0, 0, 600, 84]
+    slice: {type: 9-slice, margins: [24, 24, 24, 24]}
+
+  - id: btn-secondary-default
+    semantic_name: control-secondary-default
+    component_id: btn-secondary
+    category: control
+    state: default
+    path: assets/components/btn-secondary-default-v1.png
+    dimensions: [288, 56]
+    bbox: [0, 0, 288, 56]
+    slice: {type: 9-slice, margins: [18, 18, 18, 18]}
+
+  - id: btn-secondary-pressed
+    semantic_name: control-secondary-pressed
+    component_id: btn-secondary
+    category: control
+    state: pressed
+    path: assets/components/btn-secondary-pressed-v1.png
+    dimensions: [288, 56]
+    bbox: [0, 0, 288, 56]
+    slice: {type: 9-slice, margins: [18, 18, 18, 18]}
+
+  - id: panel-card-default
+    semantic_name: container-card-paper
+    component_id: panel-card
+    category: container
+    state: default
+    path: assets/components/panel-card-default-v1.png
+    dimensions: [600, 360]
+    bbox: [0, 0, 600, 360]
+    slice: {type: 9-slice, margins: [28, 28, 28, 28]}
+
+  - id: bar-hp-default
+    semantic_name: container-bar-hp
+    component_id: bar-hp
+    category: container
+    state: default
+    path: assets/components/bar-hp-default-v1.png
+    dimensions: [420, 16]
+    bbox: [0, 0, 420, 16]
+    slice: {type: 9-slice, margins: [6, 6, 6, 6]}
+
+  - id: icon-settings-default
+    semantic_name: icon-settings-default
+    component_id: icon-settings
+    category: icon
+    state: default
+    path: assets/components/icon-settings-default-v1.png
+    dimensions: [96, 96]
+    bbox: [0, 0, 96, 96]
+    slice: {type: full, margins: [0, 0, 0, 0]}
+
+  - id: icon-settings-pressed
+    semantic_name: icon-settings-pressed
+    component_id: icon-settings
+    category: icon
+    state: pressed
+    path: assets/components/icon-settings-pressed-v1.png
+    dimensions: [96, 96]
+    bbox: [0, 0, 96, 96]
+    slice: {type: full, margins: [0, 0, 0, 0]}
+
+  - id: icon-back-default
+    semantic_name: icon-back-default
+    component_id: icon-back
+    category: icon
+    state: default
+    path: assets/components/icon-back-default-v1.png
+    dimensions: [96, 96]
+    bbox: [0, 0, 96, 96]
+    slice: {type: full, margins: [0, 0, 0, 0]}
+
+  - id: icon-back-pressed
+    semantic_name: icon-back-pressed
+    component_id: icon-back
+    category: icon
+    state: pressed
+    path: assets/components/icon-back-pressed-v1.png
+    dimensions: [96, 96]
+    bbox: [0, 0, 96, 96]
+    slice: {type: full, margins: [0, 0, 0, 0]}
+
+  - id: route-node-default
+    semantic_name: control-route-default
+    component_id: route-node
+    category: control
+    state: default
+    path: assets/components/route-node-default-v1.png
+    dimensions: [110, 110]
+    bbox: [0, 0, 110, 110]
+    slice: {type: full, margins: [0, 0, 0, 0]}
+
+  - id: route-node-pressed
+    semantic_name: control-route-pressed
+    component_id: route-node
+    category: control
+    state: pressed
+    path: assets/components/route-node-pressed-v1.png
+    dimensions: [110, 110]
+    bbox: [0, 0, 110, 110]
+    slice: {type: full, margins: [0, 0, 0, 0]}
+
+  - id: card-skill-lg-default
+    semantic_name: container-skillcard-default
+    component_id: card-skill-lg
+    category: container
+    state: default
+    path: assets/components/card-skill-lg-default-v1.png
+    dimensions: [300, 400]
+    bbox: [0, 0, 300, 400]
+    slice: {type: 9-slice, margins: [30, 30, 30, 30]}
+
+  - id: card-skill-lg-pressed
+    semantic_name: container-skillcard-pressed
+    component_id: card-skill-lg
+    category: container
+    state: pressed
+    path: assets/components/card-skill-lg-pressed-v1.png
+    dimensions: [300, 400]
+    bbox: [0, 0, 300, 400]
+    slice: {type: 9-slice, margins: [30, 30, 30, 30]}
+
+  - id: bar-boss-default
+    semantic_name: gauge-boss-default
+    component_id: bar-boss
+    category: container
+    state: default
+    path: assets/components/bar-boss-default-v1.png
+    dimensions: [1000, 22]
+    bbox: [0, 0, 1000, 22]
+    slice: {type: 9-slice, margins: [8, 8, 8, 8]}
+
+review:
+  complete: true
+  text_free: true
+  notes:
+    - "组件由设计系统模板确定性渲染，两态轮廓像素级一致，未经精灵表切片。"
+    - "items 中的 dimensions/bbox 与资产实际尺寸一致，可直接喂给 kui atlas。"

@@ -1,0 +1,342 @@
+{
+  "atlas_id": "ui-main",
+  "atlas_size": [
+    2048,
+    1024
+  ],
+  "engine": "cocos",
+  "frames": {
+    "container-bar-hp": {
+      "capInsets": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 16,
+        "width": 420
+      },
+      "rect": {
+        "height": 16,
+        "width": 420,
+        "x": 1004,
+        "y": 490
+      }
+    },
+    "container-card-paper": {
+      "capInsets": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 360,
+        "width": 600
+      },
+      "rect": {
+        "height": 360,
+        "width": 600,
+        "x": 606,
+        "y": 2
+      }
+    },
+    "container-skillcard-default": {
+      "capInsets": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 400,
+        "width": 300
+      },
+      "rect": {
+        "height": 400,
+        "width": 300,
+        "x": 2,
+        "y": 2
+      }
+    },
+    "container-skillcard-pressed": {
+      "capInsets": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 400,
+        "width": 300
+      },
+      "rect": {
+        "height": 400,
+        "width": 300,
+        "x": 304,
+        "y": 2
+      }
+    },
+    "control-primary-default": {
+      "capInsets": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 84,
+        "width": 600
+      },
+      "rect": {
+        "height": 84,
+        "width": 600,
+        "x": 2,
+        "y": 404
+      }
+    },
+    "control-primary-pressed": {
+      "capInsets": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 84,
+        "width": 600
+      },
+      "rect": {
+        "height": 84,
+        "width": 600,
+        "x": 604,
+        "y": 404
+      }
+    },
+    "control-route-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 110,
+        "width": 110
+      },
+      "rect": {
+        "height": 110,
+        "width": 110,
+        "x": 1208,
+        "y": 2
+      }
+    },
+    "control-route-pressed": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 110,
+        "width": 110
+      },
+      "rect": {
+        "height": 110,
+        "width": 110,
+        "x": 1320,
+        "y": 2
+      }
+    },
+    "control-secondary-default": {
+      "capInsets": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 56,
+        "width": 288
+      },
+      "rect": {
+        "height": 56,
+        "width": 288,
+        "x": 1206,
+        "y": 404
+      }
+    },
+    "control-secondary-pressed": {
+      "capInsets": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 56,
+        "width": 288
+      },
+      "rect": {
+        "height": 56,
+        "width": 288,
+        "x": 1496,
+        "y": 404
+      }
+    },
+    "gauge-boss-default": {
+      "capInsets": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 22,
+        "width": 1000
+      },
+      "rect": {
+        "height": 22,
+        "width": 1000,
+        "x": 2,
+        "y": 490
+      }
+    },
+    "icon-back-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 96,
+        "width": 96
+      },
+      "rect": {
+        "height": 96,
+        "width": 96,
+        "x": 1432,
+        "y": 2
+      }
+    },
+    "icon-back-pressed": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 96,
+        "width": 96
+      },
+      "rect": {
+        "height": 96,
+        "width": 96,
+        "x": 1530,
+        "y": 2
+      }
+    },
+    "icon-settings-default": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 96,
+        "width": 96
+      },
+      "rect": {
+        "height": 96,
+        "width": 96,
+        "x": 1628,
+        "y": 2
+      }
+    },
+    "icon-settings-pressed": {
+      "capInsets": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "offset": {
+        "x": 0,
+        "y": 0
+      },
+      "originalSize": {
+        "height": 96,
+        "width": 96
+      },
+      "rect": {
+        "height": 96,
+        "width": 96,
+        "x": 1726,
+        "y": 2
+      }
+    }
+  },
+  "schema_version": 1,
+  "texture": "assets/atlases/ui-main.png"
+}

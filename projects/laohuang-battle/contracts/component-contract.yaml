@@ -1,0 +1,226 @@
+schema_version: 1
+project_id: "laohuang-battle"
+source_screen_id: home
+source_screen_status: approved
+components:
+  - id: btn-primary
+    name: 主按钮（朱砂印章底）
+    category: control
+    reusable: true
+    clickable: true
+    transparent_background: true
+    text_policy: no-text
+    target_size: [600, 84]
+    states: [default, pressed, disabled]
+    material: "朱砂印泥 + 宣纸"
+    atlas_group: button
+    slice: {type: 9-slice, margins: [24, 24, 24, 24]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies:
+      - colors.primary
+      - colors.pressed
+      - geometry.radius.small
+      - geometry.stroke.regular
+      - tokens.interaction.pressed-dim
+    prompt: prompts/components/btn-primary.md
+    output: assets/components/btn-primary-default-v1.png
+    outputs:
+      - {state: default, path: assets/components/btn-primary-default-v1.png}
+      - {state: pressed, path: assets/components/btn-primary-pressed-v1.png}
+    notes: "disabled 态由运行时降饱和 60% + 不透明度 45% 生成，不单独出图。"
+
+  - id: btn-secondary
+    name: 次按钮（宣纸描边）
+    category: control
+    reusable: true
+    clickable: true
+    transparent_background: true
+    text_policy: no-text
+    target_size: [288, 56]
+    states: [default, pressed]
+    material: "宣纸 + 墨框"
+    atlas_group: button
+    slice: {type: 9-slice, margins: [18, 18, 18, 18]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies:
+      - colors.ink
+      - tokens.color.surface-panel
+      - geometry.button_height.small
+    prompt: prompts/components/btn-secondary.md
+    output: assets/components/btn-secondary-default-v1.png
+    outputs:
+      - {state: default, path: assets/components/btn-secondary-default-v1.png}
+      - {state: pressed, path: assets/components/btn-secondary-pressed-v1.png}
+
+  - id: panel-card
+    name: 宣纸卡片
+    category: container
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: no-text
+    target_size: [600, 360]
+    states: [default]
+    material: "裱好宣纸"
+    atlas_group: panel
+    slice: {type: 9-slice, margins: [28, 28, 28, 28]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies:
+      - tokens.color.surface-panel
+      - colors.ink
+      - geometry.radius.card
+      - geometry.stroke.strong
+    prompt: prompts/components/panel-card.md
+    output: assets/components/panel-card-default-v1.png
+    outputs:
+      - {state: default, path: assets/components/panel-card-default-v1.png}
+
+  - id: bar-hp
+    name: 血条
+    category: container
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: no-text
+    target_size: [420, 16]
+    states: [default]
+    material: "墨轨 + 朱砂填充"
+    atlas_group: bar
+    slice: {type: 9-slice, margins: [6, 6, 6, 6]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies:
+      - tokens.color.hp-track
+      - tokens.color.hp-fill
+      - geometry.stroke.thin
+    prompt: prompts/components/bar-hp.md
+    output: assets/components/bar-hp-default-v1.png
+    outputs:
+      - {state: default, path: assets/components/bar-hp-default-v1.png}
+
+  - id: icon-settings
+    name: 设置图标
+    category: icon
+    reusable: true
+    clickable: true
+    transparent_background: true
+    text_policy: no-text
+    target_size: [96, 96]
+    states: [default, pressed]
+    material: "墨线"
+    atlas_group: icon
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies:
+      - colors.ink
+      - geometry.icon_size.utility
+    prompt: prompts/components/icon-settings.md
+    output: assets/components/icon-settings-default-v1.png
+    outputs:
+      - {state: default, path: assets/components/icon-settings-default-v1.png}
+      - {state: pressed, path: assets/components/icon-settings-pressed-v1.png}
+
+  - id: icon-back
+    name: 返回图标
+    category: icon
+    reusable: true
+    clickable: true
+    transparent_background: true
+    text_policy: no-text
+    target_size: [96, 96]
+    states: [default, pressed]
+    material: "毛笔回锋"
+    atlas_group: icon
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies:
+      - colors.ink
+      - geometry.icon_size.utility
+    prompt: prompts/components/icon-back.md
+    output: assets/components/icon-back-default-v1.png
+    outputs:
+      - {state: default, path: assets/components/icon-back-default-v1.png}
+      - {state: pressed, path: assets/components/icon-back-pressed-v1.png}
+
+  - id: route-node
+    name: 路线节点（山道上的圆印）
+    category: control
+    reusable: true
+    clickable: true
+    transparent_background: true
+    text_policy: no-text
+    target_size: [110, 110]
+    states: [default, pressed, done, current]
+    material: "宣纸圆牌 + 墨圈"
+    atlas_group: map
+    slice: {type: full, margins: [0, 0, 0, 0]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies:
+      - colors.ink
+      - tokens.color.surface-panel
+      - colors.primary
+      - geometry.stroke.regular
+    prompt: prompts/components/route-node.md
+    output: assets/components/route-node-default-v1.png
+    outputs:
+      - {state: default, path: assets/components/route-node-default-v1.png}
+      - {state: pressed, path: assets/components/route-node-pressed-v1.png}
+    notes: "damage_flash 同族的简单差异；`done` / `current` 两态由运行时改描边色与填充色生成，不另出图。"
+
+  - id: card-skill-lg
+    name: 三选一大卡（刀诀牌面）
+    category: container
+    reusable: true
+    clickable: true
+    transparent_background: true
+    text_policy: no-text
+    target_size: [300, 400]
+    states: [default, pressed, selected]
+    material: "宣纸裱边 + 墨框"
+    atlas_group: card
+    slice: {type: 9-slice, margins: [30, 30, 30, 30]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies:
+      - tokens.color.surface-panel
+      - colors.ink
+      - colors.primary
+      - geometry.radius.card
+      - geometry.stroke.strong
+    prompt: prompts/components/card-skill-lg.md
+    output: assets/components/card-skill-lg-default-v1.png
+    outputs:
+      - {state: default, path: assets/components/card-skill-lg-default-v1.png}
+      - {state: pressed, path: assets/components/card-skill-lg-pressed-v1.png}
+    notes: "selected 态由运行时叠加朱砂外环 + 抬升 8px 表达，不另出图，避免资产尺寸不一致。"
+
+  - id: bar-boss
+    name: 头目长血条（分段刻度）
+    category: container
+    reusable: true
+    clickable: false
+    transparent_background: true
+    text_policy: no-text
+    target_size: [1000, 22]
+    states: [default]
+    material: "墨槽 + 朱砂填充"
+    atlas_group: gauge
+    slice: {type: 9-slice, margins: [8, 8, 8, 8]}
+    export_targets: [godot, unity, cocos, generic, taptap-maker]
+    style_dependencies:
+      - tokens.color.hp-track
+      - tokens.color.hp-fill
+      - geometry.stroke.thin
+    prompt: prompts/components/bar-boss.md
+    output: assets/components/bar-boss-default-v1.png
+    outputs:
+      - {state: default, path: assets/components/bar-boss-default-v1.png}
+    notes: "四段刻度烤进资产；填充比例运行时裁切。血量跨段时引擎按段改描边色提示阶段转换。"
+
+out_of_scope:
+  - id: nav-bar
+    reason: "运行时按 4 项数据绘制，图标为同族 SVG，不单独出图"
+  - id: card-skill
+    reason: "手牌为 200×238 的扇形布局，角度随张数变化，属布局逻辑而非静态资产；牌面纹理复用 card-skill-lg 的 9-slice"
+  - id: enemy-intent
+    reason: "意图图标由战斗系统按状态切换，作为图集外的矢量图标交付"
+  - id: toggle-switch
+    reason: "开关为两态几何，运行时用 9-slice 轨道 + 圆形滑块绘制，避免多倍尺寸出图"
