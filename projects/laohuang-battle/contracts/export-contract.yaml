@@ -1,0 +1,31 @@
+schema_version: 1
+project_id: laohuang-battle
+status: generated
+source_atlas_id: ui-main
+targets:
+- engine: godot
+  format: json-manifest
+  manifest_path: exports/godot/ui-main.json
+  native_project_files: false
+- engine: unity
+  format: json-manifest
+  manifest_path: exports/unity/ui-main.json
+  native_project_files: false
+- engine: cocos
+  format: json-manifest
+  manifest_path: exports/cocos/ui-main.json
+  native_project_files: false
+- engine: generic
+  format: json-manifest
+  manifest_path: exports/generic/ui-main.json
+  native_project_files: false
+- engine: taptap-maker
+  format: json-manifest
+  manifest_path: exports/taptap-maker/ui-main.json
+  native_project_files: false
+review:
+  complete: false
+  notes:
+  - JSON manifests are deterministic handoff files, not native engine imports.
+  - Every engine folder includes README.md (agent guide to auto-apply UI on that platform) and demo/ (runnable reference — fixed assembler template + ui-main.json engine-language mirror + demo README; events only log [kui-demo]; smoke-test aid, not project files).
+  - taptap-maker also writes theme.lua, component-map.json, screens.json, README.md.

@@ -1,0 +1,416 @@
+{
+  "atlas_id": "ui-main",
+  "image": "assets/atlases/ui-main.png",
+  "schema_version": 1,
+  "size": [
+    2048,
+    1024
+  ],
+  "sprites": {
+    "container-bar-hp": {
+      "component_id": "bar-hp",
+      "id": "bar-hp-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1004,
+        490,
+        420,
+        16
+      ],
+      "rotated": false,
+      "semantic_name": "container-bar-hp",
+      "slice": {
+        "margins": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/components/bar-hp-default-v1.png",
+      "state": "default"
+    },
+    "container-card-paper": {
+      "component_id": "panel-card",
+      "id": "panel-card-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        606,
+        2,
+        600,
+        360
+      ],
+      "rotated": false,
+      "semantic_name": "container-card-paper",
+      "slice": {
+        "margins": [
+          28,
+          28,
+          28,
+          28
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/components/panel-card-default-v1.png",
+      "state": "default"
+    },
+    "container-skillcard-default": {
+      "component_id": "card-skill-lg",
+      "id": "card-skill-lg-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        2,
+        300,
+        400
+      ],
+      "rotated": false,
+      "semantic_name": "container-skillcard-default",
+      "slice": {
+        "margins": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/components/card-skill-lg-default-v1.png",
+      "state": "default"
+    },
+    "container-skillcard-pressed": {
+      "component_id": "card-skill-lg",
+      "id": "card-skill-lg-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        304,
+        2,
+        300,
+        400
+      ],
+      "rotated": false,
+      "semantic_name": "container-skillcard-pressed",
+      "slice": {
+        "margins": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/components/card-skill-lg-pressed-v1.png",
+      "state": "pressed"
+    },
+    "control-primary-default": {
+      "component_id": "btn-primary",
+      "id": "btn-primary-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        404,
+        600,
+        84
+      ],
+      "rotated": false,
+      "semantic_name": "control-primary-default",
+      "slice": {
+        "margins": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/components/btn-primary-default-v1.png",
+      "state": "default"
+    },
+    "control-primary-pressed": {
+      "component_id": "btn-primary",
+      "id": "btn-primary-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        604,
+        404,
+        600,
+        84
+      ],
+      "rotated": false,
+      "semantic_name": "control-primary-pressed",
+      "slice": {
+        "margins": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/components/btn-primary-pressed-v1.png",
+      "state": "pressed"
+    },
+    "control-route-default": {
+      "component_id": "route-node",
+      "id": "route-node-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1208,
+        2,
+        110,
+        110
+      ],
+      "rotated": false,
+      "semantic_name": "control-route-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "source_path": "assets/components/route-node-default-v1.png",
+      "state": "default"
+    },
+    "control-route-pressed": {
+      "component_id": "route-node",
+      "id": "route-node-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1320,
+        2,
+        110,
+        110
+      ],
+      "rotated": false,
+      "semantic_name": "control-route-pressed",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "source_path": "assets/components/route-node-pressed-v1.png",
+      "state": "pressed"
+    },
+    "control-secondary-default": {
+      "component_id": "btn-secondary",
+      "id": "btn-secondary-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1206,
+        404,
+        288,
+        56
+      ],
+      "rotated": false,
+      "semantic_name": "control-secondary-default",
+      "slice": {
+        "margins": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/components/btn-secondary-default-v1.png",
+      "state": "default"
+    },
+    "control-secondary-pressed": {
+      "component_id": "btn-secondary",
+      "id": "btn-secondary-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1496,
+        404,
+        288,
+        56
+      ],
+      "rotated": false,
+      "semantic_name": "control-secondary-pressed",
+      "slice": {
+        "margins": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/components/btn-secondary-pressed-v1.png",
+      "state": "pressed"
+    },
+    "gauge-boss-default": {
+      "component_id": "bar-boss",
+      "id": "bar-boss-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        490,
+        1000,
+        22
+      ],
+      "rotated": false,
+      "semantic_name": "gauge-boss-default",
+      "slice": {
+        "margins": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "type": "9-slice"
+      },
+      "source_path": "assets/components/bar-boss-default-v1.png",
+      "state": "default"
+    },
+    "icon-back-default": {
+      "component_id": "icon-back",
+      "id": "icon-back-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1432,
+        2,
+        96,
+        96
+      ],
+      "rotated": false,
+      "semantic_name": "icon-back-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "source_path": "assets/components/icon-back-default-v1.png",
+      "state": "default"
+    },
+    "icon-back-pressed": {
+      "component_id": "icon-back",
+      "id": "icon-back-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1530,
+        2,
+        96,
+        96
+      ],
+      "rotated": false,
+      "semantic_name": "icon-back-pressed",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "source_path": "assets/components/icon-back-pressed-v1.png",
+      "state": "pressed"
+    },
+    "icon-settings-default": {
+      "component_id": "icon-settings",
+      "id": "icon-settings-default",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1628,
+        2,
+        96,
+        96
+      ],
+      "rotated": false,
+      "semantic_name": "icon-settings-default",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "source_path": "assets/components/icon-settings-default-v1.png",
+      "state": "default"
+    },
+    "icon-settings-pressed": {
+      "component_id": "icon-settings",
+      "id": "icon-settings-pressed",
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1726,
+        2,
+        96,
+        96
+      ],
+      "rotated": false,
+      "semantic_name": "icon-settings-pressed",
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "source_path": "assets/components/icon-settings-pressed-v1.png",
+      "state": "pressed"
+    }
+  }
+}

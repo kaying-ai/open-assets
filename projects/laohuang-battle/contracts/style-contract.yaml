@@ -1,0 +1,118 @@
+schema_version: 1
+project_id: "laohuang-battle"
+status: approved
+platform:
+  target: mobile
+  orientation: portrait
+  aspect_ratio: "9:16"
+  reference_size: [1080, 1920]
+  safe_area:
+    top: 56
+    right: 40
+    bottom: 96
+    left: 40
+visual:
+  theme: "中式水墨硬核（ink-wash hardcore）"
+  keywords: ["水墨晕染", "宣纸纤维", "朱砂印章", "枯笔飞白", "金箔点缀", "晚明江湖", "雪夜"]
+  mood: "冷、静、硬，但人是有趣的。一夜大雪，山道残火，一个穿黑皮衣的五十岁刀客在为自己的桃花债爬山——氛围浓、装饰少、数值狠，笑点只从人物反差里长出来，不靠玩梗。"
+  complexity: medium
+  materials:
+    - "宣纸纤维：低频噪点 + 边缘微毛，米黄底 #E9DFC6"
+    - "墨色晕染：3–4 层半透明墨黑叠加，边缘有干笔缺口，不用高斯模糊"
+    - "朱砂印泥：颗粒感 + 边角不齐，用于主动作与印章，不做大面积填充"
+    - "金箔：细颗粒高光，仅用于奖励与稀有度，面积 <2%"
+    - "枯笔飞白：卡片右下的速度线，2–3 道，不指向按钮"
+    - "旧皮衣：整片浓墨块面 + 沿缝线、肩线、领口的飞白高光表现皮革反光；全站只有老黄一人用这种材质，是他的身份标识"
+    - "雪地亮面：战斗底部为亮雪（#D9CBB4 系），此处 HUD 一律改用墨字 + 纸白小牌承载，禁止直接反白"
+  lighting:
+    direction: top-left
+    softness: soft
+  shadow: "阴影不用纯黑，用墨青 rgba(44,58,56,0.22)，偏移 (0,6)，模糊 16，禁止发光阴影"
+colors:
+  primary: "#B23A28"
+  pressed: "#8E2A1C"
+  secondary: "#2C4A57"
+  accent: "#B98A3C"
+  background: "#E9DFC6"
+  warning: "#B4652A"
+  reward: "#B98A3C"
+  disabled: "#9A907C"
+  ink: "#191512"
+  ink-deep: "#0E0C0A"
+  paper-raised: "#F2EADA"
+  paper-edge: "#D6C6A4"
+  danger: "#8E2B22"
+typography:
+  language: zh-CN
+  family:
+    title: "Noto Serif SC / 宋体-粗（字面拉长 1.06，字距 0.06em）"
+    body: "Noto Serif SC / 宋体-常规"
+    number: "Noto Serif SC / 等宽衬线数字，用于血条与资源，保证小数点对齐"
+  title: {size: 52, weight: 700}
+  section: {size: 34, weight: 700}
+  body: {size: 26, weight: 500}
+  number: {size: 34, weight: 700}
+  button: {size: 32, weight: 700}
+  caption: {size: 22, weight: 500}
+  rules:
+    - "标题竖排或两行折行，单行不超过 6 字，避免压到立绘头部"
+    - "正文行高 1.6，最小 22px；小字号仅用于版本号与辅助说明"
+    - "所有文字带 1px 同色系描边（浅底用 #F2EADA，深底用 #0E0C0A）保证在墨晕上可读"
+    - "AI 底图零文字，中文一律由排版层叠加（毛笔字生成必糊）"
+geometry:
+  radius: {small: 4, card: 8, modal: 12}
+  stroke: {thin: 2, regular: 3, strong: 5}
+  button_height: {small: 56, primary: 84}
+  icon_size: {utility: 56, navigation: 48, currency: 32}
+  spacing: {xs: 4, sm: 8, md: 16, lg: 24, xl: 40, xxl: 64}
+  card_padding: 28
+  nav_height: 132
+effects:
+  shadow: "墨青投影 rgba(44,58,56,0.22) · 0/6/16，卡片间距靠留白而非投影"
+  highlight: "纸面高光为左上 135° 的 8% 白叠加，禁止镜面反射与发光"
+  selected: "选中态 = 朱砂 3px 下划线 + 图标转墨黑实心，不用背景块"
+  disabled: "整体降饱和 60% + 不透明度 45%，保留轮廓不加灰罩"
+  pressed: "亮度 ×0.86（≈压暗 14%）+ 下沉 2px + 缩放 0.97，轮廓与圆角完全不变"
+  damage_flash: "受击闪白 1 帧 + 墨点溅开 6 颗，朱砂 #B23A28，单次不超过 120ms"
+tokens:
+  color:
+    action-primary: "#B23A28"
+    action-primary-pressed: "#8E2A1C"
+    action-danger: "#8E2B22"
+    surface-panel: "#F2EADA"
+    surface-page: "#E9DFC6"
+    surface-ink-veil: "rgba(14,12,10,0.72)"
+    text-primary: "#191512"
+    text-secondary: "#5C5346"
+    text-inverse: "#F5EEDB"
+    hp-fill: "#B23A28"
+    hp-track: "#4A423A"
+    ap-fill: "#B98A3C"
+    rarity-common: "#5C5346"
+    rarity-rare: "#2C4A57"
+    rarity-legend: "#B98A3C"
+  spacing:
+    xs: 4
+    sm: 8
+    md: 16
+    lg: 24
+    xl: 40
+    xxl: 64
+  interaction:
+    pressed-scale: 0.97
+    pressed-dim: 0.86
+    pressed-offset-y: 2
+  motion:
+    fast-ms: 120
+    normal-ms: 220
+    reduced-motion: "全部改为 120ms 淡入，禁用位移与缩放"
+consistency_rules:
+  - "光源永远左上，墨青阴影，禁止黑色硬投影与发光。"
+  - "朱砂 #B23A28 只用于主动作、伤害、当前进度；单页饱和度面积 <8%。"
+  - "所有卡片同一套裱边：外 5px 墨框 + 内 2px 纸白亮线 + 8px 圆角。"
+  - "底亮则字墨、底暗则字白：亮雪地上的 HUD 用 #191512 墨字，深墨背景上的 HUD 用 #F5EEDB；同一页内两种不可混用同一区域。"
+  - "老黄的皮衣是全站唯一整片纯黑块面；其余深色一律带墨晕层次，避免与皮衣撞材质。"
+  - "导航图标统一 2.5px 笔触、正视角、无 3D 立体；选中态为实心墨 + 朱砂下划线。"
+  - "可点击控件必须有 default / pressed 两态，pressed 只改亮度、缩放与位移，轮廓禁止变化。"
+  - "AI 生成底图零文字；中文由排版层叠加，字体走系统宋体族。"
+  - "留白率不低于 40%，装饰元素不透明度不超过 30%。"

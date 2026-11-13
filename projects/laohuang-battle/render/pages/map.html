@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../ui.css" />
+<style>
+  .artwrap { position: absolute; inset: 0; overflow: hidden; z-index: 1; }
+  .artwrap img {
+    position: absolute;
+    left: -100px;
+    top: 0;
+    width: 1280px;
+    filter: brightness(1.06) saturate(0.92) contrast(0.98);
+  }
+  .veil-top {
+    position: absolute; left: 0; right: 0; top: 0; height: 260px; z-index: 3;
+    background: linear-gradient(to bottom, rgba(233,223,198,0.96) 0%, rgba(233,223,198,0.82) 44%, rgba(233,223,198,0) 100%);
+  }
+  .hd { position: absolute; left: 132px; right: 40px; top: 92px; z-index: 12; display: flex; align-items: flex-end; gap: 22px; }
+  .hd .t { font-size: 54px; font-weight: 700; letter-spacing: 0.16em; color: var(--ink); }
+  .hd .s { font-size: 22px; color: var(--text-2); letter-spacing: 0.1em; padding-bottom: 12px; }
+  .hd .right { margin-left: auto; padding-bottom: 8px; }
+
+  .node { position: absolute; z-index: 12; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+  .node .dot {
+    position: relative;
+    width: 84px; height: 84px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 38px; font-weight: 700; letter-spacing: -0.02em;
+  }
+  .node .dot::before {
+    content: ""; position: absolute; inset: 0; border-radius: 50%;
+    background: rgba(242, 234, 218, 0.94);
+    box-shadow: 0 0 0 3px var(--ink), 0 0 0 8px rgba(242, 234, 218, 0.72), 0 8px 18px rgba(44, 58, 56, 0.26);
+    filter: url(#rough);
+  }
+  .node .dot > span { position: relative; z-index: 2; }
+  .node .nm {
+    position: relative;
+    height: 46px; padding: 0 16px;
+    display: flex; align-items: center;
+    font-size: 23px; letter-spacing: 0.1em;
+    color: var(--ink);
+    background: rgba(242, 234, 218, 0.9);
+    box-shadow: inset 0 0 0 2px rgba(25, 21, 18, 0.55);
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  /* 已过 */
+  .node.done .dot { color: rgba(74, 65, 55, 0.6); }
+  .node.done .dot::before { background: rgba(226, 217, 198, 0.9); box-shadow: 0 0 0 2.5px rgba(25, 21, 18, 0.42), 0 6px 14px rgba(44,58,56,.2); }
+  .node.done .nm { color: var(--text-2); box-shadow: inset 0 0 0 1.5px rgba(25, 21, 18, 0.3); }
+  /* 当前 */
+  .node.now .dot { color: var(--text-inverse); }
+  .node.now .dot::before {
+    background: var(--primary);
+    box-shadow: 0 0 0 3px var(--ink), 0 0 0 9px rgba(178, 58, 40, 0.26), 0 0 0 10px rgba(178,58,40,.5), 0 10px 22px rgba(120, 40, 30, 0.34);
+  }
+  .node.now .nm { color: var(--text-inverse); background: var(--primary); box-shadow: inset 0 0 0 2px rgba(14,12,10,.3); }
+  /* 未到 */
+  .node.todo .dot { color: rgba(74, 65, 55, 0.72); }
+  .node.todo .dot::before { background: rgba(236, 228, 210, 0.86); box-shadow: 0 0 0 2.5px rgba(25, 21, 18, 0.5), 0 6px 14px rgba(44,58,56,.18); }
+  /* 头目 */
+  .node.boss .dot { width: 104px; height: 104px; font-size: 30px; }
+  .node.boss .dot::before { box-shadow: 0 0 0 3px var(--primary), 0 0 0 6px rgba(242,234,218,.85), 0 0 0 8px rgba(178,58,40,.45), 0 10px 22px rgba(44,58,56,.3); }
+  .node.boss .nm { box-shadow: inset 0 0 0 2px var(--primary); }
+
+  .sheet {
+    position: absolute; left: 32px; right: 32px; top: 1488px; height: 356px;
+    border-radius: var(--r-card);
+    --surface: rgba(242, 234, 218, 0.97);
+    --edge: var(--ink);
+    padding: 30px 32px;
+    z-index: 16;
+    display: flex;
+    flex-direction: column;
+  }
+  .sheet .r1 { display: flex; align-items: center; gap: 18px; }
+  .sheet .r1 .k { font-size: 30px; font-weight: 700; letter-spacing: 0.14em; }
+  .sheet .r1 .prog { margin-left: auto; font-size: 21px; color: var(--text-2); letter-spacing: 0.1em; }
+  .sheet .r2 { display: flex; align-items: baseline; gap: 16px; margin-top: 26px; }
+  .sheet .r2 .nm { font-size: 40px; font-weight: 700; letter-spacing: 0.1em; }
+  .sheet .r2 .tag {
+    font-size: 20px; letter-spacing: 0.12em; color: #6b4d18;
+    padding: 5px 12px; border-radius: 3px;
+    box-shadow: inset 0 0 0 1.5px rgba(185, 138, 60, 0.8);
+    background: rgba(185, 138, 60, 0.14);
+  }
+  .sheet .line { margin-top: 16px; font-size: 25px; color: var(--text-2); letter-spacing: 0.06em; }
+  .sheet .r3 { display: flex; align-items: center; gap: 14px; margin-top: auto; }
+  .sheet .r3 .rw { font-size: 21px; color: var(--text-2); letter-spacing: 0.08em; }
+  .sheet .r3 .rw b { color: #6b4d18; font-size: 23px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <filter id="rough" x="-8%" y="-8%" width="116%" height="116%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="3" seed="11" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="2.0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="artwrap"><img src="../art/map-art.png" alt="" /></div>
+  <div class="veil-top"></div>
+  <div class="fiber"></div>
+
+  <div class="icon-btn mounted topleft" style="z-index:14;">
+    <svg viewBox="0 0 32 32"><path d="M21 6.5 9.5 16 21 25.5" /><path d="M9.5 16h15" /></svg>
+  </div>
+
+  <div class="hd">
+    <div class="t">上山</div>
+    <div class="s">九场 · 已过三场</div>
+    <div class="right"><div class="btn secondary mounted" style="width:196px;"><span>回客栈</span></div></div>
+  </div>
+
+  <!-- 路线节点：从下往上 -->
+  <div class="node done" style="left:452px; top:1298px;">
+    <div class="dot"><span>四</span></div>
+    <div class="nm">山门 · 已过</div>
+  </div>
+
+  <div class="node now" style="left:318px; top:1108px;">
+    <div class="dot"><span>五</span></div>
+    <div class="nm">断桥雪渡</div>
+  </div>
+
+  <div class="node todo" style="left:566px; top:806px;">
+    <div class="dot"><span>六</span></div>
+    <div class="nm">破庙 · 未到</div>
+  </div>
+
+  <div class="node boss todo" style="left:454px; top:330px;">
+    <div class="dot"><span>庄</span></div>
+    <div class="nm">少庄 · 三少爷</div>
+  </div>
+
+  <!-- 当前目标 -->
+  <div class="sheet mounted">
+    <div class="r1">
+      <div class="seal sm"><span>五</span></div>
+      <div class="k">断桥雪渡</div>
+      <div class="prog">第二关 · 情敌 5/9</div>
+    </div>
+    <div class="r2">
+      <div class="nm">白衣镖头 · 霍九</div>
+      <div class="tag">话少</div>
+    </div>
+    <div class="line">「挡得住我一枪，再说。」</div>
+    <div class="r3">
+      <span class="rw">奖励　<b>刀诀 · 稀有</b>　银两 +18</span>
+      <div class="btn primary" style="margin-left:auto; width:300px; height:76px; font-size:30px;"><span>拔刀</span></div>
+    </div>
+  </div>
+
+  <div class="grain"></div>
+</div>
+</body>
+</html>

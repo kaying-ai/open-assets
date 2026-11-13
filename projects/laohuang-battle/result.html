@@ -1,0 +1,637 @@
+<!-- AI生成 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="theme-color" content="#0C0910" />
+<title>laohuang-battle — UI Preview</title>
+<link rel="stylesheet" href="exports/web/tokens.css" />
+<style>
+  /* Delivery shell palette — fixed template chrome. Do NOT bind to game tokens. */
+  :root {
+    --shell-primary: #F4E9DA;
+    --shell-accent: #FFD24A;
+    --shell-bg: #1D1522;
+    --shell-disabled: #6B6560;
+    --shell-ink: #2A2010;
+    --color-primary: var(--shell-primary);
+    --color-accent: var(--shell-accent);
+    --color-bg: var(--shell-bg);
+    --color-disabled: var(--shell-disabled);
+    --font-display: "PingFang SC", "SF Pro Display", "Noto Sans SC", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body {
+    margin: 0; height: 100%;
+    background: #0C0910;
+    color: var(--shell-primary);
+    font-family: var(--font-display);
+    overflow: hidden;
+  }
+  #app {
+    height: 100%;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 12px; padding: 12px;
+    background:
+      radial-gradient(1200px 600px at 20% -10%, rgba(255,210,74,.08), transparent 50%),
+      radial-gradient(900px 500px at 90% 110%, rgba(75,59,89,.35), transparent 55%),
+      #0C0910;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    opacity: .9; user-select: none;
+  }
+  .brand .dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: var(--color-accent);
+    box-shadow: 0 0 12px var(--color-accent);
+  }
+  .brand h1 { margin: 0; font-size: 15px; font-weight: 600; letter-spacing: .04em; }
+  .brand span { font-size: 12px; opacity: .55; }
+
+  /* viewer shell */
+  .viewer {
+    position: relative;
+    width: min(420px, 100%);
+    height: min(78vh, 820px);
+    display: flex; flex-direction: column;
+    border-radius: 28px;
+    background: var(--color-bg);
+    box-shadow: 0 0 0 2px #2A2233, 0 0 0 10px #17121C, 0 30px 80px rgba(0,0,0,.55);
+    overflow: hidden;
+  }
+
+  .view-bar {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    padding: 10px 12px;
+    background: rgba(12,9,16,.72);
+    border-bottom: 1px solid rgba(244,233,218,.08);
+    z-index: 6; flex: 0 0 auto;
+    flex-wrap: wrap;
+  }
+  .res-chip {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px; opacity: .75;
+    padding: 4px 8px; border-radius: 999px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(244,233,218,.1);
+    white-space: nowrap;
+  }
+  .zoom-controls {
+    display: flex; align-items: center; gap: 6px;
+  }
+  .zbtn {
+    width: 32px; height: 32px;
+    border: 1px solid rgba(244,233,218,.12);
+    border-radius: 10px;
+    background: rgba(75,59,89,.7);
+    color: var(--color-primary);
+    font-size: 16px; font-weight: 700;
+    cursor: pointer; line-height: 1;
+  }
+  .zbtn:hover { border-color: rgba(255,210,74,.4); }
+  .zbtn.wide {
+    width: auto; padding: 0 10px; font-size: 11px; letter-spacing: .02em;
+  }
+  .zbtn.on {
+    background: var(--color-accent); color: #2A2010; border-color: transparent;
+  }
+
+  .viewport {
+    position: relative;
+    flex: 1 1 auto;
+    overflow: hidden;
+    background:
+      linear-gradient(45deg, rgba(255,255,255,.025) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(255,255,255,.025) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(255,255,255,.025) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(255,255,255,.025) 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0;
+    background-color: #120D18;
+    cursor: grab;
+    touch-action: none;
+  }
+  .viewport.dragging { cursor: grabbing; }
+
+  /* image is sized by natural pixels × zoom; aspect never forced */
+  .stage {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    will-change: transform;
+  }
+  .stage img.screen {
+    display: block;
+    width: auto; height: auto;
+    max-width: none; max-height: none;
+    /* NEVER stretch: width/height come from natural size × zoom in JS */
+    image-rendering: auto;
+    box-shadow: 0 18px 50px rgba(0,0,0,.45);
+    border-radius: 4px;
+    background: var(--color-bg);
+    user-select: none; -webkit-user-drag: none;
+    pointer-events: none;
+  }
+  .stage img.screen.pixel {
+    image-rendering: pixelated;
+  }
+
+  .fallback {
+    position: absolute; inset: 0;
+    display: grid; place-items: center;
+    color: var(--color-disabled); font-size: 13px;
+    background: var(--color-bg);
+  }
+  .fallback[hidden] { display: none !important; }
+
+  .hotspots {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    pointer-events: none;
+    z-index: 3;
+  }
+  .hotspot {
+    position: absolute;
+    border: 1.5px dashed rgba(255,210,74,.55);
+    border-radius: 12px;
+    background: rgba(255,210,74,.08);
+    color: var(--color-accent);
+    font-size: 11px; font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    pointer-events: auto;
+  }
+  .hotspot:active { transform: scale(.97); background: rgba(255,210,74,.18); }
+
+  .hud {
+    flex: 0 0 auto;
+    padding: 12px 12px 16px;
+    background: linear-gradient(to top, rgba(12,9,16,.96), rgba(12,9,16,.88));
+    border-top: 1px solid rgba(244,233,218,.08);
+    z-index: 5;
+  }
+  .screen-title {
+    font-size: 13px; font-weight: 600; margin: 0 0 8px;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }
+  .screen-title small { opacity: .5; font-weight: 500; font-family: ui-monospace, Menlo, monospace; }
+  .tabs {
+    display: flex; gap: 6px; overflow-x: auto; padding-bottom: 2px;
+    scrollbar-width: none; -webkit-overflow-scrolling: touch;
+  }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab {
+    flex: 0 0 auto;
+    border: 1px solid rgba(244,233,218,.12);
+    background: rgba(75,59,89,.55);
+    color: var(--color-primary);
+    border-radius: 999px;
+    padding: 8px 12px;
+    font-size: 12px; font-weight: 600;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+  }
+  .tab.active {
+    background: var(--color-accent);
+    color: #2A2010;
+    border-color: transparent;
+    box-shadow: 0 6px 16px rgba(255,210,74,.28);
+  }
+  .toolbar { display: flex; gap: 8px; margin-top: 10px; }
+  .btn {
+    flex: 1; border: 0; border-radius: 14px; padding: 12px 10px;
+    font-size: 13px; font-weight: 700; cursor: pointer;
+    background: var(--color-primary); color: #2A2010;
+    box-shadow: var(--shadow-contact, 0 6px 0 rgba(0,0,0,.25));
+  }
+  .btn.ghost {
+    background: rgba(75,59,89,.8); color: var(--color-primary);
+    box-shadow: none; border: 1px solid rgba(244,233,218,.12);
+  }
+  .btn:active {
+    transform: translateY(1px);
+    filter: brightness(.88);
+  }
+  .btn.ghost:active { filter: brightness(1.25); }
+  .tab:active { filter: brightness(.9); }
+  .zbtn:active { filter: brightness(1.35); }
+  .meta {
+    margin-top: 10px; font-size: 11px; line-height: 1.5; opacity: .55;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .hint {
+    margin-top: 6px; font-size: 11px; opacity: .4;
+  }
+  .side {
+    display: none; width: 220px;
+    color: rgba(244,233,218,.7); font-size: 12px; line-height: 1.55;
+  }
+  .side h2 { font-size: 13px; margin: 0 0 8px; color: var(--color-primary); }
+  .side code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 11px; background: rgba(255,255,255,.06);
+    padding: 1px 5px; border-radius: 4px;
+  }
+  .side a { color: var(--color-accent); text-decoration: none; }
+  .side ul { margin: 6px 0 0; padding-left: 16px; }
+  .side li { margin: 4px 0; }
+
+  @media (min-width: 900px) {
+    #app { flex-direction: row; gap: 28px; }
+    .side { display: block; }
+    .brand { position: absolute; top: 18px; left: 22px; }
+  }
+</style>
+</head>
+<body>
+<p data-aigc-mark="1" style="margin:0 0 8px;font-size:10px;line-height:1.3;color:#6b6560;font-weight:400;">AI生成</p>
+
+<div id="app">
+  <div class="brand" aria-hidden="true">
+    <div class="dot"></div>
+    <div>
+      <h1>laohuang-battle</h1>
+      <span>exports/web · interactive preview</span>
+    </div>
+  </div>
+
+  <aside class="side">
+    <h2>这是什么</h2>
+    <p>基于 <code>exports/web/manifest.json</code> 的可交互 UI 壳。图像按<strong>原始分辨率</strong>等比缩放，不会拉伸变形。</p>
+    <h2>查看方式</h2>
+    <ul>
+      <li>滚轮 / ± 按钮：等比缩放</li>
+      <li>拖拽：平移（放大后）</li>
+      <li><strong>1:1</strong>：像素原尺寸</li>
+      <li><strong>适应</strong>：缩放到窗口</li>
+      <li>双击：在适应 / 1:1 间切换</li>
+    </ul>
+    <h2>资源</h2>
+    <p>
+      <a href="index.html">物料与结构总览 →</a><br />
+      <a href="exports/web/README.md">Web 交付说明 →</a>
+    </p>
+    <h2>项目</h2>
+    <p><code>laohuang-battle</code></p>
+    <p><code>kui validate specs/laohuang-battle</code></p>
+  </aside>
+
+  <div class="viewer" id="viewer">
+    <div class="view-bar">
+      <div class="res-chip" id="resChip">— × — · 100%</div>
+      <div class="zoom-controls">
+        <button class="zbtn" id="btnZoomOut" type="button" title="缩小">−</button>
+        <button class="zbtn" id="btnZoomIn" type="button" title="放大">+</button>
+        <button class="zbtn wide" id="btnFit" type="button" title="适应窗口">适应</button>
+        <button class="zbtn wide" id="btn100" type="button" title="像素 1:1">1:1</button>
+      </div>
+    </div>
+
+    <div class="viewport" id="viewport">
+      <div class="stage" id="stage">
+        <img class="screen" id="screenImg" alt="UI screen" draggable="false" />
+      </div>
+      <div class="hotspots" id="hotspots"></div>
+      <div class="fallback" id="fallback" hidden>资源加载失败</div>
+    </div>
+
+    <div class="hud">
+      <div class="screen-title">
+        <span id="screenName">—</span>
+        <small id="screenId">—</small>
+      </div>
+      <div class="tabs" id="tabs"></div>
+      <div class="toolbar">
+        <button class="btn ghost" id="btnPrev" type="button">上一屏</button>
+        <button class="btn" id="btnNext" type="button">下一屏</button>
+      </div>
+      <div class="meta" id="meta"></div>
+      <div class="hint">滚轮缩放 · 拖拽平移 · 双击切换适应/1:1 · 不变形</div>
+    </div>
+  </div>
+</div>
+
+<script>
+const DATA = [
+  {
+    "hotspots": [],
+    "id": "home",
+    "img": "assets/pages/home-v2.png",
+    "meta": "exports/web · laohuang-battle",
+    "name": "客栈首页",
+    "priority": "must-have"
+  },
+  {
+    "hotspots": [],
+    "id": "battle",
+    "img": "assets/pages/battle-v2.png",
+    "meta": "exports/web · laohuang-battle",
+    "name": "断桥雪渡 · 常规战",
+    "priority": "must-have"
+  },
+  {
+    "hotspots": [],
+    "id": "settings",
+    "img": "assets/pages/settings-v1.png",
+    "meta": "exports/web · laohuang-battle",
+    "name": "设置",
+    "priority": "must-have"
+  },
+  {
+    "hotspots": [],
+    "id": "map",
+    "img": "assets/pages/map-v1.png",
+    "meta": "exports/web · laohuang-battle",
+    "name": "上山路线图",
+    "priority": "must-have"
+  },
+  {
+    "hotspots": [],
+    "id": "rival-intro",
+    "img": "assets/pages/rival-v1.png",
+    "meta": "exports/web · laohuang-battle",
+    "name": "情敌登场（对峙）",
+    "priority": "must-have"
+  },
+  {
+    "hotspots": [],
+    "id": "boss-battle",
+    "img": "assets/pages/boss-v1.png",
+    "meta": "exports/web · laohuang-battle",
+    "name": "关底情敌战",
+    "priority": "must-have"
+  },
+  {
+    "hotspots": [],
+    "id": "victory",
+    "img": "assets/pages/victory-v1.png",
+    "meta": "exports/web · laohuang-battle",
+    "name": "战后三选一",
+    "priority": "must-have"
+  }
+];
+(function () {
+  const TABS = Array.isArray(DATA) ? DATA : [];
+  const tabsEl = document.getElementById("tabs");
+  const img = document.getElementById("screenImg");
+  const fallback = document.getElementById("fallback");
+  const hotspots = document.getElementById("hotspots");
+  const nameEl = document.getElementById("screenName");
+  const idEl = document.getElementById("screenId");
+  const metaEl = document.getElementById("meta");
+  const resChip = document.getElementById("resChip");
+  const viewport = document.getElementById("viewport");
+  const stage = document.getElementById("stage");
+
+  let index = 0;
+  /* zoom state: scale relative to CSS pixel size (1 = natural width/height) */
+  let zoom = 1;
+  let panX = 0, panY = 0;
+  let fitZoom = 1;
+  let natural = { w: 0, h: 0 };
+
+  function clampPan() {
+    const vw = viewport.clientWidth;
+    const vh = viewport.clientHeight;
+    const dw = natural.w * zoom;
+    const dh = natural.h * zoom;
+    const maxX = Math.max(0, (dw - vw) / 2 + 40);
+    const maxY = Math.max(0, (dh - vh) / 2 + 40);
+    if (dw <= vw + 1) panX = 0;
+    else panX = Math.max(-maxX, Math.min(maxX, panX));
+    if (dh <= vh + 1) panY = 0;
+    else panY = Math.max(-maxY, Math.min(maxY, panY));
+  }
+
+  function applyView() {
+    if (!natural.w) return;
+    clampPan();
+    /* fractional CSS px keeps aspect exact; never force both axes with CSS */
+    const w = natural.w * zoom;
+    const h = natural.h * zoom;
+    img.style.width = w + "px";
+    img.style.height = "auto";
+    stage.style.transform =
+      "translate(calc(-50% + " + panX + "px), calc(-50% + " + panY + "px))";
+    /* hotspots overlay matches image box exactly */
+    hotspots.style.width = w + "px";
+    hotspots.style.height = h + "px";
+    hotspots.style.transform =
+      "translate(calc(-50% + " + panX + "px), calc(-50% + " + panY + "px))";
+    const pct = Math.round(zoom * 100);
+    resChip.textContent = natural.w + "×" + natural.h + " · " + pct + "%";
+    img.classList.toggle("pixel", zoom >= 1.99);
+  }
+
+  function computeFit() {
+    if (!natural.w) return 1;
+    const vw = viewport.clientWidth - 16;
+    const vh = viewport.clientHeight - 16;
+    return Math.min(vw / natural.w, vh / natural.h, 1);
+  }
+
+  function setZoom(z, anchorClientX, anchorClientY) {
+    const old = zoom;
+    zoom = Math.max(0.05, Math.min(8, z));
+    /* keep point under cursor stable when possible */
+    if (anchorClientX != null && old > 0) {
+      const rect = viewport.getBoundingClientRect();
+      const ax = anchorClientX - rect.left - rect.width / 2 - panX;
+      const ay = anchorClientY - rect.top - rect.height / 2 - panY;
+      panX = panX - ax * (zoom / old - 1);
+      panY = panY - ay * (zoom / old - 1);
+    }
+    applyView();
+  }
+
+  function fit() {
+    fitZoom = computeFit();
+    zoom = fitZoom;
+    panX = 0; panY = 0;
+    applyView();
+    document.getElementById("btnFit").classList.add("on");
+    document.getElementById("btn100").classList.remove("on");
+  }
+
+  function oneToOne() {
+    zoom = 1;
+    panX = 0; panY = 0;
+    applyView();
+    document.getElementById("btnFit").classList.remove("on");
+    document.getElementById("btn100").classList.add("on");
+  }
+
+  function renderTabs() {
+    tabsEl.innerHTML = "";
+    TABS.forEach(function (t, i) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "tab" + (i === index ? " active" : "");
+      b.textContent = t.name || t.id || ("#" + i);
+      b.addEventListener("click", function () { go(i); });
+      tabsEl.appendChild(b);
+    });
+  }
+
+  function renderHotspots(list) {
+    hotspots.innerHTML = "";
+    (list || []).forEach(function (h) {
+      const el = document.createElement("button");
+      el.type = "button";
+      el.className = "hotspot";
+      el.style.left = h.x + "%";
+      el.style.top = h.y + "%";
+      el.style.width = h.w + "%";
+      el.style.height = h.h + "%";
+      el.textContent = h.label || "";
+      el.addEventListener("click", function (e) {
+        e.stopPropagation();
+        const t = TABS.findIndex(function (x) { return x.id === h.to; });
+        if (t >= 0) go(t);
+      });
+      hotspots.appendChild(el);
+    });
+  }
+
+  function go(i) {
+    if (!TABS.length) return;
+    if (i < 0) i = TABS.length - 1;
+    if (i >= TABS.length) i = 0;
+    index = i;
+    const t = TABS[index];
+    fallback.hidden = true;
+    img.hidden = false;
+    img.onload = function () {
+      natural.w = img.naturalWidth || 0;
+      natural.h = img.naturalHeight || 0;
+      fit();
+    };
+    img.onerror = function () {
+      img.hidden = true;
+      fallback.hidden = false;
+      natural = { w: 0, h: 0 };
+      resChip.textContent = "加载失败";
+    };
+    img.src = t.img;
+    nameEl.textContent = t.name || t.id || "—";
+    idEl.textContent = t.id || "—";
+    metaEl.textContent = t.meta || "exports/web · interactive preview";
+    renderTabs();
+    renderHotspots(t.hotspots);
+    try { history.replaceState(null, "", "#" + (t.id || "")); } catch (_) {}
+  }
+
+  /* zoom controls */
+  document.getElementById("btnZoomIn").addEventListener("click", function () {
+    setZoom(zoom * 1.25);
+  });
+  document.getElementById("btnZoomOut").addEventListener("click", function () {
+    setZoom(zoom / 1.25);
+  });
+  document.getElementById("btnFit").addEventListener("click", fit);
+  document.getElementById("btn100").addEventListener("click", oneToOne);
+
+  /* wheel zoom (no page scroll) */
+  viewport.addEventListener("wheel", function (e) {
+    e.preventDefault();
+    const factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    setZoom(zoom * factor, e.clientX, e.clientY);
+  }, { passive: false });
+
+  /* drag pan */
+  let dragging = false;
+  let dragStart = null;
+  viewport.addEventListener("pointerdown", function (e) {
+    if (e.button !== 0) return;
+    dragging = true;
+    dragStart = { x: e.clientX, y: e.clientY, px: panX, py: panY };
+    viewport.classList.add("dragging");
+    viewport.setPointerCapture(e.pointerId);
+  });
+  viewport.addEventListener("pointermove", function (e) {
+    if (!dragging || !dragStart) return;
+    panX = dragStart.px + (e.clientX - dragStart.x);
+    panY = dragStart.py + (e.clientY - dragStart.y);
+    applyView();
+  });
+  function endDrag(e) {
+    dragging = false;
+    dragStart = null;
+    viewport.classList.remove("dragging");
+    try { viewport.releasePointerCapture(e.pointerId); } catch (_) {}
+  }
+  viewport.addEventListener("pointerup", endDrag);
+  viewport.addEventListener("pointercancel", endDrag);
+
+  /* double click: fit ↔ 1:1 */
+  viewport.addEventListener("dblclick", function () {
+    if (Math.abs(zoom - 1) < 0.02) fit();
+    else oneToOne();
+  });
+
+  /* touch pinch */
+  let pinch = null;
+  viewport.addEventListener("touchstart", function (e) {
+    if (e.touches.length === 2) {
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      pinch = { dist: Math.hypot(dx, dy), zoom: zoom };
+      dragging = false;
+    }
+  }, { passive: true });
+  viewport.addEventListener("touchmove", function (e) {
+    if (pinch && e.touches.length === 2) {
+      e.preventDefault();
+      const dx = e.touches[0].clientX - e.touches[1].clientX;
+      const dy = e.touches[0].clientY - e.touches[1].clientY;
+      const dist = Math.hypot(dx, dy);
+      setZoom(pinch.zoom * (dist / pinch.dist));
+    }
+  }, { passive: false });
+  viewport.addEventListener("touchend", function () { pinch = null; }, { passive: true });
+
+  /* page switch: prev/next / keys / swipe */
+  document.getElementById("btnPrev").addEventListener("click", function () { go(index - 1); });
+  document.getElementById("btnNext").addEventListener("click", function () { go(index + 1); });
+
+  let x0 = null;
+  viewport.addEventListener("touchstart", function (e) {
+    if (e.touches.length === 1 && !pinch) x0 = e.changedTouches[0].clientX;
+  }, { passive: true });
+  viewport.addEventListener("touchend", function (e) {
+    if (x0 == null || pinch) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    x0 = null;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(e.changedTouches[0].clientY - (e.changedTouches[0].clientY))) {
+      /* only treat as page swipe when zoom is near fit */
+      if (zoom <= fitZoom * 1.15) go(index + (dx < 0 ? 1 : -1));
+    }
+  }, { passive: true });
+
+  window.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowRight") go(index + 1);
+    else if (e.key === "ArrowLeft") go(index - 1);
+    else if (e.key === "+" || e.key === "=") setZoom(zoom * 1.25);
+    else if (e.key === "-" || e.key === "_") setZoom(zoom / 1.25);
+    else if (e.key === "0") oneToOne();
+    else if (e.key === "f" || e.key === "F") fit();
+  });
+
+  window.addEventListener("resize", function () {
+    /* keep current zoom; re-clamp pan only */
+    applyView();
+  });
+
+  const hash = location.hash.replace("#", "");
+  const start = TABS.findIndex(function (t) { return t.id === hash; });
+  go(start >= 0 ? start : 0);
+})();
+</script>
+</body>
+</html>

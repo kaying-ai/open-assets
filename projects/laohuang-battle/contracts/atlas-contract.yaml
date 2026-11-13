@@ -1,0 +1,334 @@
+schema_version: 1
+project_id: laohuang-battle
+status: packed
+atlas_id: ui-main
+source_sprite_pack: ui-components
+settings:
+  max_size:
+  - 2048
+  - 2048
+  padding: 2
+  power_of_two: true
+  allow_rotation: false
+output:
+  image_path: assets/atlases/ui-main.png
+  data_path: assets/atlases/ui-main.json
+items:
+- id: card-skill-lg-default
+  semantic_name: container-skillcard-default
+  component_id: card-skill-lg
+  state: default
+  source_path: assets/components/card-skill-lg-default-v1.png
+  region:
+  - 2
+  - 2
+  - 300
+  - 400
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 30
+    - 30
+    - 30
+    - 30
+- id: card-skill-lg-pressed
+  semantic_name: container-skillcard-pressed
+  component_id: card-skill-lg
+  state: pressed
+  source_path: assets/components/card-skill-lg-pressed-v1.png
+  region:
+  - 304
+  - 2
+  - 300
+  - 400
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 30
+    - 30
+    - 30
+    - 30
+- id: panel-card-default
+  semantic_name: container-card-paper
+  component_id: panel-card
+  state: default
+  source_path: assets/components/panel-card-default-v1.png
+  region:
+  - 606
+  - 2
+  - 600
+  - 360
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 28
+    - 28
+    - 28
+    - 28
+- id: route-node-default
+  semantic_name: control-route-default
+  component_id: route-node
+  state: default
+  source_path: assets/components/route-node-default-v1.png
+  region:
+  - 1208
+  - 2
+  - 110
+  - 110
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: route-node-pressed
+  semantic_name: control-route-pressed
+  component_id: route-node
+  state: pressed
+  source_path: assets/components/route-node-pressed-v1.png
+  region:
+  - 1320
+  - 2
+  - 110
+  - 110
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-back-default
+  semantic_name: icon-back-default
+  component_id: icon-back
+  state: default
+  source_path: assets/components/icon-back-default-v1.png
+  region:
+  - 1432
+  - 2
+  - 96
+  - 96
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-back-pressed
+  semantic_name: icon-back-pressed
+  component_id: icon-back
+  state: pressed
+  source_path: assets/components/icon-back-pressed-v1.png
+  region:
+  - 1530
+  - 2
+  - 96
+  - 96
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-settings-default
+  semantic_name: icon-settings-default
+  component_id: icon-settings
+  state: default
+  source_path: assets/components/icon-settings-default-v1.png
+  region:
+  - 1628
+  - 2
+  - 96
+  - 96
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: icon-settings-pressed
+  semantic_name: icon-settings-pressed
+  component_id: icon-settings
+  state: pressed
+  source_path: assets/components/icon-settings-pressed-v1.png
+  region:
+  - 1726
+  - 2
+  - 96
+  - 96
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: full
+    margins:
+    - 0
+    - 0
+    - 0
+    - 0
+- id: btn-primary-default
+  semantic_name: control-primary-default
+  component_id: btn-primary
+  state: default
+  source_path: assets/components/btn-primary-default-v1.png
+  region:
+  - 2
+  - 404
+  - 600
+  - 84
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 24
+    - 24
+    - 24
+    - 24
+- id: btn-primary-pressed
+  semantic_name: control-primary-pressed
+  component_id: btn-primary
+  state: pressed
+  source_path: assets/components/btn-primary-pressed-v1.png
+  region:
+  - 604
+  - 404
+  - 600
+  - 84
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 24
+    - 24
+    - 24
+    - 24
+- id: btn-secondary-default
+  semantic_name: control-secondary-default
+  component_id: btn-secondary
+  state: default
+  source_path: assets/components/btn-secondary-default-v1.png
+  region:
+  - 1206
+  - 404
+  - 288
+  - 56
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 18
+    - 18
+    - 18
+    - 18
+- id: btn-secondary-pressed
+  semantic_name: control-secondary-pressed
+  component_id: btn-secondary
+  state: pressed
+  source_path: assets/components/btn-secondary-pressed-v1.png
+  region:
+  - 1496
+  - 404
+  - 288
+  - 56
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 18
+    - 18
+    - 18
+    - 18
+- id: bar-boss-default
+  semantic_name: gauge-boss-default
+  component_id: bar-boss
+  state: default
+  source_path: assets/components/bar-boss-default-v1.png
+  region:
+  - 2
+  - 490
+  - 1000
+  - 22
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 8
+    - 8
+    - 8
+    - 8
+- id: bar-hp-default
+  semantic_name: container-bar-hp
+  component_id: bar-hp
+  state: default
+  source_path: assets/components/bar-hp-default-v1.png
+  region:
+  - 1004
+  - 490
+  - 420
+  - 16
+  pivot:
+  - 0.5
+  - 0.5
+  rotated: false
+  slice:
+    type: 9-slice
+    margins:
+    - 6
+    - 6
+    - 6
+    - 6
+review:
+  complete: false
+  notes: []

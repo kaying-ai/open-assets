@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="../ui.css" />
+<style>
+  .artwrap { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
+  .artwrap img {
+    position: absolute;
+    left: -100px;
+    top: -70px;
+    width: 1280px;
+    opacity: 0.95;
+    filter: brightness(1.05) saturate(0.9);
+  }
+  .topveil {
+    position: absolute;
+    left: 0; right: 0; top: 0;
+    height: 230px;
+    z-index: 2;
+    background: linear-gradient(to bottom,
+      rgba(233, 223, 198, 0.94) 0%,
+      rgba(233, 223, 198, 0.86) 42%,
+      rgba(233, 223, 198, 0.45) 74%,
+      rgba(233, 223, 198, 0) 100%);
+  }
+  .hd-title {
+    z-index: 12;
+    position: absolute;
+    left: 0; right: 0; top: 44px;
+    text-align: center;
+    font-size: 46px;
+    font-weight: 700;
+    letter-spacing: 0.42em;
+    text-indent: 0.42em;
+    color: var(--ink);
+    text-shadow: 0 0 16px rgba(233, 223, 198, 0.9), 0 0 6px rgba(233, 223, 198, 1);
+  }
+  .hd-rule {
+    z-index: 12;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 128px;
+    width: 132px;
+    height: 2px;
+    background: var(--primary);
+    opacity: 0.85;
+  }
+  .panel { padding: 30px 32px; }
+  .footbtn {
+    z-index: 12;
+    position: absolute;
+    left: 0; right: 0; top: 1682px;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 0.14em;
+    color: var(--disabled);
+  }
+  .footbtn.on { color: var(--primary); }
+  .ver {
+    z-index: 12;
+    position: absolute;
+    left: 0; right: 0; top: 1752px;
+    text-align: center;
+    font-size: 21px;
+    letter-spacing: 0.16em;
+    color: rgba(92, 83, 70, 0.72);
+  }
+  .row .lbl.two { letter-spacing: 0.34em; }
+  .group-tag {
+    position: absolute;
+    right: 40px;
+    font-size: 20px;
+    letter-spacing: 0.24em;
+    color: rgba(92, 83, 70, 0.6);
+    writing-mode: vertical-rl;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <filter id="rough" x="-8%" y="-8%" width="116%" height="116%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.055" numOctaves="3" seed="11" result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale="2.0" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="artwrap"><img src="../art/settings-art.png" alt="" /></div>
+  <div class="topveil"></div>
+  <div class="fiber"></div>
+
+  <!-- 头部 -->
+  <div class="icon-btn mounted" style="position:absolute; left:40px; top:56px; z-index:12;">
+    <svg viewBox="0 0 32 32"><path d="M21 6.5 9.5 16 21 25.5" /><path d="M9.5 16h15" opacity="0.45" /></svg>
+  </div>
+  <div class="hd-title">设置</div>
+  <div class="hd-rule"></div>
+
+  <!-- 音画 -->
+  <div class="panel mounted" style="position:absolute; left:40px; top:196px; width:1000px; height:408px; z-index:10;">
+    <div class="hd"><span class="t">音画</span><span class="s">声音只在这台机器上</span></div>
+    <div class="row">
+      <span class="lbl">音乐</span>
+      <div class="ctl">
+        <div class="slider">
+          <div class="track"><i style="width:70%"></i><div class="knob" style="left:70%"></div></div>
+          <span class="val">70</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <span class="lbl">音效</span>
+      <div class="ctl">
+        <div class="slider">
+          <div class="track"><i style="width:85%"></i><div class="knob" style="left:85%"></div></div>
+          <span class="val">85</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <span class="lbl">画质<span class="hint">低端机建议「中」</span></span>
+      <div class="ctl">
+        <div class="seg"><b>高</b><b class="on">中</b><b>低</b></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 操作 -->
+  <div class="panel mounted" style="position:absolute; left:40px; top:632px; width:1000px; height:312px; z-index:10;">
+    <div class="hd"><span class="t">操作</span><span class="s">手感</span></div>
+    <div class="row">
+      <span class="lbl">震动</span>
+      <div class="ctl"><div class="toggle on"><i></i></div></div>
+    </div>
+    <div class="row">
+      <span class="lbl">字号<span class="hint">影响正文与说明</span></span>
+      <div class="ctl">
+        <div class="seg"><b class="on">标准</b><b>大</b></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 账号 -->
+  <div class="panel mounted" style="position:absolute; left:40px; top:972px; width:1000px; height:312px; z-index:10;">
+    <div class="hd"><span class="t">账号</span><span class="s">不绑也能打，绑了不丢档</span></div>
+    <div class="row">
+      <span class="lbl">江湖名<span class="hint">还没起名</span></span>
+      <div class="ctl"><div class="btn-mini"><span>绑定</span></div></div>
+    </div>
+    <div class="row">
+      <span class="lbl two">客服</span>
+      <div class="ctl">
+        <svg class="chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- 其他 -->
+  <div class="panel mounted" style="position:absolute; left:40px; top:1312px; width:1000px; height:312px; z-index:10;">
+    <div class="hd"><span class="t">其他</span><span class="s">剩下的事</span></div>
+    <div class="row">
+      <span class="lbl two">语言</span>
+      <div class="ctl">
+        <span style="font-size:24px; color:var(--text-2); margin-right:14px; letter-spacing:0.06em;">简体中文</span>
+        <svg class="chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
+      </div>
+    </div>
+    <div class="row">
+      <span class="lbl two">关于</span>
+      <div class="ctl">
+        <span style="font-size:24px; color:var(--text-2); margin-right:14px; letter-spacing:0.06em;">v0.1.0</span>
+        <svg class="chev" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7" /></svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="footbtn">恢复默认</div>
+  <div class="ver">v0.2.0 · 桃花债版 · 单机</div>
+
+  <div class="shelf" style="height:262px; z-index:8;"></div>
+  <div class="grain"></div>
+</div>
+</body>
+</html>

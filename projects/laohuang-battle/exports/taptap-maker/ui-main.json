@@ -1,0 +1,1410 @@
+{
+  "atlas_id": "ui-main",
+  "atlas_size": [
+    2048,
+    1024
+  ],
+  "components": [
+    {
+      "atlas_sprites": [
+        "control-primary-default",
+        "control-primary-pressed"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "btn-primary",
+      "name": "主按钮（朱砂印章底）",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "type": "9-slice"
+      },
+      "state_sprites": {
+        "default": "control-primary-default",
+        "pressed": "control-primary-pressed"
+      },
+      "states": [
+        "default",
+        "pressed",
+        "disabled"
+      ],
+      "target_size": [
+        600,
+        84
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Button",
+      "widget_hint": "gradient/solid CTA; variant from token role"
+    },
+    {
+      "atlas_sprites": [
+        "control-secondary-default",
+        "control-secondary-pressed"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "btn-secondary",
+      "name": "次按钮（宣纸描边）",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "type": "9-slice"
+      },
+      "state_sprites": {
+        "default": "control-secondary-default",
+        "pressed": "control-secondary-pressed"
+      },
+      "states": [
+        "default",
+        "pressed"
+      ],
+      "target_size": [
+        288,
+        56
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Button",
+      "widget_hint": "gradient/solid CTA; variant from token role"
+    },
+    {
+      "atlas_sprites": [
+        "container-card-paper"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "panel-card",
+      "name": "宣纸卡片",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          28,
+          28,
+          28,
+          28
+        ],
+        "type": "9-slice"
+      },
+      "state_sprites": {
+        "default": "container-card-paper"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        600,
+        360
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Card",
+      "widget_hint": "elevated panel / card surface"
+    },
+    {
+      "atlas_sprites": [
+        "container-bar-hp"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "bar-hp",
+      "name": "血条",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "type": "9-slice"
+      },
+      "state_sprites": {
+        "default": "container-bar-hp"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        420,
+        16
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.ProgressBar",
+      "widget_hint": "determinate fill bar"
+    },
+    {
+      "atlas_sprites": [
+        "icon-settings-default",
+        "icon-settings-pressed"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-settings",
+      "name": "设置图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "state_sprites": {
+        "default": "icon-settings-default",
+        "pressed": "icon-settings-pressed"
+      },
+      "states": [
+        "default",
+        "pressed"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "icon-back-default",
+        "icon-back-pressed"
+      ],
+      "category": "icon",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "icon-back",
+      "name": "返回图标",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "state_sprites": {
+        "default": "icon-back-default",
+        "pressed": "icon-back-pressed"
+      },
+      "states": [
+        "default",
+        "pressed"
+      ],
+      "target_size": [
+        96,
+        96
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Sprite",
+      "widget_hint": "icon-sized sprite from atlas region"
+    },
+    {
+      "atlas_sprites": [
+        "control-route-default",
+        "control-route-pressed"
+      ],
+      "category": "control",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "route-node",
+      "name": "路线节点（山道上的圆印）",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "state_sprites": {
+        "default": "control-route-default",
+        "pressed": "control-route-pressed"
+      },
+      "states": [
+        "default",
+        "pressed",
+        "done",
+        "current"
+      ],
+      "target_size": [
+        110,
+        110
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Button",
+      "widget_hint": "gradient/solid CTA; variant from token role"
+    },
+    {
+      "atlas_sprites": [
+        "container-skillcard-default",
+        "container-skillcard-pressed"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "card-skill-lg",
+      "name": "三选一大卡（刀诀牌面）",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "type": "9-slice"
+      },
+      "state_sprites": {
+        "default": "container-skillcard-default",
+        "pressed": "container-skillcard-pressed"
+      },
+      "states": [
+        "default",
+        "pressed",
+        "selected"
+      ],
+      "target_size": [
+        300,
+        400
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.Card",
+      "widget_hint": "elevated panel / card surface"
+    },
+    {
+      "atlas_sprites": [
+        "gauge-boss-default"
+      ],
+      "category": "container",
+      "export_targets": [
+        "godot",
+        "unity",
+        "cocos",
+        "generic",
+        "taptap-maker"
+      ],
+      "id": "bar-boss",
+      "name": "头目长血条（分段刻度）",
+      "reusable": true,
+      "slice": {
+        "margins": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "type": "9-slice"
+      },
+      "state_sprites": {
+        "default": "gauge-boss-default"
+      },
+      "states": [
+        "default"
+      ],
+      "target_size": [
+        1000,
+        22
+      ],
+      "text_policy": "no-text",
+      "widget": "UI.ProgressBar",
+      "widget_hint": "determinate fill bar"
+    }
+  ],
+  "engine": "taptap-maker",
+  "platform": {
+    "asset_roots": {
+      "audio_sfx": "assets/audio/sfx",
+      "audio_voice": "assets/audio/voice",
+      "fonts": "assets/Fonts",
+      "images": "assets/image",
+      "scripts": "scripts",
+      "sprites": "assets/sprites"
+    },
+    "engine": "UrhoX",
+    "handoff_only": true,
+    "id": "taptap-maker",
+    "layout": "Yoga",
+    "native_project_files": false,
+    "render": "NanoVG",
+    "script": "Lua",
+    "ui": "urhox-libs/UI"
+  },
+  "schema_version": 1,
+  "screens": [
+    {
+      "components": [
+        "btn-primary",
+        "btn-secondary",
+        "panel-card",
+        "icon-settings",
+        "top-resource-bar",
+        "nav-bar",
+        "hero-portrait",
+        "logo-seal"
+      ],
+      "id": "home",
+      "layout": {
+        "bottom": [
+          "主按钮「接着打」朱砂实底印章，84px 高，距底 210px",
+          "次按钮横排「开新局」「江湖名录」，56px 高",
+          "底部导航 132px：客栈 / 名录 / 酒壶 / 设置"
+        ],
+        "center": [
+          "上段：竖排 LOGO「老黄的战斗」+ 朱砂方印「黄」",
+          "中段：老黄半身立绘（肩扛缺口雁翎刀，旧斗篷落雪），占画面 32%–62% 高度",
+          "立绘下沿：进度木牌「第三场 · 雪夜破庙」+ 流派标签印章（回锋 / 借力 / 残血）"
+        ],
+        "floating": [
+          "断网窄条（顶部 6px 墨条 + 文案），3 秒收起",
+          "每日签到小印（右下，可关闭）"
+        ],
+        "top": [
+          "顶部安全区 56px 后为资源条：银两 · 酒 · 声望，右端设置齿轮（56×56）",
+          "资源条下方左侧为存档时间小字「上次 昨晚 亥时」"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/home.lua",
+      "name": "客栈首页",
+      "primary_actions": [
+        "接着打（有存档）/ 入江湖（无存档）",
+        "开新局（需确认覆盖）",
+        "打开设置"
+      ],
+      "priority": "must-have",
+      "purpose": "让玩家 3 秒内确认「我在第几场、还剩多少酒、下一步点哪」，并从存档直接续战。",
+      "states": [
+        "default",
+        "new-run",
+        "confirm-overwrite",
+        "loading",
+        "error"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "btn-primary",
+        "panel-card",
+        "bar-hp",
+        "ap-pips",
+        "card-skill",
+        "enemy-intent",
+        "icon-settings",
+        "icon-pause"
+      ],
+      "id": "battle",
+      "layout": {
+        "bottom": [
+          "手牌区：5 张扇形排列的刀诀卡，卡宽 196px，重叠 24px",
+          "左下：气 3/3 金箔圆点；右下：结束回合朱砂描边按钮（84px 高）",
+          "底部 96px 安全区内只保留手势条留白"
+        ],
+        "center": [
+          "画面 30%–35%：敌方（雪鸦寨刀手 ×2 + 弓手），立于断碑与破庙门槛之后",
+          "画面 35%–70%：空战场，仅雪地与墨色刀光层，禁止 UI",
+          "画面 66%–78%：老黄背影，宽斗篷，雁翎刀垂于右侧，血条在其头顶上方 12px"
+        ],
+        "floating": [
+          "飘字层（伤害/气不足），位于 40%–66% 高度",
+          "暂停确认层（半透明墨罩 + 宣纸面板）",
+          "战后三选一刀诀层"
+        ],
+        "top": [
+          "顶部 56px 安全区后：左上暂停（56×56）、右上设置齿轮（56×56）",
+          "顶部中央层签「第三场 · 雪夜破庙」，26px 以上，宣纸窄条",
+          "层签下方：敌方 1–3 个单位的血条与意图图标（同一水平线，图标 48px）",
+          "敌方血条右上：战利品预览小卡（不遮血条）"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/battle.lua",
+      "name": "雪夜主场景",
+      "primary_actions": [
+        "点手牌出招（消耗气）",
+        "结束回合",
+        "暂停 / 撤退"
+      ],
+      "priority": "must-have",
+      "purpose": "一屏读懂敌我状态并做出一次出招决策：谁要打我、我还有几点气、这张牌值不值。",
+      "states": [
+        "player-turn",
+        "enemy-turn",
+        "victory",
+        "defeat",
+        "paused",
+        "low-ap"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "panel-card",
+        "icon-back",
+        "row-setting",
+        "slider",
+        "segmented",
+        "toggle-switch"
+      ],
+      "id": "settings",
+      "layout": {
+        "bottom": [
+          "版本号 v0.1.0（22px，居中，低对比）",
+          "「恢复默认」文字按钮，位于版本号上方，无改动时置灰"
+        ],
+        "center": [
+          "四组宣纸卡片纵向排列，间距 24px，卡片内边距 28px",
+          "音画：音乐滑块 / 音效滑块 / 画质分段（高·中·低）",
+          "操作：震动开关 / 一键出招开关 / 字号分段（标准·大）",
+          "账号：江湖名（未入江湖）/ 绑定 / 客服",
+          "其他：语言 / 隐私 / 关于"
+        ],
+        "floating": [
+          "确认层（恢复默认）",
+          "保存失败窄条"
+        ],
+        "top": [
+          "左上返回毛笔箭头（56×56）+ 居中标题「设置」（竖排或横排粗宋）",
+          "标题下 2px 朱砂细线，长度 120px，居中"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/settings.lua",
+      "name": "设置页",
+      "primary_actions": [
+        "返回（自动保存）",
+        "切换开关 / 拖动滑块",
+        "恢复默认（二次确认）"
+      ],
+      "priority": "must-have",
+      "purpose": "在不迷路的前提下调完就走：任何改动一次点击完成，返回永远只有一步。",
+      "states": [
+        "default",
+        "dirty",
+        "confirm-reset",
+        "error"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "route-node",
+        "btn-primary",
+        "btn-secondary",
+        "panel-card",
+        "icon-back"
+      ],
+      "id": "map",
+      "layout": {
+        "bottom": [
+          "当前目标卡（32px 边距，356px 高）：关名 + 情敌名 + 一句台词 + 奖励预览 + 拔刀主按钮",
+          "底部 96px 安全区留白"
+        ],
+        "center": [
+          "水磨长卷底图：一条雪中山道自上而下，四处灯火地标",
+          "四个路线节点沿山道分布，自下而上：四 / 五 / 六 / 庄",
+          "节点 84px 圆牌（头目 104px），下方 46px 名条；已过降饱和、当前朱砂实底、未到墨描边"
+        ],
+        "floating": [
+          "节点选中态：朱砂外环 8px + 名条反色",
+          "路线未解锁时节点置灰并显示「再走一场」提示"
+        ],
+        "top": [
+          "左上返回（56×56）+ 标题「上山」54px + 副标「九场 · 已过三场」",
+          "右上「回客栈」次按钮（196×56）",
+          "顶部 220px 纸雾，保证标题压在山峦上也清晰"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/map.lua",
+      "name": "上山路线图",
+      "primary_actions": [
+        "点节点查看该位情敌",
+        "拔刀（进入 battle / rival-intro）",
+        "回客栈"
+      ],
+      "priority": "must-have",
+      "purpose": "在一屏内看清「打到第几个、下一步打谁、能拿什么」，并决定继续上山还是撤回客栈。",
+      "states": [
+        "default",
+        "node-selected",
+        "all-cleared",
+        "offline"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "btn-primary",
+        "btn-secondary",
+        "panel-card",
+        "icon-back"
+      ],
+      "id": "rival-intro",
+      "layout": {
+        "bottom": [
+          "台词卡（54px 边距，296px 高）：朱砂编号印 + 姓名 + 性格标签 + 台词 + 老黄回一句",
+          "主按钮「拔刀」600×84，次按钮「听他念完」348×56",
+          "底部提示「轻点继续 · 右上可跳过」"
+        ],
+        "center": [
+          "左侧 20%：老黄皮衣背影，几乎全黑剪影",
+          "右侧 34%：情敌正面，红灯笼顶光，折扇半开",
+          "中部 45%：空雪地，禁止任何 UI"
+        ],
+        "floating": [
+          "台词逐字机（每字 28ms），点任意处加速"
+        ],
+        "top": [
+          "左上返回、中央层签「关底 · 断桥雪渡 ｜ 情敌 5/9」、右上「跳过 ›」文字",
+          "右缘竖排「情敌 · 之五」，压在暗色屋檐上"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/rival_intro.lua",
+      "name": "情敌登场（对峙）",
+      "primary_actions": [
+        "拔刀（进入 boss-battle）",
+        "听他念完（继续下一句）",
+        "跳过"
+      ],
+      "priority": "must-have",
+      "purpose": "在两三句台词里交代「这人是谁、为什么挡路、他的脾气」，并给出「拔刀 / 听完」两条路。",
+      "states": [
+        "line-1",
+        "line-2",
+        "line-3",
+        "skipped"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "bar-boss",
+        "bar-hp",
+        "card-skill-lg",
+        "btn-primary",
+        "panel-card"
+      ],
+      "id": "boss-battle",
+      "layout": {
+        "bottom": [
+          "手牌 5 张，牌面 200×238",
+          "左下：老黄血条 + 皮衣护盾（破甲后显示「皮衣已破 0」）",
+          "中下：气牌 56px 高宣纸小牌；右下：结束回合 340×84"
+        ],
+        "center": [
+          "画面 16%–50%：情敌全身立绘，牌楼与铁灯列队，朱砂腰带为唯一饱和色",
+          "画面 50%–78%：墨色空场，只放嘲讽台词，禁止 UI"
+        ],
+        "floating": [
+          "阶段转换：全屏墨闪 1 帧 + 名条朱砂闪烁",
+          "破甲：护盾条碎裂飞白，飘字「甲破」"
+        ],
+        "top": [
+          "左上暂停（56×56）+ 头目名条（116→1040，88px 高）：朱砂编号印 + 名 + 身份 + 「关底 · 情敌之九」",
+          "名条下 18px：1000×22 四段刻度长血条",
+          "血条下：血量 / 甲 / 阶段 / 意图（蓄力 28）"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/boss_battle.lua",
+      "name": "关底情敌战",
+      "primary_actions": [
+        "点手牌出招",
+        "结束回合",
+        "暂停"
+      ],
+      "priority": "must-have",
+      "purpose": "把「打情敌」和「打杂兵」在视觉上一刀切开：一条长血条、一个名字、一句嘲讽。",
+      "states": [
+        "phase-1",
+        "phase-2",
+        "enraged",
+        "victory",
+        "defeat"
+      ],
+      "status": "approved"
+    },
+    {
+      "components": [
+        "card-skill-lg",
+        "btn-primary",
+        "btn-secondary",
+        "panel-card"
+      ],
+      "id": "victory",
+      "layout": {
+        "bottom": [
+          "提示行「跳过不要，换 1 壶酒（当前 3 壶）」",
+          "本局已得：4 张 92×122 缩略牌 + 进度文案",
+          "主按钮「取此诀」+ 次按钮「换一壶酒」",
+          "老黄一句收尾台词 + 「下一位」预告条"
+        ],
+        "center": [
+          "分隔线后「三选一 · 拿走他身上的一样东西」",
+          "三张 300×400 刀诀大卡横排，间距 34px；选中卡朱砂外环 + 「已选」下挂标",
+          "卡面：左上费用圆、右上稀有度、中段墨绘图标、牌名 40px、底部效果"
+        ],
+        "floating": [
+          "选定：卡面抬升 8px，其余两张降饱和 35%",
+          "跳过：飘字「+1 壶酒」"
+        ],
+        "top": [
+          "顶部 78px：层签「战后 · 断桥雪渡」",
+          "朱砂大印「胜」128×128 + 「第五位情敌，躺下了」46px + 情敌名与一句评语",
+          "右端战利品：银两 +18 / 声望 +6"
+        ]
+      },
+      "lua_module": "scripts/ui/screens/victory.lua",
+      "name": "战后三选一",
+      "primary_actions": [
+        "选一张刀诀（点卡面）",
+        "取此诀",
+        "换一壶酒（跳过）"
+      ],
+      "priority": "must-have",
+      "purpose": "让胜利的爽感落在「拿走他一样东西」上：三张牌面一眼可辨，选完就走。",
+      "states": [
+        "picking",
+        "selected",
+        "skipped"
+      ],
+      "status": "approved"
+    }
+  ],
+  "sprites": {
+    "container-bar-hp": {
+      "component_id": "bar-hp",
+      "nine_patch": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1004,
+        490,
+        420,
+        16
+      ],
+      "slice": {
+        "margins": [
+          6,
+          6,
+          6,
+          6
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "container-card-paper": {
+      "component_id": "panel-card",
+      "nine_patch": [
+        28,
+        28,
+        28,
+        28
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        606,
+        2,
+        600,
+        360
+      ],
+      "slice": {
+        "margins": [
+          28,
+          28,
+          28,
+          28
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "container-skillcard-default": {
+      "component_id": "card-skill-lg",
+      "nine_patch": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        2,
+        300,
+        400
+      ],
+      "slice": {
+        "margins": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "container-skillcard-pressed": {
+      "component_id": "card-skill-lg",
+      "nine_patch": [
+        30,
+        30,
+        30,
+        30
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        304,
+        2,
+        300,
+        400
+      ],
+      "slice": {
+        "margins": [
+          30,
+          30,
+          30,
+          30
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "pressed"
+    },
+    "control-primary-default": {
+      "component_id": "btn-primary",
+      "nine_patch": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        404,
+        600,
+        84
+      ],
+      "slice": {
+        "margins": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "control-primary-pressed": {
+      "component_id": "btn-primary",
+      "nine_patch": [
+        24,
+        24,
+        24,
+        24
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        604,
+        404,
+        600,
+        84
+      ],
+      "slice": {
+        "margins": [
+          24,
+          24,
+          24,
+          24
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "pressed"
+    },
+    "control-route-default": {
+      "component_id": "route-node",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1208,
+        2,
+        110,
+        110
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "slice_type": "full",
+      "state": "default"
+    },
+    "control-route-pressed": {
+      "component_id": "route-node",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1320,
+        2,
+        110,
+        110
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "slice_type": "full",
+      "state": "pressed"
+    },
+    "control-secondary-default": {
+      "component_id": "btn-secondary",
+      "nine_patch": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1206,
+        404,
+        288,
+        56
+      ],
+      "slice": {
+        "margins": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "control-secondary-pressed": {
+      "component_id": "btn-secondary",
+      "nine_patch": [
+        18,
+        18,
+        18,
+        18
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1496,
+        404,
+        288,
+        56
+      ],
+      "slice": {
+        "margins": [
+          18,
+          18,
+          18,
+          18
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "pressed"
+    },
+    "gauge-boss-default": {
+      "component_id": "bar-boss",
+      "nine_patch": [
+        8,
+        8,
+        8,
+        8
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        2,
+        490,
+        1000,
+        22
+      ],
+      "slice": {
+        "margins": [
+          8,
+          8,
+          8,
+          8
+        ],
+        "type": "9-slice"
+      },
+      "slice_type": "9-slice",
+      "state": "default"
+    },
+    "icon-back-default": {
+      "component_id": "icon-back",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1432,
+        2,
+        96,
+        96
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "slice_type": "full",
+      "state": "default"
+    },
+    "icon-back-pressed": {
+      "component_id": "icon-back",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1530,
+        2,
+        96,
+        96
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "slice_type": "full",
+      "state": "pressed"
+    },
+    "icon-settings-default": {
+      "component_id": "icon-settings",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1628,
+        2,
+        96,
+        96
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "slice_type": "full",
+      "state": "default"
+    },
+    "icon-settings-pressed": {
+      "component_id": "icon-settings",
+      "nine_patch": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "region": [
+        1726,
+        2,
+        96,
+        96
+      ],
+      "slice": {
+        "margins": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "type": "full"
+      },
+      "slice_type": "full",
+      "state": "pressed"
+    }
+  },
+  "texture": "assets/atlases/ui-main.png",
+  "theme": {
+    "base": "DefaultTaptap",
+    "colors": {
+      "accent": [
+        185,
+        138,
+        60,
+        255
+      ],
+      "accent_hex": "#B98A3C",
+      "background": [
+        233,
+        223,
+        198,
+        255
+      ],
+      "background_hex": "#E9DFC6",
+      "disabled": [
+        154,
+        144,
+        124,
+        255
+      ],
+      "disabled_hex": "#9A907C",
+      "primary": [
+        178,
+        58,
+        40,
+        255
+      ],
+      "primaryPressed": [
+        142,
+        42,
+        28,
+        255
+      ],
+      "primaryPressed_hex": "#8E2A1C",
+      "primary_hex": "#B23A28",
+      "reward": [
+        185,
+        138,
+        60,
+        255
+      ],
+      "reward_hex": "#B98A3C",
+      "secondary": [
+        44,
+        74,
+        87,
+        255
+      ],
+      "secondary_hex": "#2C4A57",
+      "token.action-danger": [
+        142,
+        43,
+        34,
+        255
+      ],
+      "token.action-primary": [
+        178,
+        58,
+        40,
+        255
+      ],
+      "token.action-primary-pressed": [
+        142,
+        42,
+        28,
+        255
+      ],
+      "token.ap-fill": [
+        185,
+        138,
+        60,
+        255
+      ],
+      "token.hp-fill": [
+        178,
+        58,
+        40,
+        255
+      ],
+      "token.hp-track": [
+        74,
+        66,
+        58,
+        255
+      ],
+      "token.rarity-common": [
+        92,
+        83,
+        70,
+        255
+      ],
+      "token.rarity-legend": [
+        185,
+        138,
+        60,
+        255
+      ],
+      "token.rarity-rare": [
+        44,
+        74,
+        87,
+        255
+      ],
+      "token.surface-ink-veil": null,
+      "token.surface-page": [
+        233,
+        223,
+        198,
+        255
+      ],
+      "token.surface-panel": [
+        242,
+        234,
+        218,
+        255
+      ],
+      "token.text-inverse": [
+        245,
+        238,
+        219,
+        255
+      ],
+      "token.text-primary": [
+        25,
+        21,
+        18,
+        255
+      ],
+      "token.text-secondary": [
+        92,
+        83,
+        70,
+        255
+      ],
+      "warning": [
+        180,
+        101,
+        42,
+        255
+      ],
+      "warning_hex": "#B4652A"
+    },
+    "name": null,
+    "platform": {
+      "orientation": "portrait",
+      "reference_size": [
+        1080,
+        1920
+      ],
+      "safe_area": {
+        "bottom": 96,
+        "left": 40,
+        "right": 40,
+        "top": 56
+      },
+      "target": "mobile"
+    },
+    "radius": {
+      "full": 9999,
+      "lg": 8,
+      "sm": 4,
+      "xl": 12
+    },
+    "source": "style-contract.yaml",
+    "spacing": {
+      "lg": 24,
+      "md": 16,
+      "sm": 8,
+      "xl": 40,
+      "xs": 4,
+      "xxl": 64
+    },
+    "style_packs": {
+      "DefaultTaptap": "clean flat rounded · teal/mint · Resource Han Rounded",
+      "ui-astroon": "cosmic cartoon · purple/gradient/glow · Inter",
+      "ui-brawlforge": "sci-fi HUD · sharp edges · Noto Sans SC bold",
+      "ui-pixelforge": "retro pixel · radius 0 · Fusion Pixel"
+    },
+    "typography": {
+      "body": {
+        "size": 26,
+        "weight": 500
+      },
+      "button": {
+        "size": 32,
+        "weight": 700
+      },
+      "number": {
+        "size": 34,
+        "weight": 700
+      },
+      "section": {
+        "size": 34,
+        "weight": 700
+      },
+      "title": {
+        "size": 52,
+        "weight": 700
+      }
+    },
+    "ui_language": {
+      "engine": "UrhoX / TapTap Maker",
+      "fonts": "copy TTF into assets/Fonts/ and register in UI.Init fonts",
+      "init": [
+        "UI.Init(config)",
+        "build widget tree",
+        "UI.SetRoot(root)"
+      ],
+      "layout": "Yoga (Flexbox-like; defaults differ from CSS)",
+      "render": "NanoVG",
+      "safe_area": "UI.SafeAreaView for interactive HUD; background outside",
+      "scale": "UI.Scale.DEFAULT (1 base px ≈ 1 CSS px)",
+      "script": "Lua 5.4"
+    },
+    "visual_keywords": [
+      "水墨晕染",
+      "宣纸纤维",
+      "朱砂印章",
+      "枯笔飞白",
+      "金箔点缀",
+      "晚明江湖",
+      "雪夜"
+    ]
+  }
+}

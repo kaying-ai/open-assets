@@ -60,9 +60,24 @@ function deriveMeta(src, id, args) {
   const screen = readText(path.join(src, "contracts", "screen-contract.yaml"));
   const atlasJson = readJson(path.join(src, "assets", "atlases", "ui-main.json"));
   const firstScreen = (screen.match(/screens:\s*\n\s*-\s*id:\s*([a-z0-9-]+)/) || [])[1];
-  const previewFile = firstScreen && fs.existsSync(path.join(src, "assets", "pages", `${firstScreen}-v1.png`))
-    ? `${firstScreen}-v1.png`
-    : (fs.readdirSync(path.join(src, "assets", "pages")).filter((f) => f.endsWith(".png")).sort()[0] || "");
+  // The first screen's hero, at whatever version the artwork reached (`<screen>-vN.png`,
+  // highest N wins). Packs whose hero was iterated past v1 used to fall through to the
+  // alphabetically first page, so the gallery cover was an unrelated screen.
+  const pageFiles = fs.existsSync(path.join(src, "assets", "pages"))
+    ? fs.readdirSync(path.join(src, "assets", "pages")).filter((f) => f.endsWith(".png"))
+    : [];
+  const pickPreview = () => {
+    if (!firstScreen) return pageFiles.sort()[0] || "";
+    const own = pageFiles
+      .map((f) => {
+        const m = f.match(new RegExp(`^${firstScreen}-v(\\d+)\\.png$`));
+        return m ? [f, parseInt(m[1], 10)] : null;
+      })
+      .filter(Boolean)
+      .sort((a, b) => b[1] - a[1]);
+    return own.length ? own[0][0] : pageFiles.sort()[0] || "";
+  };
+  const previewFile = args.opt["preview"] || pickPreview();
   const platform = `${yamlScalar(style, "target") || "mobile"}-${yamlScalar(style, "orientation") || "landscape"}`;
   const ratio = yamlScalar(style, "aspect_ratio") || "16:9";
   const resolution = yamlIntList(style, "reference_size") || [1792, 1024];
@@ -167,7 +182,10 @@ function main() {
   }
   const renderSrc = path.join(src, "render");
   if (fs.existsSync(renderSrc)) {
-    copyTree(renderSrc, path.join(dst, "render"), (p) => !/node_modules|_detect|_preview/.test(p));
+    // `art/` holds the raw AI-generation plates (tens of MB) — inputs, not
+    // deliverables; the prompts/ and contracts/ document how they were made.
+    copyTree(renderSrc, path.join(dst, "render"),
+      (p) => !/node_modules|_detect|_preview|[/\\]art[/\\]/.test(p));
   }
   const docsDir = path.join(dst, "docs");
   fs.mkdirSync(docsDir, { recursive: true });
